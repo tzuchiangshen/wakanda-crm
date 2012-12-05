@@ -1,0 +1,1 @@
+﻿if (loginByPassword("admin", "a")) {	/**/	var dmartin = new ds.User({		login: "dmartin", 		password: "martin", 		fullName: "Dean Martin" 	});	dmartin.save();		var jbishop = new ds.User({		login: "jbishop", 		password: "bishop", 		fullName: "Joey Bishop" 	});	jbishop.save();		//	var users = ds.User.all();//	users}
