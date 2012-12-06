@@ -13,6 +13,7 @@ function constructor (id) {
 	errorMsg = getHtmlId('errorMessageRichText');
 	
 	function signIn() {
+		//pass callback to signIn, onSuccess calls my function - then call users callback
 		if (waf.directory.loginByPassword(waf.sources.loginObject.name, waf.sources.loginObject.password)) {
 			//$$(id).removeComponent();
 			$$(id).loadComponent({path: '/LoginComponentViews/logout.waComponent'});

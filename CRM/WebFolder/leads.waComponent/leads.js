@@ -11,7 +11,14 @@ function constructor (id) {
 	// @endregion// @endlock
 
 	this.load = function (data) {// @lock
-
+		var comboWidthPx = $('#' + id + '_combobox1').css('width');
+		var comboWidth = $('#' + id + '_combobox1').width();
+		//var inputWidth = $('#' + id + '_combobox1 input').width();
+		//console.log("combo width: " + comboWidth + " : " + comboWidthPx);
+		//console.log("input width: " + inputWidth);
+		$('#' + id + '_combobox1 input').css('width', comboWidth - 27);
+		
+		
 	// @region namespaceDeclaration// @startlock
 	// @endregion// @endlock
 
@@ -20,6 +27,7 @@ function constructor (id) {
 	// @region eventManager// @startlock
 	// @endregion// @endlock
 
+		
 	};// @lock
 
 
