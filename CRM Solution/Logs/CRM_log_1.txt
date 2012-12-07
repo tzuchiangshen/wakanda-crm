@@ -784,3 +784,43 @@
 2012-12-06 15:26:01 [com.wakanda-software.CRM.ServerAdmin] INFO - Closing the project
 2012-12-06 15:26:01 [com.wakanda-software.CRM.ServerAdmin] INFO - Project closed (duration: 1 ms)
 2012-12-06 15:26:02 [com.wakanda-software.CRM] INFO - Solution closed (duration: 816 ms)
+2012-12-06 15:29:59 [com.wakanda-software.CRM] INFO - Opening the solution
+2012-12-06 15:29:59 [com.wakanda-software.CRM] INFO - Opening the users and groups directory
+2012-12-06 15:29:59 [com.wakanda-software.CRM] INFO - Users and groups directory opened (duration: 12 ms)
+2012-12-06 15:29:59 [com.wakanda-software.CRM.CRM] INFO - Opening the project
+2012-12-06 15:29:59 [com.wakanda-software.CRM.CRM] INFO - Opening the database
+2012-12-06 15:29:59 [com.wakanda-software.CRM.CRM] INFO - Database opened (duration: 6 ms)
+2012-12-06 15:29:59 [com.wakanda-software.CRM.CRM] INFO - Project opened (duration: 40 ms)
+2012-12-06 15:29:59 [com.wakanda-software.CRM.ServerAdmin] INFO - Opening the project
+2012-12-06 15:29:59 [com.wakanda-software.CRM.ServerAdmin] INFO - Project opened (duration: 6 ms)
+2012-12-06 15:29:59 [com.wakanda-software.CRM] INFO - Solution opened (duration: 90 ms)
+2012-12-06 15:29:59 [com.wakanda-software.CRM] INFO - Starting the solution
+2012-12-06 15:29:59 [com.wakanda-software.CRM.CRM] INFO - Starting the project
+2012-12-06 15:30:00 [com.wakanda-software.CRM.CRM] INFO - Starting the HTTP server
+2012-12-06 15:30:00 [com.wakanda-software.CRM.CRM] INFO - HTTP server started (duration: 29 ms)
+2012-12-06 15:30:00 [com.wakanda-software.CRM.CRM] INFO - Project started (duration: 79 ms)
+2012-12-06 15:30:00 [com.wakanda-software.CRM.ServerAdmin] INFO - Starting the project
+2012-12-06 15:30:00 [com.wakanda-software.CRM.ServerAdmin] INFO - Starting the HTTP server
+2012-12-06 15:30:00 [com.wakanda-software.CRM.ServerAdmin] INFO - HTTP server started (duration: 34 ms)
+2012-12-06 15:30:00 [com.wakanda-software.CRM.ServerAdmin] INFO - Project started (duration: 111 ms)
+2012-12-06 15:30:00 [com.wakanda-software.CRM.CRM] INFO - Executing the bootstrap(s)
+2012-12-06 15:30:00 [com.wakanda-software.CRM.CRM] INFO - Bootstrap(s) executed (duration: 5 ms)
+2012-12-06 15:30:00 [com.wakanda-software.CRM.ServerAdmin] INFO - Executing the bootstrap(s)
+2012-12-06 15:30:00 [com.wakanda-software.CRM.ServerAdmin] INFO - Bootstrap(s) executed (duration: 10 ms)
+2012-12-06 15:30:00 [com.wakanda-software.CRM] INFO - Solution started (duration: 208 ms)
+2012-12-06 15:37:03 [com.wakanda-software.CRM.CRM.JS4D] ERROR - [1] Error on line 23. SyntaxError: Parse error, HTTP connection handler
+2012-12-06 15:37:03 [com.wakanda-software.CRM.CRM.JS4D] ERROR - [2] Error evaluating javascript file:///Volumes/Macintosh HD/Users/DavidRobbins/github/wakanda-crm/CRM/serverTest.js, HTTP connection handler
+2012-12-06 16:33:19 [com.wakanda-software.CRM] INFO - Stopping the solution
+2012-12-06 16:33:19 [com.wakanda-software.CRM.CRM] INFO - Stopping the project
+2012-12-06 16:33:20 [com.wakanda-software.CRM.CRM] INFO - Project stopped (duration: 1060 ms)
+2012-12-06 16:33:20 [com.wakanda-software.CRM.ServerAdmin] INFO - Stopping the project
+2012-12-06 16:33:22 [com.wakanda-software.CRM.ServerAdmin] INFO - Project stopped (duration: 2064 ms)
+2012-12-06 16:33:22 [com.wakanda-software.CRM] INFO - Solution stopped (duration: 3125 ms)
+2012-12-06 16:33:22 [com.wakanda-software.CRM] INFO - Closing the solution
+2012-12-06 16:33:22 [com.wakanda-software.CRM.CRM] INFO - Closing the project
+2012-12-06 16:33:22 [com.wakanda-software.CRM.CRM] INFO - Closing the database
+2012-12-06 16:33:22 [com.wakanda-software.CRM.CRM] INFO - Database closed (duration: 454 ms)
+2012-12-06 16:33:22 [com.wakanda-software.CRM.CRM] INFO - Project closed (duration: 456 ms)
+2012-12-06 16:33:22 [com.wakanda-software.CRM.ServerAdmin] INFO - Closing the project
+2012-12-06 16:33:22 [com.wakanda-software.CRM.ServerAdmin] INFO - Project closed (duration: 2 ms)
+2012-12-06 16:33:23 [com.wakanda-software.CRM] INFO - Solution closed (duration: 865 ms)

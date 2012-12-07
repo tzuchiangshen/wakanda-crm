@@ -11,20 +11,29 @@ function constructor (id) {
 	// @endregion// @endlock
 
 	this.load = function (data) {// @lock
-		var comboWidthPx = $('#' + id + '_combobox1').css('width');
-		var comboWidth = $('#' + id + '_combobox1').width();
-		//var inputWidth = $('#' + id + '_combobox1 input').width();
-		//console.log("combo width: " + comboWidth + " : " + comboWidthPx);
-		//console.log("input width: " + inputWidth);
-		$('#' + id + '_combobox1 input').css('width', comboWidth - 27);
-		
-		
+
 	// @region namespaceDeclaration// @startlock
+	var leadsCancelButton = {};	// @button
+	var leadsDataGrid = {};	// @dataGrid
 	// @endregion// @endlock
 
 	// eventHandlers// @lock
 
+	leadsCancelButton.click = function leadsCancelButton_click (event)// @startlock
+	{// @endlock
+		// Add your code here
+		$$(id + "_tabView2").selectTab(1);
+	};// @lock
+
+	leadsDataGrid.onRowDblClick = function leadsDataGrid_onRowDblClick (event)// @startlock
+	{// @endlock
+		// Add your code here
+		$$(id + "_tabView2").selectTab(2);
+	};// @lock
+
 	// @region eventManager// @startlock
+	WAF.addListener(this.id + "_leadsCancelButton", "click", leadsCancelButton.click, "WAF");
+	WAF.addListener(this.id + "_leadsDataGrid", "onRowDblClick", leadsDataGrid.onRowDblClick, "WAF");
 	// @endregion// @endlock
 
 		
