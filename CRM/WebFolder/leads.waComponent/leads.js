@@ -4,31 +4,14 @@
 // Add the code that needs to be shared between components here
 
 function constructor (id) {
-
-	// @region beginComponentDeclaration// @startlock
-	var $comp = this;
-	this.name = 'leads';
-	// @endregion// @endlock
-
-	this.load = function (data) {// @lock
-		var quickAddFirstName = getHtmlId('quickAddFirstName'),
+	var quickAddFirstName = getHtmlId('quickAddFirstName'),
 			quickAddLastName = getHtmlId('quickAddLastName'),
 			quickAddTitle = getHtmlId('quickAddTitle'),
-			quickAddPhone = getHtmlId('quickAddPhone');
+			quickAddPhone = getHtmlId('quickAddPhone'),
+			leadDataSource = waf.sources[id + "_lead"];
 			
-	// @region namespaceDeclaration// @startlock
-	var quickAddSaveButton = {};	// @button
-	var leadsCancelButton = {};	// @button
-	var leadsDataGrid = {};	// @dataGrid
-	// @endregion// @endlock
-
-	// eventHandlers// @lock
-
-	quickAddSaveButton.click = function quickAddSaveButton_click (event)// @startlock
-	{// @endlock
-		// Add your code here
+	function quickAdd() {
 		//Tried to use an object datasource to bind to the quick add fields...problems.
-		var leadDataSource = waf.sources[id + "_lead"];
 		leadDataSource.addNewElement();
 		leadDataSource.serverRefresh({onSuccess:function(event){
             // the new entity has been initialized by the server
@@ -43,7 +26,34 @@ function constructor (id) {
 			$$(quickAddLastName).setValue();
 			$$(quickAddTitle).setValue();
 			$$(quickAddPhone).setValue();
-        }})
+        }});
+	}
+	
+	
+	// @region beginComponentDeclaration// @startlock
+	var $comp = this;
+	this.name = 'leads';
+	// @endregion// @endlock
+
+	this.load = function (data) {// @lock
+		$("#" + quickAddFirstName + ", #" + quickAddLastName+ ", #" + quickAddTitle+ ", #" + quickAddPhone).live('keyup', function (e) {
+	   		if ( e.keyCode == 13 ){
+	   			quickAdd();
+	    	}
+		});
+			
+	// @region namespaceDeclaration// @startlock
+	var quickAddSaveButton = {};	// @button
+	var leadsCancelButton = {};	// @button
+	var leadsDataGrid = {};	// @dataGrid
+	// @endregion// @endlock
+
+	// eventHandlers// @lock
+
+	quickAddSaveButton.click = function quickAddSaveButton_click (event)// @startlock
+	{// @endlock
+		// Add your code here
+		quickAdd();
 		
 		
 	};// @lock
