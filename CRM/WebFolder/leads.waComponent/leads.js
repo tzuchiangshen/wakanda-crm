@@ -26,6 +26,8 @@ function constructor (id) {
 			$$(quickAddLastName).setValue();
 			$$(quickAddTitle).setValue();
 			$$(quickAddPhone).setValue();
+			
+			$('#' + quickAddFirstName).focus();
         }});
 	}
 	
