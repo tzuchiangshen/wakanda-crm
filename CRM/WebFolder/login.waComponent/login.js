@@ -16,13 +16,14 @@ function constructor (id) {
 	this.name = 'login';
 	// @endregion// @endlock
 
-	function toggleLogin() {
-		if (waf.widgets[loginContainerRef].isVisible()) {
-			$("#" + loginContainerRef).fadeOut(400); //hide() 
-			$("#" + logoutContainerRef).fadeIn(900); //show() 
-		} else {
+	function toggleLogin(toggle) {
+		
+		if (toggle == "logout") {
 			$("#" + loginContainerRef).fadeIn(900, function() {$$(loginNameField).focus();});; //show
 			$("#" + logoutContainerRef).fadeOut(400); //hide 
+		} else {
+			$("#" + loginContainerRef).fadeOut(400); //hide() 
+			$("#" + logoutContainerRef).fadeIn(900); //show() 
 		}
 	}
 	
@@ -30,12 +31,12 @@ function constructor (id) {
 	function signIn() {
 		if (waf.directory.loginByPassword($("#" + loginNameField).val(), $("#" + loginPasswordField).val())) {
 			//Our user signed in successfully.
-			toggleLogin();
 			$$(statusMsg).setValue("Signed in as: " + waf.directory.currentUser().fullName);
 			$$(loginNameField).setValue("");
 			$$(loginPasswordField).setValue("");
 			$$(errorMsg).setValue("");
 			$$(loginNameField).focus();
+			toggleLogin("login");
 			
 		} else {
 			$$(errorMsg).setValue("Invalid login.");
@@ -50,15 +51,14 @@ function constructor (id) {
 		$("#" + logoutContainerRef).css("left", "0px");			
 			
 		//If we have a current user signed in then show login container, else show logout container.
-		if (WAF.directory.currentUser() === null) {
+		if (WAF.directory.currentUser().fullName === "default guest") { //WAF.directory.currentUser() === null
 			//No user is signed in.
 			$("#" + loginContainerRef).show(200, function() {$$(loginNameField).focus();}); //show
 			$("#" + logoutContainerRef).hide(); //hide
-			
 		} else {
 			//We have a user signed in.
-			$("#" + loginContainerRef).hide(); //show
-			$("#" + logoutContainerRef).show(); //hide
+			$("#" + loginContainerRef).hide(); //hide
+			$("#" + logoutContainerRef).show(); //show
 			$$(statusMsg).setValue("Signed in as: " + waf.directory.currentUser().fullName); 	
 		}
 		
@@ -83,7 +83,7 @@ function constructor (id) {
 	logoutButton.click = function logoutButton_click (event)// @startlock
 	{// @endlock
 		if (WAF.directory.logout()) {
-			toggleLogin();
+			toggleLogin("logout");
 		}
 	};// @lock
 
