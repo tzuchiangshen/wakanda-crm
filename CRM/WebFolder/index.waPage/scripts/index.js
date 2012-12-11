@@ -38,15 +38,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
 	{// @endlock
-		if (WAF.directory.currentUser() === null) {
-			$$('bodyComponent').removeComponent();
-			$$('loginComponent').loadComponent({path: '/LoginComponentViews/login.waComponent'});
-			$$('bodyContainer').hide();
-		} else {
-			$$('loginComponent').loadComponent({path: '/LoginComponentViews/logout.waComponent'});
-			$$('bodyComponent').loadComponent({path: '/home.waComponent'});
-			$$('bodyContainer').show();
-		}
+		
 	};// @lock
 
 // @region eventManager// @startlock
