@@ -9,10 +9,14 @@ function constructor (id) {
 			quickAddTitle = getHtmlId('quickAddTitle'),
 			quickAddCompany = getHtmlId('quickAddCompany'),
 			quickAddPhone = getHtmlId('quickAddPhone'),
-			leadDataSource = waf.sources[id + "_lead"];
+			//leadDataSource = waf.sources[id + "_lead"]; 
+			leadDataSource = waf.sources.account;
 			
 	function quickAdd() {
 		//Tried to use an object datasource to bind to the quick add fields...problems.
+		
+		console.log($$(quickAddFirstName).getValue());
+		
 		leadDataSource.addNewElement();
 		leadDataSource.serverRefresh({onSuccess:function(event){
             // the new entity has been initialized by the server
@@ -42,7 +46,7 @@ function constructor (id) {
 
 	this.load = function (data) {// @lock
 		$("#" + quickAddFirstName + ", #" + quickAddLastName+ ", #" + quickAddTitle+ ", #" + quickAddPhone + ", #" + quickAddCompany).live('keyup', function (e) {
-	   		if ( e.keyCode == 13 ){
+	   		if ( e.keyCode == 13 ) {
 	   			quickAdd();
 	    	}
 		});

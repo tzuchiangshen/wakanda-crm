@@ -9,29 +9,61 @@ function constructor (id) {
 		quickAddWebsite = getHtmlId('quickAddWebsite'),
 		quickAddCity = getHtmlId('quickAddCity'),
 		quickAddCountry = getHtmlId('quickAddCountry'),
-		accountDataSource = waf.sources[id + "_account"];
+		//accountDataSource = waf.sources[id + "_account"];
+		accountDataSource = waf.sources.account;
 	
 	function quickAdd() {
-		//Tried to use an object datasource to bind to the quick add fields...problems.
+		//Laurent: Tried to use an object datasource to bind to the quick add fields...problems.
+		/*
+		accountDataSource.newAccount({
+			onSuccess: function(event) {
+				//console.log(event);
+				console.log("Returned Entity: " + event.result);
+				
+				event.result.name.setValue($$(quickAddAccountName).getValue());
+				event.result.phone.setValue($$(quickAddPhone).getValue());
+				event.result.website.setValue($$(quickAddWebsite).getValue());
+				event.result.billingCity.setValue($$(quickAddCity).getValue());
+				event.result.billingCountry.setValue($$(quickAddCountry).getValue());
+				
+				accountDataSource.setCurrentEntity(event.result);
+				
+				accountDataSource.save({
+					onSuccess: function(event) {
+						accountDataSource.addEntity(accountDataSource.getCurrentElement());
+					}
+				});
+				
+				
+			}
+		});
+		*/
+		
+		/**/
 		accountDataSource.addNewElement();
-		accountDataSource.serverRefresh({onSuccess:function(event){
-            // the new entity has been initialized by the server
-            accountDataSource.name = $$(quickAddAccountName).getValue();
-			accountDataSource.phone = $$(quickAddPhone).getValue();
-			accountDataSource.website = $$(quickAddWebsite).getValue();
-			accountDataSource.billingCity = $$(quickAddCity).getValue();
-			accountDataSource.billingCountry = $$(quickAddCountry).getValue();
-			accountDataSource.save();
-			accountDataSource.autoDispatch();
-			//reset form
-			$$(quickAddAccountName).setValue();
-			$$(quickAddPhone).setValue();
-			$$(quickAddWebsite).setValue();
-			$$(quickAddCity).setValue();
-			$$(quickAddCountry).setValue();
-			
-			$('#' + quickAddAccountName).focus();
-        }});
+		accountDataSource.serverRefresh({
+			onSuccess:function(event){
+		        // the new entity has been initialized by the server
+		        //Now update the new entity with the form values.
+		        accountDataSource.name = $$(quickAddAccountName).getValue();
+				accountDataSource.phone = $$(quickAddPhone).getValue();
+				accountDataSource.website = $$(quickAddWebsite).getValue();
+				accountDataSource.billingCity = $$(quickAddCity).getValue();
+				accountDataSource.billingCountry = $$(quickAddCountry).getValue();
+				//Save the entity.
+				accountDataSource.save();
+				accountDataSource.autoDispatch();
+				//reset form
+				$$(quickAddAccountName).setValue();
+				$$(quickAddPhone).setValue();
+				$$(quickAddWebsite).setValue();
+				$$(quickAddCity).setValue();
+				$$(quickAddCountry).setValue();
+				
+				$('#' + quickAddAccountName).focus();
+			}
+   		});
+   		
 	}	
 	
 	// @region beginComponentDeclaration// @startlock
@@ -40,25 +72,26 @@ function constructor (id) {
 	// @endregion// @endlock
 
 	this.load = function (data) {// @lock
-		$("#" + quickAddAccountName + ", #" + quickAddPhone+ ", #" + quickAddWebsite + ", #" + quickAddCity + ", #" + quickAddCountry).live('keyup', function (e) {
+		$("#" + quickAddAccountName + ", #" + quickAddPhone + ", #" + quickAddWebsite + ", #" + quickAddCity + ", #" + quickAddCountry).live('keyup', function (e) {
 	   		if ( e.keyCode == 13 ){
 	   			quickAdd();
 	    	}
 		});
 
 	// @region namespaceDeclaration// @startlock
-	var quickAddSaveButtonAcct = {};	// @button
+	var button1 = {};	// @button
 	// @endregion// @endlock
 
 	// eventHandlers// @lock
 
-	quickAddSaveButtonAcct.click = function quickAddSaveButtonAcct_click (event)// @startlock
+	button1.click = function button1_click (event)// @startlock
 	{// @endlock
-		// Add your code here
+		console.log("click save...");
+		quickAdd();
 	};// @lock
 
 	// @region eventManager// @startlock
-	WAF.addListener(this.id + "_quickAddSaveButtonAcct", "click", quickAddSaveButtonAcct.click, "WAF");
+	WAF.addListener(this.id + "_button1", "click", button1.click, "WAF");
 	// @endregion// @endlock
 
 	};// @lock

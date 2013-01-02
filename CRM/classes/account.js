@@ -1,0 +1,1 @@
+//Account data class methods.model.Account = {};//*** Methodsmodel.Account.methods = {};model.Account.methods.newAccount = function(){	return new ds.Account();};model.Account.methods.newAccount.scope = "public";

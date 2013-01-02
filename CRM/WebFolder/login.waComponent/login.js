@@ -17,7 +17,6 @@ function constructor (id) {
 	// @endregion// @endlock
 
 	function toggleLogin(toggle) {
-		
 		if (toggle == "logout") {
 			$("#" + loginContainerRef).fadeIn(900, function() {$$(loginNameField).focus();});; //show
 			$("#" + logoutContainerRef).fadeOut(400); //hide 
@@ -51,7 +50,7 @@ function constructor (id) {
 		$("#" + logoutContainerRef).css("left", "0px");			
 			
 		//If we have a current user signed in then show login container, else show logout container.
-		if (WAF.directory.currentUser().fullName === "default guest") { //WAF.directory.currentUser() === null
+		if (WAF.directory.currentUser() === null) { //WAF.directory.currentUser().fullName === "default guest"
 			//No user is signed in.
 			$("#" + loginContainerRef).show(200, function() {$$(loginNameField).focus();}); //show
 			$("#" + logoutContainerRef).hide(); //hide
