@@ -10,12 +10,11 @@ function constructor (id) {
 			quickAddCompany = getHtmlId('quickAddCompany'),
 			quickAddPhone = getHtmlId('quickAddPhone'),
 			//leadDataSource = waf.sources[id + "_lead"]; 
-			leadDataSource = waf.sources.account;
+			leadDataSource = waf.sources.lead;
 			
 	function quickAdd() {
 		//Tried to use an object datasource to bind to the quick add fields...problems.
-		
-		console.log($$(quickAddFirstName).getValue());
+		//console.log($$(quickAddFirstName).getValue());
 		
 		leadDataSource.addNewElement();
 		leadDataSource.serverRefresh({onSuccess:function(event){
