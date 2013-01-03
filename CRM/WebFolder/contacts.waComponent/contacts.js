@@ -23,9 +23,9 @@ function constructor (id) {
 			contactDataSource.save();
 			contactDataSource.autoDispatch();
 			//reset form
-			$$(quickAddFirstName).setValue();
-			$$(quickAddLastName).setValue();
-			$$(quickAddTitle).setValue();
+			$$('quickAddFirstName').setValue();
+			$$('quickAddLastName').setValue();
+			$$('quickAddTitle').setValue();
 			
 			$('#' + quickAddFirstName).focus();
         }});
