@@ -41,6 +41,8 @@ function constructor (id) {
 			$$(errorMsg).setValue("Invalid login.");
 			$$(statusMsg).setValue("");
 		}
+		
+		waf.widgets.bodyComponent.loadComponent("home.waComponent");
 	}
 	
 	
@@ -50,7 +52,7 @@ function constructor (id) {
 		$("#" + logoutContainerRef).css("left", "0px");			
 			
 		//If we have a current user signed in then show login container, else show logout container.
-		if (WAF.directory.currentUser() === null) { //WAF.directory.currentUser().fullName === "default guest"
+		if (waf.directory.currentUser() === null) { //WAF.directory.currentUser().fullName === "default guest"
 			//No user is signed in.
 			$("#" + loginContainerRef).show(200, function() {$$(loginNameField).focus();}); //show
 			$("#" + logoutContainerRef).hide(); //hide
@@ -82,6 +84,7 @@ function constructor (id) {
 	logoutButton.click = function logoutButton_click (event)// @startlock
 	{// @endlock
 		if (WAF.directory.logout()) {
+			waf.widgets.bodyComponent.loadComponent("home.waComponent");
 			toggleLogin("logout");
 		}
 	};// @lock
