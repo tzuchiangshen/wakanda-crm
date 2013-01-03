@@ -44,21 +44,21 @@ function constructor (id) {
 	// @endregion// @endlock
 
 	this.load = function (data) {// @lock
-		$("#" + quickAddFirstName + ", #" + quickAddLastName+ ", #" + quickAddTitle+ ", #" + quickAddPhone + ", #" + quickAddCompany).live('keyup', function (e) {
+		$("#" + quickAddFirstName + ", #" + quickAddLastName+ ", #" + quickAddTitle + ", #" + quickAddPhone + ", #" + quickAddCompany).live('keyup', function (e) {
 	   		if ( e.keyCode == 13 ) {
 	   			quickAdd();
 	    	}
 		});
 			
 	// @region namespaceDeclaration// @startlock
-	var quickAddSaveButtonLead = {};	// @button
+	var quickAddSaveButton = {};	// @button
 	var leadsCancelButton = {};	// @button
 	var leadsDataGrid = {};	// @dataGrid
 	// @endregion// @endlock
 
 	// eventHandlers// @lock
 
-	quickAddSaveButtonLead.click = function quickAddSaveButtonLead_click (event)// @startlock
+	quickAddSaveButton.click = function quickAddSaveButton_click (event)// @startlock
 	{// @endlock
 		// Add your code here
 		quickAdd();
@@ -79,7 +79,7 @@ function constructor (id) {
 	};// @lock
 
 	// @region eventManager// @startlock
-	WAF.addListener(this.id + "_quickAddSaveButtonLead", "click", quickAddSaveButtonLead.click, "WAF");
+	WAF.addListener(this.id + "_quickAddSaveButton", "click", quickAddSaveButton.click, "WAF");
 	WAF.addListener(this.id + "_leadsCancelButton", "click", leadsCancelButton.click, "WAF");
 	WAF.addListener(this.id + "_leadsDataGrid", "onRowDblClick", leadsDataGrid.onRowDblClick, "WAF");
 	// @endregion// @endlock
