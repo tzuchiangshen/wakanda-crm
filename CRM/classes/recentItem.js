@@ -1,0 +1,1 @@
+﻿//RecentItem data class methods.model.RecentItem = {};model.RecentItem.events = {};model.RecentItem.events.onInit = function() {	var myCurrentUser = currentUser(), // we get the user of the current session.		myUser = ds.User.find("ID = :1", myCurrentUser.ID);		if ((myCurrentUser !== null) && (myUser !== null)) {//if a user is logged in.				this.owner = myUser;	}};

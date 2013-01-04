@@ -82,6 +82,36 @@ function constructor (id) {
 		$$(id + "_tabView2").selectTab(1);
 	};// @lock
 
+	leadsDataGrid.onRowClick = function leadsDataGrid_onRowClick (event)// @startlock
+	{// @endlock
+		//Add to recent items.
+		var sessionCurrentUser = WAF.directory.currentUser();
+		//Load the User entity for current session.
+		/*
+		var theUser = waf.ds.User.find("ID = " + sessionCurrentUser.ID, {
+			onSuccess: function(event) {
+				
+			}
+		}); 
+		*/
+		
+		
+		//Create a recent items entity.
+		
+		var recentItem = ds.RecentItem.newEntity(); // create the entity
+		recentItem.dataClassName.setValue("Lead");
+		recentItem.entityKey.setValue(waf.sources.lead.ID);
+		recentItem.save({
+        	onSuccess:function(event) {
+        
+        	}
+        });
+
+		
+		
+		
+	};// @lock
+
 	leadsDataGrid.onRowDblClick = function leadsDataGrid_onRowDblClick (event)// @startlock
 	{// @endlock
 		// Add your code here
@@ -89,6 +119,7 @@ function constructor (id) {
 	};// @lock
 
 	// @region eventManager// @startlock
+	WAF.addListener(this.id + "_leadsDataGrid", "onRowClick", leadsDataGrid.onRowClick, "WAF");
 	WAF.addListener(this.id + "_testLink", "click", testLink.click, "WAF");
 	WAF.addListener(this.id + "_quickAddSaveButton", "click", quickAddSaveButton.click, "WAF");
 	WAF.addListener(this.id + "_leadsCancelButton", "click", leadsCancelButton.click, "WAF");
