@@ -42,10 +42,22 @@ function constructor (id) {
 	    	}
 		});
 	// @region namespaceDeclaration// @startlock
+	var button1 = {};	// @button
+	var dataGrid1 = {};	// @dataGrid
 	var quickAddSaveButton = {};	// @button
 	// @endregion// @endlock
 
 	// eventHandlers// @lock
+
+	button1.click = function button1_click (event)// @startlock
+	{// @endlock
+		$$(id + "_tabView1").selectTab(1);
+	};// @lock
+
+	dataGrid1.onRowDblClick = function dataGrid1_onRowDblClick (event)// @startlock
+	{// @endlock
+		$$(id + "_tabView1").selectTab(2);
+	};// @lock
 
 	quickAddSaveButton.click = function quickAddSaveButton_click (event)// @startlock
 	{// @endlock
@@ -53,6 +65,8 @@ function constructor (id) {
 	};// @lock
 
 	// @region eventManager// @startlock
+	WAF.addListener(this.id + "_button1", "click", button1.click, "WAF");
+	WAF.addListener(this.id + "_dataGrid1", "onRowDblClick", dataGrid1.onRowDblClick, "WAF");
 	WAF.addListener(this.id + "_quickAddSaveButton", "click", quickAddSaveButton.click, "WAF");
 	// @endregion// @endlock
 

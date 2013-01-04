@@ -51,12 +51,22 @@ function constructor (id) {
 		});
 			
 	// @region namespaceDeclaration// @startlock
+	var testLink = {};	// @richText
 	var quickAddSaveButton = {};	// @button
 	var leadsCancelButton = {};	// @button
 	var leadsDataGrid = {};	// @dataGrid
 	// @endregion// @endlock
 
 	// eventHandlers// @lock
+
+	testLink.click = function testLink_click (event)// @startlock
+	{// @endlock
+		$$('bodyComponent').loadComponent({path: '/accounts.waComponent', userData: {view: "detail"}});
+		$('#menuBar1 li div').removeClass('menuSelected');
+		$('#menuItem3 div').addClass('menuSelected');
+		waf.sources.account.selectByKey(120);
+		//$$(id + "_tabView1").selectTab(1);
+	};// @lock
 
 	quickAddSaveButton.click = function quickAddSaveButton_click (event)// @startlock
 	{// @endlock
@@ -79,6 +89,7 @@ function constructor (id) {
 	};// @lock
 
 	// @region eventManager// @startlock
+	WAF.addListener(this.id + "_testLink", "click", testLink.click, "WAF");
 	WAF.addListener(this.id + "_quickAddSaveButton", "click", quickAddSaveButton.click, "WAF");
 	WAF.addListener(this.id + "_leadsCancelButton", "click", leadsCancelButton.click, "WAF");
 	WAF.addListener(this.id + "_leadsDataGrid", "onRowDblClick", leadsDataGrid.onRowDblClick, "WAF");

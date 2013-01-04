@@ -72,6 +72,11 @@ function constructor (id) {
 	// @endregion// @endlock
 
 	this.load = function (data) {// @lock
+		//console.log("userData: " + data.userData);
+		//console.log("userData View: " + data.userData.view);
+		
+		
+		
 		$("#" + quickAddAccountName + ", #" + quickAddPhone + ", #" + quickAddWebsite + ", #" + quickAddCity + ", #" + quickAddCountry).live('keyup', function (e) {
 	   		if ( e.keyCode == 13 ){
 	   			quickAdd();
@@ -79,18 +84,48 @@ function constructor (id) {
 		});
 
 	// @region namespaceDeclaration// @startlock
+	var tabView1 = {};	// @tabView
+	var button2 = {};	// @button
+	var accountsDataGrid = {};	// @dataGrid
 	var button1 = {};	// @button
 	// @endregion// @endlock
 
 	// eventHandlers// @lock
 
+	tabView1.onReady = function tabView1_onReady (event)// @startlock
+	{// @endlock
+		console.log("tab ready");
+		/*
+		if (data.userData.view == "detail") {
+			console.log("Detail View Selected. Red Alert. : " + $$(id + "_tabView1"));
+			//debugger;
+			$$(id + "_tabView1").selectTab(2);
+			//waf.widgets.bodyComponent_tabView1.selectTab(2);
+		} else {
+			console.log("Detail View Not Requested.");
+		}
+		*/
+	};// @lock
+
+	button2.click = function button2_click (event)// @startlock
+	{// @endlock
+		$$(id + "_tabView1").selectTab(1);
+	};// @lock
+
+	accountsDataGrid.onRowDblClick = function accountsDataGrid_onRowDblClick (event)// @startlock
+	{// @endlock
+		$$(id + "_tabView1").selectTab(2);
+	};// @lock
+
 	button1.click = function button1_click (event)// @startlock
 	{// @endlock
-		console.log("click save...");
 		quickAdd();
 	};// @lock
 
 	// @region eventManager// @startlock
+	WAF.addListener(this.id + "_tabView1", "onReady", tabView1.onReady, "WAF");
+	WAF.addListener(this.id + "_button2", "click", button2.click, "WAF");
+	WAF.addListener(this.id + "_accountsDataGrid", "onRowDblClick", accountsDataGrid.onRowDblClick, "WAF");
 	WAF.addListener(this.id + "_button1", "click", button1.click, "WAF");
 	// @endregion// @endlock
 
