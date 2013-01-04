@@ -1,1 +1,1 @@
-﻿<?xml version="1.0" encoding="UTF-8"?><configuration RIAServerType="default"><solutionExplorer><tabs currentIndex="4"><locator path="../CRM/WebFolder/index.waPage/index.html"/><locator path="../CRM/WebFolder/home.waComponent/home.html"/><locator path="../CRM/WebFolder/home.waComponent/home.js"/><locator path="../CRM/WebFolder/login.waComponent/login.js"/><locator path="../CRM/WebFolder/login.waComponent/login.html"/></tabs></solutionExplorer></configuration>
+﻿<?xml version="1.0" encoding="UTF-8"?><configuration RIAServerType="default"><solutionExplorer/></configuration>

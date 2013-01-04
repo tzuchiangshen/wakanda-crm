@@ -13,19 +13,20 @@ function constructor (id) {
 	// @endregion// @endlock
 
 	this.load = function (data) {// @lock
-		console.log("onLoad: " + WAF.directory.currentUser());
-		
 		//Move our signup section into place.
 		$("#" + homeContainerSignUp).css("top", "0px");
 		$("#" + homeContainerSignUp).css("left", "0px");		
 		
 		
 		if (WAF.directory.currentUser() === null) {
+			$$('menuBar1').hide();
 			$("#" + homeContainerSignUp).show(); //show
 			$("#" + homeContainerSplash).hide(); //hide
+			
 		} else {
+			$$('menuBar1').show();
 			$("#" + homeContainerSignUp).hide(); //hide
-			$("#" + homeContainerSplash).show(); //show
+			$("#" + homeContainerSplash).show(); //show	
 		}
 		
 	// @region namespaceDeclaration// @startlock

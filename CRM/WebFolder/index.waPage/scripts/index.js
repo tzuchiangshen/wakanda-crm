@@ -15,25 +15,42 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	{// @endlock
 		//Contacts
 		$$('bodyComponent').loadComponent({path: '/contacts.waComponent'});
+		$('#menuBar1 li div').removeClass('menuSelected');
+		//$('#menuBar1 li').removeClass('menuSelected2');
+		$('#menuItem4 div').addClass('menuSelected');
+		//waf.widgets.menuItem4.disable();
 	};// @lock
 
 	menuItem3.click = function menuItem3_click (event)// @startlock
 	{// @endlock
 		//Accounts
 		$$('bodyComponent').loadComponent({path: '/accounts.waComponent'});
+		$('#menuBar1 li div').removeClass('menuSelected');
+		//$('#menuBar1 li').removeClass('menuSelected2');
+		$('#menuItem3 div').addClass('menuSelected');
+		//$('#menuItem3').addClass('menuSelected2');
+		//waf.widgets.menuItem3.disable();
 	};// @lock
 
 	menuItem2.click = function menuItem2_click (event)// @startlock
 	{// @endlock
 		//Leads
 		$$('bodyComponent').loadComponent({path: '/leads.waComponent'});
+		$('#menuBar1 li div').removeClass('menuSelected');
+		//$('#menuBar1 li').removeClass('menuSelected2');
+		$('#menuItem2 div').addClass('menuSelected');
+		//waf.widgets.menuItem2.disable();
+
 	};// @lock
 
 	menuItem1.click = function menuItem1_click (event)// @startlock
 	{// @endlock
 		//Home
 		$$('bodyComponent').loadComponent({path: '/home.waComponent'});
-		
+		$('#menuBar1 li div').removeClass('menuSelected');
+		//$('#menuBar1 li').removeClass('menuSelected2');
+		$('#menuItem1 div').addClass('menuSelected');
+		//waf.widgets.menuItem1.disable();
 	};// @lock
 
 	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
