@@ -54,6 +54,20 @@ function constructor (id) {
 		$$(id + "_tabView1").selectTab(1);
 	};// @lock
 
+	dataGrid1.onRowClick = function dataGrid1_onRowClick (event)// @startlock
+	{// @endlock
+		//Add recent items.
+		var sessionCurrentUser = WAF.directory.currentUser();
+		var recentItem = ds.RecentItem.newEntity(); // create the entity
+		recentItem.dataClassName.setValue("contacts");
+		recentItem.entityKey.setValue(waf.sources.contact.ID);
+		recentItem.save({
+        	onSuccess:function(event) {
+        
+        	}
+        });
+	};// @lock
+
 	dataGrid1.onRowDblClick = function dataGrid1_onRowDblClick (event)// @startlock
 	{// @endlock
 		$$(id + "_tabView1").selectTab(2);
@@ -65,6 +79,7 @@ function constructor (id) {
 	};// @lock
 
 	// @region eventManager// @startlock
+	WAF.addListener(this.id + "_dataGrid1", "onRowClick", dataGrid1.onRowClick, "WAF");
 	WAF.addListener(this.id + "_button1", "click", button1.click, "WAF");
 	WAF.addListener(this.id + "_dataGrid1", "onRowDblClick", dataGrid1.onRowDblClick, "WAF");
 	WAF.addListener(this.id + "_quickAddSaveButton", "click", quickAddSaveButton.click, "WAF");

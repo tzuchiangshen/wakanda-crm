@@ -112,6 +112,20 @@ function constructor (id) {
 		$$(id + "_tabView1").selectTab(1);
 	};// @lock
 
+	accountsDataGrid.onRowClick = function accountsDataGrid_onRowClick (event)// @startlock
+	{// @endlock
+		//Add recent item.
+		var sessionCurrentUser = WAF.directory.currentUser();
+		var recentItem = ds.RecentItem.newEntity(); // create the entity
+		recentItem.dataClassName.setValue("accounts");
+		recentItem.entityKey.setValue(waf.sources.account.ID);
+		recentItem.save({
+        	onSuccess:function(event) {
+        
+        	}
+        });
+	};// @lock
+
 	accountsDataGrid.onRowDblClick = function accountsDataGrid_onRowDblClick (event)// @startlock
 	{// @endlock
 		$$(id + "_tabView1").selectTab(2);
@@ -123,6 +137,7 @@ function constructor (id) {
 	};// @lock
 
 	// @region eventManager// @startlock
+	WAF.addListener(this.id + "_accountsDataGrid", "onRowClick", accountsDataGrid.onRowClick, "WAF");
 	WAF.addListener(this.id + "_tabView1", "onReady", tabView1.onReady, "WAF");
 	WAF.addListener(this.id + "_button2", "click", button2.click, "WAF");
 	WAF.addListener(this.id + "_accountsDataGrid", "onRowDblClick", accountsDataGrid.onRowDblClick, "WAF");
