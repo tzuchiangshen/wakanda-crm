@@ -9,52 +9,42 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	var documentEvent = {};	// @document
 // @endregion// @endlock
 
+var sessionCurrentUser;
+
 // eventHandlers// @lock
 
 	menuItem4.click = function menuItem4_click (event)// @startlock
 	{// @endlock
 		//Contacts
 		$$('bodyComponent').loadComponent({path: '/contacts.waComponent'});
-		$('#menuBar1 li div').removeClass('menuSelected');
-		//$('#menuBar1 li').removeClass('menuSelected2');
-		$('#menuItem4 div').addClass('menuSelected');
-		//waf.widgets.menuItem4.disable();
+		crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem4');
 	};// @lock
 
 	menuItem3.click = function menuItem3_click (event)// @startlock
 	{// @endlock
 		//Accounts
 		$$('bodyComponent').loadComponent({path: '/accounts.waComponent'});
-		$('#menuBar1 li div').removeClass('menuSelected');
-		//$('#menuBar1 li').removeClass('menuSelected2');
-		$('#menuItem3 div').addClass('menuSelected');
-		//$('#menuItem3').addClass('menuSelected2');
-		//waf.widgets.menuItem3.disable();
+		crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem3');
 	};// @lock
 
 	menuItem2.click = function menuItem2_click (event)// @startlock
 	{// @endlock
 		//Leads
 		$$('bodyComponent').loadComponent({path: '/leads.waComponent'});
-		$('#menuBar1 li div').removeClass('menuSelected');
-		//$('#menuBar1 li').removeClass('menuSelected2');
-		$('#menuItem2 div').addClass('menuSelected');
-		//waf.widgets.menuItem2.disable();
-
+		crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem2');
 	};// @lock
 
 	menuItem1.click = function menuItem1_click (event)// @startlock
 	{// @endlock
 		//Home
 		$$('bodyComponent').loadComponent({path: '/home.waComponent'});
-		$('#menuBar1 li div').removeClass('menuSelected');
-		//$('#menuBar1 li').removeClass('menuSelected2');
-		$('#menuItem1 div').addClass('menuSelected');
-		//waf.widgets.menuItem1.disable();
+		crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem1');
 	};// @lock
 
 	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
 	{// @endlock
+		crmUtil.testMessage();
+		//console.log('document loaded');
 		
 	};// @lock
 

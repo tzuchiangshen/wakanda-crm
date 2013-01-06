@@ -9,7 +9,7 @@ function constructor (id) {
 			quickAddTitle = getHtmlId('quickAddTitle'),
 			quickAddCompany = getHtmlId('quickAddCompany'),
 			quickAddPhone = getHtmlId('quickAddPhone'),
-			recentItemsBodyContainer = getHtmlId('recentItemsBodyContainer'),
+			recentItemsBodyContainer = getHtmlId('recentItemsBodyContainerLeads'),
 			//leadDataSource = waf.sources[id + "_lead"]; 
 			leadDataSource = waf.sources.lead;
 			
@@ -45,96 +45,11 @@ function constructor (id) {
 	// @endregion// @endlock
 
 	this.load = function (data) {// @lock
+		//Have to do this here in case user reloads page.
+		sessionCurrentUser = waf.directory.currentUser(); // Set the current user
 		
-		//Update recent items.
-		/**/
-		var sessionCurrentUser = waf.directory.currentUser(), // Get the current user
-			myHTML,
-			theDataClass,
-			theEntityKey;
-		console.log(sessionCurrentUser.ID);
-		waf.ds.User.find("ID = " + sessionCurrentUser.ID, {
-			autoExpand: "recentItemCollection",
-			onSuccess: function(event) {
-				//console.log(event);
-				//console.log(event.entity.recentItemCollection.relEntityCollection);
-				var recentItemsCollection = event.entity.recentItemCollection.relEntityCollection;
-				if (recentItemsCollection.length > 0) {	
-					//myHTML = 'This many: ' + recentItemsCollection.length;
-					myHTML = '';
-					recentItemsCollection.forEach({
-						onSuccess: function(evRecentItem) {	
-							theDataClass = evRecentItem.entity.dataClassName.getValue();
-							theEntityKey = evRecentItem.entity.entityKey.getValue();
-							myHTML += '<p><a data-class="' + theDataClass + '"data-entity="' + theEntityKey + '" class="recentItem" href="#">' + theDataClass + ' : ' + theEntityKey + '</a></p>'; 
-						}			
-					});		
-					
-				} else {
-					myHTML = 'No recent Items.';
-				}
-				$('#' + recentItemsBodyContainer).html(myHTML);
-			}
-		});
-		
-		
-		/*
-		var currentUserEntity = waf.ds.User.find("ID = " + sessionCurrentUser.ID, {
-			onSuccess: function(event) {
-				var recentItemsCollection = event.entity.recentItemCollection.relEntityCollection;
-				if (recentItemsCollection.length > 0) {	
-					var myHTML = '';
-					recentItemsCollection.forEach({
-						onSuccess: function(evRecentItem) {	
-							var theDataClass = evRecentItem.entity.dataClassName.getValue();
-							myHTML += '<p class="title">' + theDataClass + '</p>'; 
-						}			
-					});		
-							
-				} else {
-					var myHTML = 'No recent Items.';
-					$('#' + recentItemsBodyContainer).html(myHTML);
-				} //if (recentItemsCollection.length > 0)
-				
-//				var myHTML = '';
-//				myHTML += '<p class="title">Red</p>'; 
-//				myHTML += '<p class="title">Blue</p>'; 
-//				myHTML += '<p class="title">Green</p>';
-//				$('#' + recentItemsBodyContainer).html(myHTML);
-			}
-		});
-		*/
-		
-		 //set event handler on recent item links
-		 //class: recentItem
-		 $('.recentItem').live('click', function(e) {
-		 	var $this = $(this),
-		 		theDataClass = $this.data('class'),
-		 		theEntityID = $this.data('entity');
-		 		//console.log(theEntityID);
-		 	//console.log($this.data('class') + " / " + $this.data('entity'));
-		 	
-		 	var theNewPath = '/' + theDataClass + '.waComponent';
-		 	//console.log(theNewPath);
-		 	$$('bodyComponent').loadComponent({path: theNewPath, userData: {view: "detail"}});
-		 	$('#menuBar1 li div').removeClass('menuSelected');
-		 	
-		 	if (theDataClass == "accounts") {
-		 		$('#menuItem3 div').addClass('menuSelected');
-				waf.sources.account.selectByKey($this.data('entity'));
-		 	} else {
-		 		$('#menuItem4 div').addClass('menuSelected');
-				waf.sources.contact.selectByKey($this.data('entity'));
-		 	}
-		 	
-		 	/*
-		 	$$('bodyComponent').loadComponent({path: '/accounts.waComponent', userData: {view: "detail"}});
-			$('#menuBar1 li div').removeClass('menuSelected');
-			$('#menuItem3 div').addClass('menuSelected');
-			waf.sources.account.selectByKey(120);
-			*/
-		 	
-		 });
+		//Load the recent items into our recent items container.
+		crmUtil.loadRecentItems(recentItemsBodyContainer);
 			
 		$("#" + quickAddFirstName + ", #" + quickAddLastName+ ", #" + quickAddTitle + ", #" + quickAddPhone + ", #" + quickAddCompany).live('keyup', function (e) {
 	   		if ( e.keyCode == 13 ) {
@@ -177,7 +92,7 @@ function constructor (id) {
 	leadsDataGrid.onRowClick = function leadsDataGrid_onRowClick (event)// @startlock
 	{// @endlock
 		//Add to recent items.
-		var sessionCurrentUser = WAF.directory.currentUser();
+		//var sessionCurrentUser = WAF.directory.currentUser();
 		//Load the User entity for current session.
 		/*
 		var theUser = waf.ds.User.find("ID = " + sessionCurrentUser.ID, {
@@ -188,6 +103,9 @@ function constructor (id) {
 		*/
 		
 		//Create a recent items entity.
+		//crmUtil.newRecentItem();
+		
+		
 		var recentItem = ds.RecentItem.newEntity(); // create the entity
 		recentItem.dataClassName.setValue("leads");
 		recentItem.entityKey.setValue(waf.sources.lead.ID);

@@ -30,6 +30,8 @@ function constructor (id) {
 	function signIn() {
 		if (waf.directory.loginByPassword($("#" + loginNameField).val(), $("#" + loginPasswordField).val())) {
 			//Our user signed in successfully.
+			sessionCurrentUser = waf.directory.currentUser(); // Set the current user
+			
 			$$(statusMsg).setValue("Signed in as: " + waf.directory.currentUser().fullName);
 			$$(loginNameField).setValue("");
 			$$(loginPasswordField).setValue("");
@@ -43,6 +45,7 @@ function constructor (id) {
 		}
 		
 		waf.widgets.bodyComponent.loadComponent("home.waComponent");
+		crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem1');
 	}
 	
 	
@@ -84,6 +87,7 @@ function constructor (id) {
 	logoutButton.click = function logoutButton_click (event)// @startlock
 	{// @endlock
 		if (WAF.directory.logout()) {
+			sessionCurrentUser = waf.directory.currentUser(); // Set the current user to default.
 			waf.widgets.bodyComponent.loadComponent("home.waComponent");
 			toggleLogin("logout");
 		}
