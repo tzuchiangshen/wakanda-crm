@@ -7,7 +7,7 @@ function constructor (id) {
 	var quickAddFirstName = getHtmlId('quickAddFirstName'),
 		quickAddLastName = getHtmlId('quickAddLastName'),
 		quickAddTitle = getHtmlId('quickAddTitle'),
-		//contactDataSource = waf.sources[id + "_contact"]; 
+		recentItemsBodyContainer = getHtmlId('recentItemsBodyContainerContacts'),
 		contactDataSource = waf.sources.contact;
 			
 	function quickAdd() {
@@ -36,6 +36,11 @@ function constructor (id) {
 	// @endregion// @endlock
 
 	this.load = function (data) {// @lock
+		//Have to do this here in case user reloads page.
+		sessionCurrentUser = waf.directory.currentUser(); // Set the current user
+		//Load the recent items into our recent items container.
+		crmUtil.loadRecentItems(recentItemsBodyContainer);
+		//Add event handler for return key to the quick add contacts.
 		$("#" + quickAddFirstName + ", #" + quickAddLastName+ ", #" + quickAddTitle).live('keyup', function (e) {
 	   		if ( e.keyCode == 13 ) {
 	   			quickAdd();

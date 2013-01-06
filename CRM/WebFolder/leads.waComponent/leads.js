@@ -47,10 +47,9 @@ function constructor (id) {
 	this.load = function (data) {// @lock
 		//Have to do this here in case user reloads page.
 		sessionCurrentUser = waf.directory.currentUser(); // Set the current user
-		
 		//Load the recent items into our recent items container.
 		crmUtil.loadRecentItems(recentItemsBodyContainer);
-			
+		//Add event handler to our quickAdd lead.	
 		$("#" + quickAddFirstName + ", #" + quickAddLastName+ ", #" + quickAddTitle + ", #" + quickAddPhone + ", #" + quickAddCompany).live('keyup', function (e) {
 	   		if ( e.keyCode == 13 ) {
 	   			quickAdd();
