@@ -62,11 +62,18 @@ function constructor (id) {
 		*/
 			
 	// @region namespaceDeclaration// @startlock
+	var button1 = {};	// @button
 	var leadsCancelButton = {};	// @button
 	var leadsDataGrid = {};	// @dataGrid
 	// @endregion// @endlock
 
 	// eventHandlers// @lock
+
+	button1.click = function button1_click (event)// @startlock
+	{// @endlock
+		// Add your code here
+		$$(id + "_tabView2").selectTab(1);
+	};// @lock
 
 	leadsCancelButton.click = function leadsCancelButton_click (event)// @startlock
 	{// @endlock
@@ -95,6 +102,7 @@ function constructor (id) {
 	};// @lock
 
 	// @region eventManager// @startlock
+	WAF.addListener(this.id + "_button1", "click", button1.click, "WAF");
 	WAF.addListener(this.id + "_leadsCancelButton", "click", leadsCancelButton.click, "WAF");
 	WAF.addListener(this.id + "_leadsDataGrid", "onRowDblClick", leadsDataGrid.onRowDblClick, "WAF");
 	// @endregion// @endlock
