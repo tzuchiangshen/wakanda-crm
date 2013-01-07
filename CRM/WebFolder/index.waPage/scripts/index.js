@@ -31,6 +31,7 @@ var sessionCurrentUser;
 	{// @endlock
 		//Leads
 		$$('bodyComponent').loadComponent({path: '/leads.waComponent'});
+		$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent'});
 		crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem2');
 	};// @lock
 
