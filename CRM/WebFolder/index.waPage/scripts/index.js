@@ -17,6 +17,7 @@ var sessionCurrentUser;
 	{// @endlock
 		//Contacts
 		$$('bodyComponent').loadComponent({path: '/contacts.waComponent'});
+		$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "contacts"}});
 		crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem4');
 	};// @lock
 
@@ -24,6 +25,7 @@ var sessionCurrentUser;
 	{// @endlock
 		//Accounts
 		$$('bodyComponent').loadComponent({path: '/accounts.waComponent'});
+		$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "accounts"}});
 		crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem3');
 	};// @lock
 
@@ -31,7 +33,7 @@ var sessionCurrentUser;
 	{// @endlock
 		//Leads
 		$$('bodyComponent').loadComponent({path: '/leads.waComponent'});
-		$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent'});
+		$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "leads"}});
 		crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem2');
 	};// @lock
 
@@ -39,6 +41,7 @@ var sessionCurrentUser;
 	{// @endlock
 		//Home
 		$$('bodyComponent').loadComponent({path: '/home.waComponent'});
+		$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "home"}});
 		crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem1');
 	};// @lock
 
