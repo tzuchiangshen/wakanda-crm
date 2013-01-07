@@ -31,6 +31,7 @@ var crmUtil = (function() {
 		//console.log('crmUtilObj.loadRecentItems called');
 		var myHTML,
 			theDataClass,
+			theTitle,
 			recentItemsCollection,
 			theEntityKey;
 		
@@ -44,7 +45,8 @@ var crmUtil = (function() {
 						onSuccess: function(evRecentItem) {	
 							theDataClass = evRecentItem.entity.dataClassName.getValue();
 							theEntityKey = evRecentItem.entity.entityKey.getValue();
-							myHTML += '<p><a data-class="' + theDataClass + '"data-entity="' + theEntityKey + '" class="recentItem" href="#">' + theDataClass + ' : ' + theEntityKey + '</a></p>'; 
+							theTitle = evRecentItem.entity.title.getValue();
+							myHTML += '<p><a data-class="' + theDataClass + '"data-entity="' + theEntityKey + '" class="recentItem" href="#">' + theTitle + '</a></p>'; 
 						}			
 					});		
 					
@@ -52,6 +54,11 @@ var crmUtil = (function() {
 					myHTML = 'No recent Items.';
 				}
 				
+				$('#' + targetContainer).html(myHTML);
+			},
+			
+			onError: function(error) {
+				myHTML = '';
 				$('#' + targetContainer).html(myHTML);
 			}
 		});

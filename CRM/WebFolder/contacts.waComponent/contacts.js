@@ -39,9 +39,9 @@ function constructor (id) {
 
 	this.load = function (data) {// @lock
 		//Have to do this here in case user reloads page.
-		sessionCurrentUser = waf.directory.currentUser(); // Set the current user
+		//sessionCurrentUser = waf.directory.currentUser(); // Set the current user
 		//Load the recent items into our recent items container.
-		crmUtil.loadRecentItems(recentItemsBodyContainer);
+		//crmUtil.loadRecentItems(recentItemsBodyContainer);
 		
 		/*
 		//Add event handler for return key to the quick add contacts.
@@ -63,27 +63,28 @@ function constructor (id) {
 		$$(id + "_tabView1").selectTab(1);
 	};// @lock
 
-	dataGrid1.onRowClick = function dataGrid1_onRowClick (event)// @startlock
+	dataGrid1.onRowDblClick = function dataGrid1_onRowDblClick (event)// @startlock
 	{// @endlock
 		//Add recent items.
 		var sessionCurrentUser = WAF.directory.currentUser();
 		var recentItem = ds.RecentItem.newEntity(); // create the entity
 		recentItem.dataClassName.setValue("contacts");
+		recentItem.title.setValue("Contact: " + waf.sources.contact.firstName + " " + waf.sources.contact.lastName); //change to fullName ROBBINS
 		recentItem.entityKey.setValue(waf.sources.contact.ID);
 		recentItem.save({
         	onSuccess:function(event) {
         
         	}
         });
-	};// @lock
-
-	dataGrid1.onRowDblClick = function dataGrid1_onRowDblClick (event)// @startlock
-	{// @endlock
+        
+         //reload the most recent items into our recent items container.
+		sessionCurrentUser = waf.directory.currentUser(); // Set the current user to default.
+		crmUtil.loadRecentItems('recentItemsBodyContainer');
+		
 		$$(id + "_tabView1").selectTab(2);
 	};// @lock
 
 	// @region eventManager// @startlock
-	WAF.addListener(this.id + "_dataGrid1", "onRowClick", dataGrid1.onRowClick, "WAF");
 	WAF.addListener(this.id + "_button1", "click", button1.click, "WAF");
 	WAF.addListener(this.id + "_dataGrid1", "onRowDblClick", dataGrid1.onRowDblClick, "WAF");
 	// @endregion// @endlock

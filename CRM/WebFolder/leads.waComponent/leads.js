@@ -48,9 +48,9 @@ function constructor (id) {
 
 	this.load = function (data) {// @lock
 		//Have to do this here in case user reloads page.
-		sessionCurrentUser = waf.directory.currentUser(); // Set the current user
+		//sessionCurrentUser = waf.directory.currentUser(); // Set the current user
 		//Load the recent items into our recent items container.
-		crmUtil.loadRecentItems(recentItemsBodyContainer);
+		//crmUtil.loadRecentItems(recentItemsBodyContainer);
 		
 		/*
 		//Add event handler to our quickAdd lead.	
@@ -74,32 +74,27 @@ function constructor (id) {
 		$$(id + "_tabView2").selectTab(1);
 	};// @lock
 
-	leadsDataGrid.onRowClick = function leadsDataGrid_onRowClick (event)// @startlock
+	leadsDataGrid.onRowDblClick = function leadsDataGrid_onRowDblClick (event)// @startlock
 	{// @endlock
 		//Add to recent items.
 		var sessionCurrentUser = WAF.directory.currentUser();
 		var recentItem = ds.RecentItem.newEntity(); // create the entity
 		recentItem.dataClassName.setValue("leads");
+		recentItem.title.setValue("Lead: " + waf.sources.lead.firstName + " " + waf.sources.lead.lastName); //change to fullName ROBBINS
 		recentItem.entityKey.setValue(waf.sources.lead.ID);
 		recentItem.save({
         	onSuccess:function(event) {
         
         	}
         });
-
-		
-		
-		
-	};// @lock
-
-	leadsDataGrid.onRowDblClick = function leadsDataGrid_onRowDblClick (event)// @startlock
-	{// @endlock
-		// Add your code here
+        //reload the most recent items into our recent items container.
+		sessionCurrentUser = waf.directory.currentUser(); // Set the current user to default.
+		crmUtil.loadRecentItems('recentItemsBodyContainer');
+        
 		$$(id + "_tabView2").selectTab(2);
 	};// @lock
 
 	// @region eventManager// @startlock
-	WAF.addListener(this.id + "_leadsDataGrid", "onRowClick", leadsDataGrid.onRowClick, "WAF");
 	WAF.addListener(this.id + "_leadsCancelButton", "click", leadsCancelButton.click, "WAF");
 	WAF.addListener(this.id + "_leadsDataGrid", "onRowDblClick", leadsDataGrid.onRowDblClick, "WAF");
 	// @endregion// @endlock

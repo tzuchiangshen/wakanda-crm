@@ -13,6 +13,7 @@ function constructor (id) {
 	// @endregion// @endlock
 
 	this.load = function (data) {// @lock
+		/*
 		//Move our signup section into place.
 		$("#" + homeContainerSignUp).css("top", "0px");
 		$("#" + homeContainerSignUp).css("left", "0px");		
@@ -28,6 +29,8 @@ function constructor (id) {
 			$("#" + homeContainerSignUp).hide(); //hide
 			$("#" + homeContainerSplash).show(); //show	
 		}
+		*/
+		
 		
 	// @region namespaceDeclaration// @startlock
 	// @endregion// @endlock

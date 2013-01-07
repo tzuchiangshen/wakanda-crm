@@ -43,7 +43,21 @@ var sessionCurrentUser;
 
 	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
 	{// @endlock
-		crmUtil.testMessage();
+		//Move our signup section into place.
+		$("#signUpContainer").css("top", "0px");
+		$("#signUpContainer").css("left", "0px");
+		
+		if (WAF.directory.currentUser() === null) {
+			$$("signUpContainer").show(); //show
+			$$("bodyContainer").hide(); //hide
+			
+		} else {
+			$$("signUpContainer").hide(); //hide
+			$$("bodyContainer").show(); //show	
+		}
+		//bodyContainer
+				
+		//crmUtil.testMessage();
 		//console.log('document loaded');
 		
 	};// @lock

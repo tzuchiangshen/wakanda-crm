@@ -50,7 +50,7 @@ function constructor (id) {
 		//Have to do this here in case user reloads page.
 		sessionCurrentUser = waf.directory.currentUser(); // Set the current user
 		//Load the recent items into our recent items container.
-		crmUtil.loadRecentItems(recentItemsBodyContainer);
+		//crmUtil.loadRecentItems(recentItemsBodyContainer);
 		/*
 		//Add event handler for return key to the quick add contacts.
 		$("#" + quickAddAccountName + ", #" + quickAddPhone + ", #" + quickAddWebsite + ", #" + quickAddCity + ", #" + quickAddCountry).live('keyup', function (e) {
@@ -72,27 +72,27 @@ function constructor (id) {
 		$$(id + "_tabView1").selectTab(1);
 	};// @lock
 
-	accountsDataGrid.onRowClick = function accountsDataGrid_onRowClick (event)// @startlock
+	accountsDataGrid.onRowDblClick = function accountsDataGrid_onRowDblClick (event)// @startlock
 	{// @endlock
 		//Add recent item.
 		var sessionCurrentUser = WAF.directory.currentUser();
 		var recentItem = ds.RecentItem.newEntity(); // create the entity
 		recentItem.dataClassName.setValue("accounts");
+		recentItem.title.setValue("Account: " + waf.sources.account.name); 
 		recentItem.entityKey.setValue(waf.sources.account.ID);
 		recentItem.save({
         	onSuccess:function(event) {
         
         	}
         });
-	};// @lock
-
-	accountsDataGrid.onRowDblClick = function accountsDataGrid_onRowDblClick (event)// @startlock
-	{// @endlock
+        //reload the most recent items into our recent items container.
+		sessionCurrentUser = waf.directory.currentUser(); // Set the current user to default.
+		crmUtil.loadRecentItems('recentItemsBodyContainer');
+        
 		$$(id + "_tabView1").selectTab(2);
 	};// @lock
 
 	// @region eventManager// @startlock
-	WAF.addListener(this.id + "_accountsDataGrid", "onRowClick", accountsDataGrid.onRowClick, "WAF");
 	WAF.addListener(this.id + "_button2", "click", button2.click, "WAF");
 	WAF.addListener(this.id + "_accountsDataGrid", "onRowDblClick", accountsDataGrid.onRowDblClick, "WAF");
 	// @endregion// @endlock

@@ -44,8 +44,13 @@ function constructor (id) {
 			$$(statusMsg).setValue("");
 		}
 		
+		$$("signUpContainer").hide(); //hide
+		$$("bodyContainer").show(); //show	
 		waf.widgets.bodyComponent.loadComponent("home.waComponent");
 		crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem1');
+		//Load the recent items into our recent items container.
+		sessionCurrentUser = waf.directory.currentUser(); // Set the current user to default.
+		crmUtil.loadRecentItems('recentItemsBodyContainer');
 	}
 	
 	
@@ -87,8 +92,13 @@ function constructor (id) {
 	logoutButton.click = function logoutButton_click (event)// @startlock
 	{// @endlock
 		if (WAF.directory.logout()) {
-			sessionCurrentUser = waf.directory.currentUser(); // Set the current user to default.
-			waf.widgets.bodyComponent.loadComponent("home.waComponent");
+			$$("signUpContainer").show(); //show
+			$$("bodyContainer").hide(); //hide
+			//sessionCurrentUser = waf.directory.currentUser(); // Set the current user to default.
+			//Load the recent items into our recent items container.
+			//crmUtil.loadRecentItems('recentItemsBodyContainer');
+			$('#recentItemsBodyContainer').html('');
+			//waf.widgets.bodyComponent.loadComponent("home.waComponent");
 			toggleLogin("logout");
 		}
 	};// @lock
