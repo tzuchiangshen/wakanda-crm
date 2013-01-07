@@ -4,10 +4,11 @@
 // Add the code that needs to be shared between components here
 
 function constructor (id) {
+	/*
 	var quickAddFirstName = getHtmlId('quickAddFirstName'),
 		quickAddLastName = getHtmlId('quickAddLastName'),
 		quickAddTitle = getHtmlId('quickAddTitle'),
-		recentItemsBodyContainer = getHtmlId('recentItemsBodyContainerContacts'),
+		recentItemsBodyContainer = getHtmlId('recentItemsBodyContacts'),
 		contactDataSource = waf.sources.contact;
 			
 	function quickAdd() {
@@ -30,6 +31,7 @@ function constructor (id) {
 			$('#' + quickAddFirstName).focus();
         }});
 	}
+	*/
 	// @region beginComponentDeclaration// @startlock
 	var $comp = this;
 	this.name = 'contacts';
@@ -40,16 +42,18 @@ function constructor (id) {
 		sessionCurrentUser = waf.directory.currentUser(); // Set the current user
 		//Load the recent items into our recent items container.
 		crmUtil.loadRecentItems(recentItemsBodyContainer);
+		
+		/*
 		//Add event handler for return key to the quick add contacts.
 		$("#" + quickAddFirstName + ", #" + quickAddLastName+ ", #" + quickAddTitle).live('keyup', function (e) {
 	   		if ( e.keyCode == 13 ) {
 	   			quickAdd();
 	    	}
 		});
+		*/
 	// @region namespaceDeclaration// @startlock
 	var button1 = {};	// @button
 	var dataGrid1 = {};	// @dataGrid
-	var quickAddSaveButton = {};	// @button
 	// @endregion// @endlock
 
 	// eventHandlers// @lock
@@ -78,16 +82,10 @@ function constructor (id) {
 		$$(id + "_tabView1").selectTab(2);
 	};// @lock
 
-	quickAddSaveButton.click = function quickAddSaveButton_click (event)// @startlock
-	{// @endlock
-		quickAdd();
-	};// @lock
-
 	// @region eventManager// @startlock
 	WAF.addListener(this.id + "_dataGrid1", "onRowClick", dataGrid1.onRowClick, "WAF");
 	WAF.addListener(this.id + "_button1", "click", button1.click, "WAF");
 	WAF.addListener(this.id + "_dataGrid1", "onRowDblClick", dataGrid1.onRowDblClick, "WAF");
-	WAF.addListener(this.id + "_quickAddSaveButton", "click", quickAddSaveButton.click, "WAF");
 	// @endregion// @endlock
 
 	};// @lock

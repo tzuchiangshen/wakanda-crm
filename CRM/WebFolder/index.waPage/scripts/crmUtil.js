@@ -11,7 +11,7 @@ var crmUtil = (function() {
 	
 	//Keep current menu item on main menubar hightlighted.
 	crmUtilObj.menuBarKeepHighlight = function(menuBarName, menuItem) {
-		console.log('crmUtilObj.menuBarKeepHighlight called');
+		//console.log('crmUtilObj.menuBarKeepHighlight called');
 		
 		var menuBarSiblingsRef = '#' + menuBarName + ' li div',
 			menuItemRef = '#' + menuItem + ' div';
@@ -28,7 +28,7 @@ var crmUtil = (function() {
 	
 	//Load Recent Items for current user into a container.
 	crmUtilObj.loadRecentItems = function(targetContainer) {
-		console.log('crmUtilObj.loadRecentItems called');
+		//console.log('crmUtilObj.loadRecentItems called');
 		var myHTML,
 			theDataClass,
 			recentItemsCollection,
@@ -62,25 +62,29 @@ var crmUtil = (function() {
 		 	var $this = $(this),
 		 		theDataClass = $this.data('class'),
 		 		theEntityID = $this.data('entity');
-		 	
+		 	//debugger;
 		 	var theNewPath = '/' + theDataClass + '.waComponent';
-		 	$$('bodyComponent').loadComponent({path: theNewPath, userData: {view: "detail"}});
+		 	//$$('bodyComponent').loadComponent({path: theNewPath, userData: {view: "detail"}});
+		 	$$('bodyComponent').loadComponent({path: theNewPath});
 		 	
 		 	switch(theDataClass) {
 				case "accounts":
 				crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem3');
+				waf.sources.account.selectByKey($this.data('entity'));
 				break;
 					
 				case "contacts":
 				crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem4');
+				waf.sources.contact.selectByKey($this.data('entity'));
 				break;
 					
 				case "leads":
 				crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem2');
+				waf.sources.lead.selectByKey($this.data('entity'));
 				break;
 			}
 
-			waf.sources.account.selectByKey($this.data('entity'));
+			
 			
 		 	/*
 		 	$('#menuBar1 li div').removeClass('menuSelected');

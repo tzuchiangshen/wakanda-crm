@@ -4,6 +4,7 @@
 // Add the code that needs to be shared between components here
 
 function constructor (id) {
+	/*
 	var quickAddFirstName = getHtmlId('quickAddFirstName'),
 			quickAddLastName = getHtmlId('quickAddLastName'),
 			quickAddTitle = getHtmlId('quickAddTitle'),
@@ -36,8 +37,9 @@ function constructor (id) {
 			
 			$('#' + quickAddFirstName).focus();
         }});
+        
 	}
-	
+	*/
 	
 	// @region beginComponentDeclaration// @startlock
 	var $comp = this;
@@ -49,38 +51,22 @@ function constructor (id) {
 		sessionCurrentUser = waf.directory.currentUser(); // Set the current user
 		//Load the recent items into our recent items container.
 		crmUtil.loadRecentItems(recentItemsBodyContainer);
+		
+		/*
 		//Add event handler to our quickAdd lead.	
 		$("#" + quickAddFirstName + ", #" + quickAddLastName+ ", #" + quickAddTitle + ", #" + quickAddPhone + ", #" + quickAddCompany).live('keyup', function (e) {
 	   		if ( e.keyCode == 13 ) {
 	   			quickAdd();
 	    	}
 		});
+		*/
 			
 	// @region namespaceDeclaration// @startlock
-	var testLink = {};	// @richText
-	var quickAddSaveButton = {};	// @button
 	var leadsCancelButton = {};	// @button
 	var leadsDataGrid = {};	// @dataGrid
 	// @endregion// @endlock
 
 	// eventHandlers// @lock
-
-	testLink.click = function testLink_click (event)// @startlock
-	{// @endlock
-		$$('bodyComponent').loadComponent({path: '/accounts.waComponent', userData: {view: "detail"}});
-		$('#menuBar1 li div').removeClass('menuSelected');
-		$('#menuItem3 div').addClass('menuSelected');
-		waf.sources.account.selectByKey(120);
-		//$$(id + "_tabView1").selectTab(1);
-	};// @lock
-
-	quickAddSaveButton.click = function quickAddSaveButton_click (event)// @startlock
-	{// @endlock
-		// Add your code here
-		quickAdd();
-		
-		
-	};// @lock
 
 	leadsCancelButton.click = function leadsCancelButton_click (event)// @startlock
 	{// @endlock
@@ -91,20 +77,7 @@ function constructor (id) {
 	leadsDataGrid.onRowClick = function leadsDataGrid_onRowClick (event)// @startlock
 	{// @endlock
 		//Add to recent items.
-		//var sessionCurrentUser = WAF.directory.currentUser();
-		//Load the User entity for current session.
-		/*
-		var theUser = waf.ds.User.find("ID = " + sessionCurrentUser.ID, {
-			onSuccess: function(event) {
-				
-			}
-		}); 
-		*/
-		
-		//Create a recent items entity.
-		//crmUtil.newRecentItem();
-		
-		
+		var sessionCurrentUser = WAF.directory.currentUser();
 		var recentItem = ds.RecentItem.newEntity(); // create the entity
 		recentItem.dataClassName.setValue("leads");
 		recentItem.entityKey.setValue(waf.sources.lead.ID);
@@ -127,8 +100,6 @@ function constructor (id) {
 
 	// @region eventManager// @startlock
 	WAF.addListener(this.id + "_leadsDataGrid", "onRowClick", leadsDataGrid.onRowClick, "WAF");
-	WAF.addListener(this.id + "_testLink", "click", testLink.click, "WAF");
-	WAF.addListener(this.id + "_quickAddSaveButton", "click", quickAddSaveButton.click, "WAF");
 	WAF.addListener(this.id + "_leadsCancelButton", "click", leadsCancelButton.click, "WAF");
 	WAF.addListener(this.id + "_leadsDataGrid", "onRowDblClick", leadsDataGrid.onRowDblClick, "WAF");
 	// @endregion// @endlock
