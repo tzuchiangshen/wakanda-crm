@@ -84,19 +84,8 @@ function constructor (id) {
 	leadsDataGrid.onRowDblClick = function leadsDataGrid_onRowDblClick (event)// @startlock
 	{// @endlock
 		//Add to recent items.
-		var sessionCurrentUser = WAF.directory.currentUser();
-		var recentItem = ds.RecentItem.newEntity(); // create the entity
-		recentItem.dataClassName.setValue("leads");
-		recentItem.title.setValue("Lead: " + waf.sources.lead.firstName + " " + waf.sources.lead.lastName); //change to fullName ROBBINS
-		recentItem.entityKey.setValue(waf.sources.lead.ID);
-		recentItem.save({
-        	onSuccess:function(event) {
-        
-        	}
-        });
-        //reload the most recent items into our recent items container.
-		sessionCurrentUser = waf.directory.currentUser(); // Set the current user to default.
-		crmUtil.loadRecentItems('recentItemsBodyContainer');
+		crmUtil.newRecentItem("leads", "Lead: ", waf.sources.lead.firstName + " " + waf.sources.lead.lastName, waf.sources.lead.ID, 'recentItemsBodyContainer');
+		//crmUtil.loadRecentItems('recentItemsBodyContainer');
         
 		$$(id + "_tabView2").selectTab(2);
 	};// @lock

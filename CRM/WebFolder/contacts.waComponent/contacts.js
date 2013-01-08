@@ -72,20 +72,8 @@ function constructor (id) {
 	dataGrid1.onRowDblClick = function dataGrid1_onRowDblClick (event)// @startlock
 	{// @endlock
 		//Add recent items.
-		var sessionCurrentUser = WAF.directory.currentUser();
-		var recentItem = ds.RecentItem.newEntity(); // create the entity
-		recentItem.dataClassName.setValue("contacts");
-		recentItem.title.setValue("Contact: " + waf.sources.contact.firstName + " " + waf.sources.contact.lastName); //change to fullName ROBBINS
-		recentItem.entityKey.setValue(waf.sources.contact.ID);
-		recentItem.save({
-        	onSuccess:function(event) {
-        
-        	}
-        });
-        
-         //reload the most recent items into our recent items container.
-		sessionCurrentUser = waf.directory.currentUser(); // Set the current user to default.
-		crmUtil.loadRecentItems('recentItemsBodyContainer');
+		crmUtil.newRecentItem("contacts", "Contact: ", waf.sources.contact.firstName + " " + waf.sources.contact.lastName, waf.sources.contact.ID, 'recentItemsBodyContainer');
+		//crmUtil.loadRecentItems('recentItemsBodyContainer');
 		
 		$$(id + "_tabView1").selectTab(2);
 	};// @lock

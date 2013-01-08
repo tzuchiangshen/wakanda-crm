@@ -21,15 +21,26 @@ var crmUtil = (function() {
 		//waf.widgets.menuItem2.disable();
 	};
 	
-	//Create new Recent Item.
-	crmUtilObj.newRecentItem = function() {
-		
+	//Create New Recent Item
+	crmUtilObj.newRecentItem = function(dataClassName, titleKey, titleValue, entityKey, targetContainer) {
+		var recentItem = ds.RecentItem.newEntity(); // create the entity
+		recentItem.dataClassName.setValue(dataClassName);
+		recentItem.title.setValue(titleKey + titleValue); 
+		recentItem.entityKey.setValue(entityKey);
+		recentItem.sortOrder.setValue(0);
+		//sortOrder
+		recentItem.save({
+        	onSuccess:function(event) {
+        		ds.RecentItem.reorderItems();
+        		crmUtilObj.loadRecentItems(targetContainer);
+        	}
+        });
 	};
 	
 	//Load Recent Items for current user into a container.
 	crmUtilObj.loadRecentItems = function(targetContainer) {
-		//console.log('crmUtilObj.loadRecentItems called');
 		var myHTML,
+			sessionCurrentUser = WAF.directory.currentUser(),
 			theDataClass,
 			theTitle,
 			recentItemsCollection,
@@ -39,22 +50,56 @@ var crmUtil = (function() {
 			autoExpand: "recentItemCollection",
 			onSuccess: function(event) {
 				recentItemsCollection = event.entity.recentItemCollection.relEntityCollection;
+				
+
+				//Laurent if I don't put this check here orderBy of my collection returns all the Recent Items
+				// instead of just the ones for this user.
+				/**/
 				if (recentItemsCollection.length > 0) {	
-					myHTML = '';
+					recentItemsCollection.orderBy("sortOrder", {
+						onSuccess: function(event) {
+							var recentItemsCollection = event.entityCollection;
+							if (recentItemsCollection.length > 0) {	
+								myHTML = '<ul class="recentItemsList">';
+								recentItemsCollection.forEach({
+									onSuccess: function(evRecentItem) {	
+										theDataClass = evRecentItem.entity.dataClassName.getValue();
+										theEntityKey = evRecentItem.entity.entityKey.getValue();
+										theTitle = evRecentItem.entity.title.getValue() + " : " + evRecentItem.entity.sortOrder.getValue();
+										myHTML += '<li><a data-class="' + theDataClass + '"data-entity="' + theEntityKey + '" class="recentItem" href="#">' + theTitle + '</a></li>'; 
+									}			
+								});	
+								myHTML += '</ul>';	
+								
+							} else {
+								myHTML = 'No recent Items.';
+							}
+							
+							$('#' + targetContainer).html(myHTML);
+						}
+					});
+				}
+				
+				
+				/*
+				if (recentItemsCollection.length > 0) {	
+					myHTML = '<ul class="recentItemsList">';
 					recentItemsCollection.forEach({
 						onSuccess: function(evRecentItem) {	
 							theDataClass = evRecentItem.entity.dataClassName.getValue();
 							theEntityKey = evRecentItem.entity.entityKey.getValue();
-							theTitle = evRecentItem.entity.title.getValue();
-							myHTML += '<p><a data-class="' + theDataClass + '"data-entity="' + theEntityKey + '" class="recentItem" href="#">' + theTitle + '</a></p>'; 
+							theTitle = evRecentItem.entity.title.getValue() + " : " + evRecentItem.entity.sortOrder.getValue();
+							myHTML += '<li><a data-class="' + theDataClass + '"data-entity="' + theEntityKey + '" class="recentItem" href="#">' + theTitle + '</a></li>'; 
 						}			
-					});		
+					});	
+					myHTML += '</ul>';	
 					
 				} else {
 					myHTML = 'No recent Items.';
 				}
 				
 				$('#' + targetContainer).html(myHTML);
+				*/
 			},
 			
 			onError: function(error) {

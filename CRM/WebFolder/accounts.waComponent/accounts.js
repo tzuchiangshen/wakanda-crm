@@ -48,7 +48,7 @@ function constructor (id) {
 
 	this.load = function (data) {// @lock
 		//Have to do this here in case user reloads page.
-		sessionCurrentUser = waf.directory.currentUser(); // Set the current user
+		//sessionCurrentUser = waf.directory.currentUser(); // Set the current user
 		//Load the recent items into our recent items container.
 		//crmUtil.loadRecentItems(recentItemsBodyContainer);
 		/*
@@ -61,11 +61,17 @@ function constructor (id) {
 		*/
 		
 	// @region namespaceDeclaration// @startlock
+	var button1 = {};	// @button
 	var button2 = {};	// @button
 	var accountsDataGrid = {};	// @dataGrid
 	// @endregion// @endlock
 
 	// eventHandlers// @lock
+
+	button1.click = function button1_click (event)// @startlock
+	{// @endlock
+		$$(id + "_tabView1").selectTab(1);
+	};// @lock
 
 	button2.click = function button2_click (event)// @startlock
 	{// @endlock
@@ -75,24 +81,14 @@ function constructor (id) {
 	accountsDataGrid.onRowDblClick = function accountsDataGrid_onRowDblClick (event)// @startlock
 	{// @endlock
 		//Add recent item.
-		var sessionCurrentUser = WAF.directory.currentUser();
-		var recentItem = ds.RecentItem.newEntity(); // create the entity
-		recentItem.dataClassName.setValue("accounts");
-		recentItem.title.setValue("Account: " + waf.sources.account.name); 
-		recentItem.entityKey.setValue(waf.sources.account.ID);
-		recentItem.save({
-        	onSuccess:function(event) {
-        
-        	}
-        });
-        //reload the most recent items into our recent items container.
-		sessionCurrentUser = waf.directory.currentUser(); // Set the current user to default.
-		crmUtil.loadRecentItems('recentItemsBodyContainer');
+		crmUtil.newRecentItem("accounts", "Account: ", waf.sources.account.name, waf.sources.account.ID, 'recentItemsBodyContainer');
+		//crmUtil.loadRecentItems('recentItemsBodyContainer');
         
 		$$(id + "_tabView1").selectTab(2);
 	};// @lock
 
 	// @region eventManager// @startlock
+	WAF.addListener(this.id + "_button1", "click", button1.click, "WAF");
 	WAF.addListener(this.id + "_button2", "click", button2.click, "WAF");
 	WAF.addListener(this.id + "_accountsDataGrid", "onRowDblClick", accountsDataGrid.onRowDblClick, "WAF");
 	// @endregion// @endlock
