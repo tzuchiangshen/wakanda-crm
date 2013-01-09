@@ -5,6 +5,9 @@
 
 function constructor (id) {
 	var quickAddMainContainer = getHtmlId('quickAddMainContainer'),
+		quickAddTitle = getHtmlId('quickAddTitle'),
+		//Home
+		homeMessagesBody = getHtmlId('homeMessagesBody'),
 		//Leads
 		quickAddBodyContainerLeads = getHtmlId('quickAddBodyContainerLeads'),
 		quickAddFirstNameLeads = getHtmlId('quickAddFirstNameLeads'),
@@ -102,12 +105,14 @@ function constructor (id) {
 		switch(data.userData.menuItem)
 		{
 			case "leads":
+			$$(quickAddTitle).setValue("Quick Add");
 			$$(quickAddBodyContainerContacts).hide();
 			$$(quickAddBodyContainerAccounts).hide();
 			$$(quickAddMainContainer).show();
 			break;
 			
 			case "accounts":
+			$$(quickAddTitle).setValue("Quick Add");
 			$("#" + quickAddBodyContainerAccounts).css("top", "30px");
 			$("#" + quickAddBodyContainerAccounts).css("left", "0px");
 			$$(quickAddBodyContainerLeads).hide();
@@ -116,6 +121,7 @@ function constructor (id) {
 			break;
 			
 			case "contacts":
+			$$(quickAddTitle).setValue("Quick Add");
 			$("#" + quickAddBodyContainerContacts).css("top", "30px");
 			$("#" + quickAddBodyContainerContacts).css("left", "0px");
 			$$(quickAddBodyContainerLeads).hide();
@@ -123,7 +129,21 @@ function constructor (id) {
 			$$(quickAddBodyContainerContacts).show();
 			break;
 			
+			case "home":
+			$$(quickAddTitle).setValue("Messages");
+			$("#" + homeMessagesBody).css("top", "30px");
+			$("#" + homeMessagesBody).css("left", "0px");
+			$$(quickAddBodyContainerLeads).hide();
+			$$(quickAddBodyContainerAccounts).hide();
+			$$(quickAddBodyContainerContacts).hide();
+			$$(homeMessagesBody).show();
+			//quickAddTitle
+			//homeMessagesBody
+			
+			break;
+			
 			default:
+			$$(quickAddTitle).setValue("Quick Add");
 			$$(quickAddMainContainer).hide();
 		}
 		
@@ -135,12 +155,18 @@ function constructor (id) {
 	    	}
 		});
 	// @region namespaceDeclaration// @startlock
+	var button1 = {};	// @button
 	var quickAddContactsSaveButton = {};	// @button
 	var quickAddAccountsSaveButton = {};	// @button
 	var quickAddLeadsSaveButton = {};	// @button
 	// @endregion// @endlock
 
 	// eventHandlers// @lock
+
+	button1.click = function button1_click (event)// @startlock
+	{// @endlock
+		quickAddContacts();
+	};// @lock
 
 	quickAddContactsSaveButton.click = function quickAddContactsSaveButton_click (event)// @startlock
 	{// @endlock
@@ -158,6 +184,7 @@ function constructor (id) {
 	};// @lock
 
 	// @region eventManager// @startlock
+	WAF.addListener(this.id + "_button1", "click", button1.click, "WAF");
 	WAF.addListener(this.id + "_quickAddContactsSaveButton", "click", quickAddContactsSaveButton.click, "WAF");
 	WAF.addListener(this.id + "_quickAddAccountsSaveButton", "click", quickAddAccountsSaveButton.click, "WAF");
 	WAF.addListener(this.id + "_quickAddLeadsSaveButton", "click", quickAddLeadsSaveButton.click, "WAF");
