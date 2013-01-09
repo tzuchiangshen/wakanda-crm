@@ -48,7 +48,7 @@ var sessionCurrentUser;
 	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
 	{// @endlock
 		//Move our signup section into place.
-		$("#signUpContainer").css("top", "0px");
+		$("#signUpContainer").css("top", "96px");
 		$("#signUpContainer").css("left", "0px");
 		
 		if (WAF.directory.currentUser() === null) {

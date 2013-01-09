@@ -4,8 +4,8 @@
 // Add the code that needs to be shared between components here
 
 function constructor (id) {
-	var homeContainerSignUp = getHtmlId('homeContainerSignUp'),
-		homeContainerSplash = getHtmlId('homeContainerSplash');
+//	var homeContainerSignUp = getHtmlId('homeContainerSignUp'),
+//		homeContainerSplash = getHtmlId('homeContainerSplash');
 		
 	// @region beginComponentDeclaration// @startlock
 	var $comp = this;
