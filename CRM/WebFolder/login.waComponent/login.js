@@ -44,6 +44,8 @@ function constructor (id) {
 			$$(statusMsg).setValue("");
 		}
 		
+		$('#headerContainerBackground').css('background', '#f5f5f5');
+		$('#headerContainerBackground').css('border-bottom', 'solid 1px lightgray');
 		$$("signUpContainer").hide(); //hide
 		$$("bodyContainer").show(); //show	
 		waf.widgets.bodyComponent.loadComponent("home.waComponent");
@@ -93,6 +95,7 @@ function constructor (id) {
 	logoutButton.click = function logoutButton_click (event)// @startlock
 	{// @endlock
 		if (WAF.directory.logout()) {
+			$('#headerContainerBackground').css('background', 'white');
 			$$("signUpContainer").show(); //show
 			$$("bodyContainer").hide(); //hide
 			//sessionCurrentUser = waf.directory.currentUser(); // Set the current user to default.
