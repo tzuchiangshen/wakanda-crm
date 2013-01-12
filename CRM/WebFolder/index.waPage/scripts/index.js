@@ -17,7 +17,24 @@ var sessionCurrentUser;
 	signUpButton.click = function signUpButton_click (event)// @startlock
 	{// @endlock
 		//Sign Up
+		//*** Best Pratice ***
+		// Use a local datasource object and bind it to the sign up input fields.
+		// This will make it easy to change your interface without having to make a change to 
+		// the signUp() function.
+		
 		crmUtil.signUp(waf.sources.signUpObj);
+		
+		//*** Anti-pattern ***
+		/*
+		var mySignUpObj = {
+			name: $$('inputUsername').getValue(),
+			email: $$('inputEmailAddress').getValue(),
+			password: $$('iputPassword').getValue(),
+			verifyPassword: $$('inputVerifyPassword').getValue()
+		};
+		
+		crmUtil.signUp(mySignUpObj);
+		*/
 	};// @lock
 
 	menuItem4.click = function menuItem4_click (event)// @startlock

@@ -11,7 +11,40 @@ var crmUtil = (function() {
 	
 	//Sign Up New User
 	crmUtilObj.signUp = function(signUpObj) {
-		//console.log(signUpObj);
+		//Laurent: Can't pass signUpObj as paramater to addUser().
+		// I Get this error: "Uncaught TypeError: Converting circular structure to JSON waf-optimize:2285"
+		var signUpData = {
+			name: waf.sources.signUpObj.name,
+			email: waf.sources.signUpObj.email,
+			password: waf.sources.signUpObj.password,
+			verifyPassword: waf.sources.signUpObj.verifyPassword	
+		};
+		
+		waf.ds.User.addUser({
+			onSuccess: function(event) {
+				
+				$$("messageText").setValue(event.result.message);
+				
+				/*
+				$("#errorDiv1").html(event.result.message);
+				if (WAF.directory.currentUser() !== null) {
+					$$("signInContainer").hide();
+					$$("signOutContainer").show();
+					$$("tabView1").selectTab(2);
+					WAF.source.queryStatusArray.select(0);
+					WAF.sources.ticket.query("status = :1", "open");
+					$$("richText6").setValue("Signed in as : " + WAF.directory.currentUser().fullName);
+					
+					signUpObject.login = "";
+					signUpObject.password = "";
+					signUpObject.fullName = "";
+					signUpObject.repeat = "";
+					signUpObject.email = "";
+					WAF.sources.signUpObject.autoDispatch();
+				}
+				*/
+			}
+		}, signUpData);	//end - waf.ds.User.addUser
 	};
 	
 	//Keep current menu item on main menubar hightlighted.
