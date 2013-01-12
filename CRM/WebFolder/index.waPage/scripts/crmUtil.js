@@ -9,6 +9,11 @@ var crmUtil = (function() {
 	
 	crmUtilObj.testMessage = function() {console.log("Wakanda CRM Util Module is Active.");};
 	
+	//Sign Up New User
+	crmUtilObj.signUp = function(signUpObj) {
+		//console.log(signUpObj);
+	};
+	
 	//Keep current menu item on main menubar hightlighted.
 	crmUtilObj.menuBarKeepHighlight = function(menuBarName, menuItem) {
 		var menuBarSiblingsRef = '#' + menuBarName + ' li div',

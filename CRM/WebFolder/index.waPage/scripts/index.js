@@ -2,6 +2,7 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var signUpButton = {};	// @button
 	var menuItem4 = {};	// @menuItem
 	var menuItem3 = {};	// @menuItem
 	var menuItem2 = {};	// @menuItem
@@ -12,6 +13,12 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 var sessionCurrentUser;
 
 // eventHandlers// @lock
+
+	signUpButton.click = function signUpButton_click (event)// @startlock
+	{// @endlock
+		//Sign Up
+		crmUtil.signUp(waf.sources.signUpObj);
+	};// @lock
 
 	menuItem4.click = function menuItem4_click (event)// @startlock
 	{// @endlock
@@ -67,6 +74,7 @@ var sessionCurrentUser;
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("signUpButton", "click", signUpButton.click, "WAF");
 	WAF.addListener("menuItem4", "click", menuItem4.click, "WAF");
 	WAF.addListener("menuItem3", "click", menuItem3.click, "WAF");
 	WAF.addListener("menuItem2", "click", menuItem2.click, "WAF");
