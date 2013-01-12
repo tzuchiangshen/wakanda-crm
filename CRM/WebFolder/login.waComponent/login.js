@@ -39,21 +39,23 @@ function constructor (id) {
 			$$(loginNameField).focus();
 			toggleLogin("login");
 			
+			$('#headerContainerBackground').css('background', '#f5f5f5');
+			$('#headerContainerBackground').css('border-bottom', 'solid 1px lightgray');
+			$$("signUpContainer").hide(); //hide
+			$$("bodyContainer").show(); //show	
+			waf.widgets.bodyComponent.loadComponent({path: '/leads.waComponent'}); //"home.waComponent"
+			$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "leads"}}); //{menuItem: "home"}
+			crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem2');
+			//Load the recent items into our recent items container.
+			sessionCurrentUser = waf.directory.currentUser(); // Set the current user to default.
+			crmUtil.loadRecentItems('recentItemsBodyContainer');
+			
 		} else {
 			$$(errorMsg).setValue("Invalid login.");
 			$$(statusMsg).setValue("");
 		}
 		
-		$('#headerContainerBackground').css('background', '#f5f5f5');
-		$('#headerContainerBackground').css('border-bottom', 'solid 1px lightgray');
-		$$("signUpContainer").hide(); //hide
-		$$("bodyContainer").show(); //show	
-		waf.widgets.bodyComponent.loadComponent("home.waComponent");
-		$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "home"}});
-		crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem1');
-		//Load the recent items into our recent items container.
-		sessionCurrentUser = waf.directory.currentUser(); // Set the current user to default.
-		crmUtil.loadRecentItems('recentItemsBodyContainer');
+		
 	}
 	
 	
