@@ -24,6 +24,7 @@ var sessionCurrentUser;
 		crmUtil.signUp(waf.sources.signUpObj);
 		
 		//*** Anti-pattern ***
+		//Don't assign the value directly from the input fields.
 		/*
 		var mySignUpObj = {
 			name: $$('inputUsername').getValue(),
