@@ -22,27 +22,21 @@ var crmUtil = (function() {
 		
 		waf.ds.User.addUser({
 			onSuccess: function(event) {
+				$$("signUpMessage").setValue(event.result.errorMessage);
 				
-				$$("messageText").setValue(event.result.message);
-				
-				/*
-				$("#errorDiv1").html(event.result.message);
+				/**/
 				if (WAF.directory.currentUser() !== null) {
-					$$("signInContainer").hide();
-					$$("signOutContainer").show();
-					$$("tabView1").selectTab(2);
-					WAF.source.queryStatusArray.select(0);
-					WAF.sources.ticket.query("status = :1", "open");
-					$$("richText6").setValue("Signed in as : " + WAF.directory.currentUser().fullName);
+					//$$("signInContainer").hide();
+					//$$("signOutContainer").show();
+					//$$("richText6").setValue("Signed in as : " + WAF.directory.currentUser().fullName);
 					
-					signUpObject.login = "";
-					signUpObject.password = "";
-					signUpObject.fullName = "";
-					signUpObject.repeat = "";
-					signUpObject.email = "";
-					WAF.sources.signUpObject.autoDispatch();
+					signUpObj.name = "";
+					signUpObj.email = "";
+					signUpObj.password = "";
+					signUpObj.verifyPassword = "";
+					waf.sources.signUpObj.autoDispatch();
 				}
-				*/
+				
 			}
 		}, signUpData);	//end - waf.ds.User.addUser
 	};
