@@ -4,6 +4,7 @@
 // Add the code that needs to be shared between components here
 
 function constructor (id) {
+	var contactsReportsComponent = getHtmlId('contactsReportsComponent');
 	/*
 	var quickAddFirstName = getHtmlId('quickAddFirstName'),
 		quickAddLastName = getHtmlId('quickAddLastName'),
@@ -38,6 +39,7 @@ function constructor (id) {
 	// @endregion// @endlock
 
 	this.load = function (data) {// @lock
+		$$(contactsReportsComponent).loadComponent({path: '/reports.waComponent', userData: {menuItem: "contacts"}});
 		//Have to do this here in case user reloads page.
 		//sessionCurrentUser = waf.directory.currentUser(); // Set the current user
 		//Load the recent items into our recent items container.
