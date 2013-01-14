@@ -14,7 +14,39 @@ function constructor (id) {
 	// @endregion// @endlock
 
 	this.load = function (data) {// @lock
-		/**/
+		switch(waf.widgets.menuBar1.crmGetSelectedMenuItem())
+		{
+			case 1:
+			$("#" + exportURLLeads).css("top", "25px");
+			$("#" + exportURLLeads).css("left", "25px");
+			$$(exportURLContacts).hide(); //hide
+			$$(exportURLAccounts).hide(); //hide
+			$$(exportURLLeads).show(); //show
+			break;
+			
+			case 2:
+			$("#" + exportURLAccounts).css("top", "25px");
+			$("#" + exportURLAccounts).css("left", "25px");
+			$$(exportURLContacts).hide(); //hide
+			$$(exportURLLeads).hide(); //hide
+			$$(exportURLAccounts).show(); //show
+			break;
+			
+			case 3:
+			$("#" + exportURLContacts).css("top", "25px");
+			$("#" + exportURLContacts).css("left", "25px");
+			$$(exportURLAccounts).hide(); //hide
+			$$(exportURLLeads).hide(); //hide
+			$$(exportURLContacts).show(); //show
+			break;
+			
+			default:
+			$$(exportURLLeads).hide(); //hide
+			$$(exportURLContacts).hide(); //hide
+			$$(exportURLAccounts).hide(); //hide
+		}
+		//Laurent - userData is not consistent. Sometimes null.
+		/*
 		switch(data.userData.menuItem)
 		{
 			case "leads":
@@ -46,7 +78,7 @@ function constructor (id) {
 			$$(exportURLContacts).hide(); //hide
 			$$(exportURLAccounts).hide(); //hide
 		}
-		
+		*/
 	// @region namespaceDeclaration// @startlock
 	// @endregion// @endlock
 

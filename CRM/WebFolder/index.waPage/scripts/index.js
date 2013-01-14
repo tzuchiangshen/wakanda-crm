@@ -72,6 +72,11 @@ var sessionCurrentUser;
 
 	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
 	{// @endlock
+		waf.widgets.menuBar1.crmGetSelectedMenuItem = function() {
+			//This function will allow me to determine which menuItem of menubar1 is highlighted.
+			return this.$domNode.children('li').index(this.$domNode.children('.crm-menuSelected2'));
+		};
+		
 		//Move our signup section into place.
 		$("#signUpContainer").css("top", "80px");
 		$("#signUpContainer").css("left", "0px");

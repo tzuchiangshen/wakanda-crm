@@ -43,9 +43,9 @@ function constructor (id) {
 			$('#headerContainerBackground').css('border-bottom', 'solid 1px lightgray');
 			$$("signUpContainer").hide(); //hide
 			$$("bodyContainer").show(); //show	
-			waf.widgets.bodyComponent.loadComponent({path: '/leads.waComponent'}); //"home.waComponent"
-			$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "leads"}}); //{menuItem: "home"}
-			crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem2');
+			waf.widgets.bodyComponent.loadComponent({path: '/home.waComponent'}); 
+			$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "home"}}); 
+			crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem1');
 			//Load the recent items into our recent items container.
 			sessionCurrentUser = waf.directory.currentUser(); // Set the current user to default.
 			crmUtil.loadRecentItems('recentItemsBodyContainer');

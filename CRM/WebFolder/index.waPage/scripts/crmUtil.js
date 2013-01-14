@@ -41,13 +41,18 @@ var crmUtil = (function() {
 		}, signUpData);	//end - waf.ds.User.addUser
 	};
 	
+	
 	//Keep current menu item on main menubar hightlighted.
 	crmUtilObj.menuBarKeepHighlight = function(menuBarName, menuItem) {
 		var menuBarSiblingsRef = '#' + menuBarName + ' li div',
-			menuItemRef = '#' + menuItem + ' div';
+			menuItemRef = '#' + menuItem + ' div',
+			menuItemContainerRef = '#' + menuItem,
+			menuBarContainerSiblingsRef = '#' + menuBarName + ' li';
 			
-		$(menuBarSiblingsRef).removeClass('menuSelected'); //unhighlight all other menuitems.
-		$(menuItemRef).addClass('menuSelected'); //highlight the selected menuitem.
+		$(menuBarSiblingsRef).removeClass('crm-menuSelected'); //unhighlight all other menuitems.
+		$(menuBarContainerSiblingsRef).removeClass('crm-menuSelected2'); 
+		$(menuItemRef).addClass('crm-menuSelected'); //highlight the selected menuitem.
+		$(menuItemContainerRef).addClass('crm-menuSelected2'); //mark the selected menuitem container.
 	};
 	
 	//Create New Recent Item
