@@ -41,23 +41,40 @@ function constructor (id) {
 			case 2:
 			$("#" + exportURLAccounts).css("top", "25px");
 			$("#" + exportURLAccounts).css("left", "25px");
+			$("#" + exportURLAccountsAntiPattern).css("top", "40px");
+			$("#" + exportURLAccountsAntiPattern).css("left", "25px");
+			
 			$$(exportURLContacts).hide(); //hide
+			$$(exportURLContactsAntiPattern).hide(); //hide
 			$$(exportURLLeads).hide(); //hide
+			$$(exportURLLeadsAntiPattern).hide(); //hide
+			
 			$$(exportURLAccounts).show(); //show
+			$$(exportURLAccountsAntiPattern).show(); //show
 			break;
 			
 			case 3:
 			$("#" + exportURLContacts).css("top", "25px");
 			$("#" + exportURLContacts).css("left", "25px");
+			$("#" + exportURLContactsAntiPattern).css("top", "40px");
+			$("#" + exportURLContactsAntiPattern).css("left", "25px");
+			
 			$$(exportURLAccounts).hide(); //hide
+			$$(exportURLAccountsAntiPattern).hide(); //hide
 			$$(exportURLLeads).hide(); //hide
+			$$(exportURLLeadsAntiPattern).hide(); //hide
+			
 			$$(exportURLContacts).show(); //show
+			$$(exportURLContactsAntiPattern).show(); //show
 			break;
 			
 			default:
 			$$(exportURLLeads).hide(); //hide
 			$$(exportURLContacts).hide(); //hide
 			$$(exportURLAccounts).hide(); //hide
+			$$(exportURLLeadsAntiPattern).hide(); //hide
+			$$(exportURLContactsAntiPattern).hide(); //hide
+			$$(exportURLAccountsAntiPattern).hide(); //hide
 		}
 		//Laurent - userData is not consistent. Sometimes null.
 		/*
