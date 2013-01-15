@@ -8,15 +8,21 @@ function constructor (id) {
 		quickAddTitle = getHtmlId('quickAddTitle'),
 		//Home
 		homeMessagesBody = getHtmlId('homeMessagesBody'),
+		
 		//Leads
 		quickAddBodyContainerLeads = getHtmlId('quickAddBodyContainerLeads'),
 		quickAddFirstNameLeads = getHtmlId('quickAddFirstNameLeads'),
 		quickAddLastNameLeads = getHtmlId('quickAddLastNameLeads'),
+		quickAddCompanyLeads = getHtmlId('quickAddCompanyLeads'),
+		quickAddPhoneLeads = getHtmlId('quickAddPhoneLeads'),
+		
 		//Accounts
 		quickAddBodyContainerAccounts = getHtmlId('quickAddBodyContainerAccounts'),
 		quickAddAccountName = getHtmlId('quickAddAccountName'),
 		quickAddAccountPhone = getHtmlId('quickAddAccountPhone'),
 		quickAddAccountWebsite = getHtmlId('quickAddAccountWebsite'),
+		quickAddAccountCity = getHtmlId('quickAddAccountCity'),
+		
 		//Contacts
 		quickAddBodyContainerContacts = getHtmlId('quickAddBodyContainerContacts'),
 		quickAddFirstNameContacts = getHtmlId('quickAddFirstNameContacts'),
@@ -33,19 +39,16 @@ function constructor (id) {
             // the new entity has been initialized by the server
             leadDataSource.firstName = $$(quickAddFirstNameLeads).getValue();
 			leadDataSource.lastName = $$(quickAddLastNameLeads).getValue();
-			//leadDataSource.title = $$(quickAddTitle).getValue();
-			//leadDataSource.phone = $$(quickAddPhone).getValue();
-			//leadDataSource.company = $$(quickAddCompany).getValue();
+			leadDataSource.phone = $$(quickAddPhoneLeads).getValue();
+			leadDataSource.company = $$(quickAddCompanyLeads).getValue();
 			leadDataSource.save({
 				onSuccess:function(event) {
 					leadDataSource.autoDispatch();
 					//reset form
 					$$(quickAddFirstNameLeads).setValue();
 					$$(quickAddLastNameLeads).setValue();
-					//$$(quickAddTitle).setValue();
-					//$$(quickAddPhone).setValue();
-					//$$(quickAddCompany).setValue();
-					
+					$$(quickAddPhoneLeads).setValue();
+					$$(quickAddCompanyLeads).setValue();
 					$('#' + quickAddFirstNameLeads).focus();
 				}
 			});
@@ -58,7 +61,7 @@ function constructor (id) {
             // the new entity has been initialized by the server
             contactDataSource.firstName = $$(quickAddFirstNameContacts).getValue();
 			contactDataSource.lastName = $$(quickAddLastNameContacts).getValue();
-			//contactDataSource.title = $$(quickAddTitle).getValue();
+			
 			contactDataSource.save({
 				onSuccess:function(event){
 					contactDataSource.autoDispatch();
@@ -82,7 +85,7 @@ function constructor (id) {
 		        accountDataSource.name = $$(quickAddAccountName).getValue();
 				accountDataSource.phone = $$(quickAddAccountPhone).getValue();
 				accountDataSource.website = $$(quickAddAccountWebsite).getValue();
-				//accountDataSource.billingCity = $$(quickAddCity).getValue();
+				accountDataSource.billingCity = $$(quickAddAccountCity).getValue();
 				//accountDataSource.billingCountry = $$(quickAddCountry).getValue();
 				//Save the entity.
 				accountDataSource.save({
@@ -92,9 +95,7 @@ function constructor (id) {
 						$$(quickAddAccountName).setValue();
 						$$(quickAddAccountPhone).setValue();
 						$$(quickAddAccountWebsite).setValue();
-						//$$(quickAddCity).setValue();
-						//$$(quickAddCountry).setValue();
-						
+						$$(quickAddAccountCity).setValue();
 						$('#' + quickAddAccountName).focus();
 					}
 				});
@@ -118,6 +119,7 @@ function constructor (id) {
 			$$(quickAddBodyContainerContacts).hide();
 			$$(quickAddBodyContainerAccounts).hide();
 			$$(quickAddMainContainer).show();
+			$('#' + quickAddFirstNameLeads).focus();
 			break;
 			
 			case "accounts":
@@ -127,6 +129,7 @@ function constructor (id) {
 			$$(quickAddBodyContainerLeads).hide();
 			$$(quickAddBodyContainerContacts).hide();
 			$$(quickAddBodyContainerAccounts).show();
+			$('#' + quickAddAccountName).focus();
 			break;
 			
 			case "contacts":
@@ -156,26 +159,26 @@ function constructor (id) {
 			$$(quickAddMainContainer).hide();
 		}
 		
-		//Add event handler for return key to the quick add contacts.
-		$("#" + quickAddAccountName + ", #" + quickAddAccountPhone + ", #" + quickAddAccountWebsite).live('keyup', function (e) {
-			// + ", #" + quickAddCity + ", #" + quickAddCountry
+		//Add event handler for return key to the quick add accounts.
+		$("#" + quickAddAccountName + ", #" + quickAddAccountPhone + ", #" + quickAddAccountWebsite + ", #" + quickAddAccountCity).live('keyup', function (e) {
 	   		if ( e.keyCode == 13 ){
 	   			quickAddAccounts();
 	    	}
 		});
+		
+		//Add event handler for return key to the quick add leads.
+		$("#" + quickAddFirstNameLeads + ", #" + quickAddLastNameLeads + ", #" + quickAddCompanyLeads + ", #" + quickAddPhoneLeads).live('keyup', function (e) {
+	   		if ( e.keyCode == 13 ){
+	   			quickAddLeads();
+	    	}
+		});
 	// @region namespaceDeclaration// @startlock
-	var button1 = {};	// @button
 	var quickAddContactsSaveButton = {};	// @button
 	var quickAddAccountsSaveButton = {};	// @button
 	var quickAddLeadsSaveButton = {};	// @button
 	// @endregion// @endlock
 
 	// eventHandlers// @lock
-
-	button1.click = function button1_click (event)// @startlock
-	{// @endlock
-		quickAddContacts();
-	};// @lock
 
 	quickAddContactsSaveButton.click = function quickAddContactsSaveButton_click (event)// @startlock
 	{// @endlock
@@ -193,7 +196,6 @@ function constructor (id) {
 	};// @lock
 
 	// @region eventManager// @startlock
-	WAF.addListener(this.id + "_button1", "click", button1.click, "WAF");
 	WAF.addListener(this.id + "_quickAddContactsSaveButton", "click", quickAddContactsSaveButton.click, "WAF");
 	WAF.addListener(this.id + "_quickAddAccountsSaveButton", "click", quickAddAccountsSaveButton.click, "WAF");
 	WAF.addListener(this.id + "_quickAddLeadsSaveButton", "click", quickAddLeadsSaveButton.click, "WAF");
