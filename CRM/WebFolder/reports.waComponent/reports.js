@@ -5,23 +5,37 @@
 
 function constructor (id) {
 	var exportURLLeads = getHtmlId('exportURLLeads'),
+		exportURLLeadsAntiPattern = getHtmlId('exportURLLeadsAntiPattern'),
 		exportURLContacts = getHtmlId('exportURLContacts'),
-		exportURLAccounts = getHtmlId('exportURLAccounts');
-
+		exportURLContactsAntiPattern = getHtmlId('exportURLContactsAntiPattern'),
+		exportURLAccounts = getHtmlId('exportURLAccounts'),
+		exportURLAccountsAntiPattern = getHtmlId('exportURLAccountsAntiPattern');
+		
 	// @region beginComponentDeclaration// @startlock
 	var $comp = this;
 	this.name = 'reports';
 	// @endregion// @endlock
 
 	this.load = function (data) {// @lock
+		//Laurent - http://forum.wakanda.org/showthread.php?3899-WebComponents
+		//console.log('load reports component');
+		
+		
 		switch(waf.widgets.menuBar1.crmGetSelectedMenuItem())
 		{
 			case 1:
 			$("#" + exportURLLeads).css("top", "25px");
 			$("#" + exportURLLeads).css("left", "25px");
+			$("#" + exportURLLeadsAntiPattern).css("top", "40px");
+			$("#" + exportURLLeadsAntiPattern).css("left", "25px");
+			
 			$$(exportURLContacts).hide(); //hide
 			$$(exportURLAccounts).hide(); //hide
+			$$(exportURLContactsAntiPattern).hide(); //hide
+			$$(exportURLAccountsAntiPattern).hide(); //hide
+			
 			$$(exportURLLeads).show(); //show
+			$$(exportURLLeadsAntiPattern).show(); //show
 			break;
 			
 			case 2:

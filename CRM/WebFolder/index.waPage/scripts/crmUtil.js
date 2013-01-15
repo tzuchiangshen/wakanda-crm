@@ -7,7 +7,7 @@ var crmUtil = (function() {
 	
 	var crmUtilObj = {}; //This is the object we will return to create our module.
 	
-	crmUtilObj.testMessage = function() {console.log("Wakanda CRM Util Module is Active.");};
+	crmUtilObj.testMessage = function() {console.log("Wakanda CRM Utility Module is Active.");};
 	
 	//Sign Up New User
 	crmUtilObj.signUp = function(signUpObj) {
