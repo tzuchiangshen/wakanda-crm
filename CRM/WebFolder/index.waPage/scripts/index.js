@@ -72,8 +72,14 @@ var sessionCurrentUser;
 
 	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
 	{// @endlock
+		//Let's make sure we load the owner with the Lead, Contact, and Account.
+		sources.lead.declareDependencies("owner");
+		sources.contact.declareDependencies("owner");
+		sources.account.declareDependencies("owner");
+		
 		waf.widgets.menuBar1.crmGetSelectedMenuItem = function() {
 			//This function will allow me to determine which menuItem of menubar1 is highlighted.
+			// Even if I navigate to another section without the user clicking on the menubar.
 			return this.$domNode.children('li').index(this.$domNode.children('.crm-menuSelected2'));
 		};
 		
@@ -88,12 +94,7 @@ var sessionCurrentUser;
 		} else {
 			$$("signUpContainer").hide(); //hide
 			$$("bodyContainer").show(); //show	
-		}
-		//bodyContainer
-				
-		//crmUtil.testMessage();
-		//console.log('document loaded');
-		
+		} //end - if (WAF.directory.currentUser() === null)
 	};// @lock
 
 // @region eventManager// @startlock

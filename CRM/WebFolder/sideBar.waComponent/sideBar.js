@@ -24,7 +24,7 @@ function constructor (id) {
 		
 		//Datasources
 		accountDataSource = waf.sources.account,
-		contactDataSource = waf.sources.contact
+		contactDataSource = waf.sources.contact,
 		leadDataSource = waf.sources.lead;
 		
 	function quickAddLeads() {
@@ -36,16 +36,19 @@ function constructor (id) {
 			//leadDataSource.title = $$(quickAddTitle).getValue();
 			//leadDataSource.phone = $$(quickAddPhone).getValue();
 			//leadDataSource.company = $$(quickAddCompany).getValue();
-			leadDataSource.save();
-			leadDataSource.autoDispatch();
-			//reset form
-			$$(quickAddFirstNameLeads).setValue();
-			$$(quickAddLastNameLeads).setValue();
-			//$$(quickAddTitle).setValue();
-			//$$(quickAddPhone).setValue();
-			//$$(quickAddCompany).setValue();
-			
-			$('#' + quickAddFirstNameLeads).focus();
+			leadDataSource.save({
+				onSuccess:function(event) {
+					leadDataSource.autoDispatch();
+					//reset form
+					$$(quickAddFirstNameLeads).setValue();
+					$$(quickAddLastNameLeads).setValue();
+					//$$(quickAddTitle).setValue();
+					//$$(quickAddPhone).setValue();
+					//$$(quickAddCompany).setValue();
+					
+					$('#' + quickAddFirstNameLeads).focus();
+				}
+			});
         }});
 	}
 	
@@ -56,15 +59,18 @@ function constructor (id) {
             contactDataSource.firstName = $$(quickAddFirstNameContacts).getValue();
 			contactDataSource.lastName = $$(quickAddLastNameContacts).getValue();
 			//contactDataSource.title = $$(quickAddTitle).getValue();
-			contactDataSource.save();
-			contactDataSource.autoDispatch();
-			//reset form
-			$$('quickAddFirstNameContacts').setValue();
-			$$('quickAddLastNameContacts').setValue();
-			//$$('quickAddTitle').setValue();
-			
-			$('#' + quickAddFirstName).focus();
-        }});
+			contactDataSource.save({
+				onSuccess:function(event){
+					contactDataSource.autoDispatch();
+					//reset form
+					$$('quickAddFirstNameContacts').setValue();
+					$$('quickAddLastNameContacts').setValue();
+					//$$('quickAddTitle').setValue();
+					
+					$('#' + quickAddFirstName).focus();
+				}
+			}); //end - save()
+        }}); //end - serverRefresh()
 	}
 	
 	function quickAddAccounts() {
@@ -73,26 +79,29 @@ function constructor (id) {
 			onSuccess:function(event){
 		        // the new entity has been initialized by the server
 		        //Now update the new entity with the form values.
-		        debugger;
 		        accountDataSource.name = $$(quickAddAccountName).getValue();
 				accountDataSource.phone = $$(quickAddAccountPhone).getValue();
 				accountDataSource.website = $$(quickAddAccountWebsite).getValue();
 				//accountDataSource.billingCity = $$(quickAddCity).getValue();
 				//accountDataSource.billingCountry = $$(quickAddCountry).getValue();
 				//Save the entity.
-				accountDataSource.save();
-				accountDataSource.autoDispatch();
-				//reset form
-				$$(quickAddAccountName).setValue();
-				$$(quickAddPhone).setValue();
-				$$(quickAddWebsite).setValue();
-				//$$(quickAddCity).setValue();
-				//$$(quickAddCountry).setValue();
+				accountDataSource.save({
+					onSuccess:function(event){
+						accountDataSource.autoDispatch();
+						//reset form
+						$$(quickAddAccountName).setValue();
+						$$(quickAddAccountPhone).setValue();
+						$$(quickAddAccountWebsite).setValue();
+						//$$(quickAddCity).setValue();
+						//$$(quickAddCountry).setValue();
+						
+						$('#' + quickAddAccountName).focus();
+					}
+				});
 				
-				$('#' + quickAddAccountName).focus();
 			}
    		});
-	}
+	} //end - function quickAddAccounts()
 	
 	
 	// @region beginComponentDeclaration// @startlock

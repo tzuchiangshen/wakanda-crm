@@ -39,6 +39,8 @@ function constructor (id) {
 			$$(loginNameField).focus();
 			toggleLogin("login");
 			
+			waf.sources.account.all();
+			
 			$('#headerContainerBackground').css('background', '#f5f5f5');
 			$('#headerContainerBackground').css('border-bottom', 'solid 1px lightgray');
 			$$("signUpContainer").hide(); //hide
