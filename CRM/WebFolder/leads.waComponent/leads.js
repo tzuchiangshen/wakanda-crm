@@ -87,9 +87,7 @@ function constructor (id) {
 	leadsDataGrid.onRowDblClick = function leadsDataGrid_onRowDblClick (event)// @startlock
 	{// @endlock
 		//Add to recent items.
-		crmUtil.newRecentItem("leads", "Lead: ", waf.sources.lead.firstName + " " + waf.sources.lead.lastName, waf.sources.lead.ID, 'recentItemsBodyContainer');
-		//crmUtil.loadRecentItems('recentItemsBodyContainer');
-        
+		crmUtil.newRecentItem("leads", "Lead: ", waf.sources.lead.firstName + " " + waf.sources.lead.lastName, waf.sources.lead.ID, 'recentItemsBodyContainer');        
 		$$(id + "_tabView2").selectTab(2);
 	};// @lock
 

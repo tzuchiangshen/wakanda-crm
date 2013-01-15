@@ -84,8 +84,6 @@ function constructor (id) {
 	{// @endlock
 		//Add recent item.
 		crmUtil.newRecentItem("accounts", "Account: ", waf.sources.account.name, waf.sources.account.ID, 'recentItemsBodyContainer');
-		//crmUtil.loadRecentItems('recentItemsBodyContainer');
-        
 		$$(id + "_tabView1").selectTab(2);
 	};// @lock
 

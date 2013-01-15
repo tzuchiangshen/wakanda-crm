@@ -27,6 +27,8 @@ function constructor (id) {
 		quickAddBodyContainerContacts = getHtmlId('quickAddBodyContainerContacts'),
 		quickAddFirstNameContacts = getHtmlId('quickAddFirstNameContacts'),
 		quickAddLastNameContacts = getHtmlId('quickAddLastNameContacts'),
+		quickAddPhoneContacts = getHtmlId('quickAddPhoneContacts'),
+		quickAddEmailContacts = getHtmlId('quickAddEmailContacts'),
 		
 		//Datasources
 		accountDataSource = waf.sources.account,
@@ -44,6 +46,7 @@ function constructor (id) {
 			leadDataSource.save({
 				onSuccess:function(event) {
 					leadDataSource.autoDispatch();
+					crmUtil.newRecentItem("leads", "Lead: ", leadDataSource.firstName + " " + leadDataSource.lastName, leadDataSource.ID, 'recentItemsBodyContainer');        
 					//reset form
 					$$(quickAddFirstNameLeads).setValue();
 					$$(quickAddLastNameLeads).setValue();
@@ -61,16 +64,19 @@ function constructor (id) {
             // the new entity has been initialized by the server
             contactDataSource.firstName = $$(quickAddFirstNameContacts).getValue();
 			contactDataSource.lastName = $$(quickAddLastNameContacts).getValue();
-			
+			contactDataSource.phone = $$(quickAddPhoneContacts).getValue();
+			contactDataSource.emailAccnt = $$(quickAddEmailContacts).getValue();
+			debugger;
 			contactDataSource.save({
 				onSuccess:function(event){
 					contactDataSource.autoDispatch();
+					crmUtil.newRecentItem("contacts", "Contact: ", contactDataSource.firstName + " " + contactDataSource.lastName, contactDataSource.ID, 'recentItemsBodyContainer');
 					//reset form
-					$$('quickAddFirstNameContacts').setValue();
-					$$('quickAddLastNameContacts').setValue();
-					//$$('quickAddTitle').setValue();
-					
-					$('#' + quickAddFirstName).focus();
+					$$(quickAddFirstNameContacts).setValue();
+					$$(quickAddLastNameContacts).setValue();
+					$$(quickAddPhoneContacts).setValue();
+					$$(quickAddEmailContacts).setValue();
+					$('#' + quickAddFirstNameContacts).focus();
 				}
 			}); //end - save()
         }}); //end - serverRefresh()
@@ -86,11 +92,11 @@ function constructor (id) {
 				accountDataSource.phone = $$(quickAddAccountPhone).getValue();
 				accountDataSource.website = $$(quickAddAccountWebsite).getValue();
 				accountDataSource.billingCity = $$(quickAddAccountCity).getValue();
-				//accountDataSource.billingCountry = $$(quickAddCountry).getValue();
 				//Save the entity.
 				accountDataSource.save({
 					onSuccess:function(event){
 						accountDataSource.autoDispatch();
+						crmUtil.newRecentItem("accounts", "Account: ", accountDataSource.name, accountDataSource.ID, 'recentItemsBodyContainer');
 						//reset form
 						$$(quickAddAccountName).setValue();
 						$$(quickAddAccountPhone).setValue();
@@ -139,6 +145,7 @@ function constructor (id) {
 			$$(quickAddBodyContainerLeads).hide();
 			$$(quickAddBodyContainerAccounts).hide();
 			$$(quickAddBodyContainerContacts).show();
+			$('#' + quickAddFirstNameContacts).focus();
 			break;
 			
 			case "home":
@@ -170,6 +177,13 @@ function constructor (id) {
 		$("#" + quickAddFirstNameLeads + ", #" + quickAddLastNameLeads + ", #" + quickAddCompanyLeads + ", #" + quickAddPhoneLeads).live('keyup', function (e) {
 	   		if ( e.keyCode == 13 ){
 	   			quickAddLeads();
+	    	}
+		});
+		
+		//Add event handler for return key to the quick add contacts.
+		$("#" + quickAddFirstNameContacts + ", #" + quickAddLastNameContacts + ", #" + quickAddPhoneContacts + ", #" + quickAddEmailContacts).live('keyup', function (e) {
+	   		if ( e.keyCode == 13 ){
+	   			quickAddContacts();
 	    	}
 		});
 	// @region namespaceDeclaration// @startlock
