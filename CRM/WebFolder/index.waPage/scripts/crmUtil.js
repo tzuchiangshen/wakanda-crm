@@ -24,17 +24,37 @@ var crmUtil = (function() {
 			onSuccess: function(event) {
 				$$("signUpMessage").setValue(event.result.errorMessage);
 				
-				/**/
-				if (WAF.directory.currentUser() !== null) {
-					//$$("signInContainer").hide();
-					//$$("signOutContainer").show();
-					//$$("richText6").setValue("Signed in as : " + WAF.directory.currentUser().fullName);
-					
+				if (waf.directory.currentUser() !== null) {
+					//Laurent the code below does not set my Sign Up input fields to blank. Should it?
 					signUpObj.name = "";
 					signUpObj.email = "";
 					signUpObj.password = "";
 					signUpObj.verifyPassword = "";
 					waf.sources.signUpObj.autoDispatch();
+					
+					$$('inputUsername').setValue();
+					$$('inputEmailAddress').setValue();
+					$$('iputPassword').setValue();
+					$$('inputVerifyPassword').setValue();
+					$$('signUpMessage').setValue();
+					
+					//***note*** make this a function()
+					$('#headerContainerBackground').css('background', '#f5f5f5');
+					$('#headerContainerBackground').css('border-bottom', 'solid 1px lightgray');
+					$$("signUpContainer").hide(); //hide
+					$$("bodyContainer").show(); //show	
+					waf.widgets.bodyComponent.loadComponent({path: '/home.waComponent'}); 
+					$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "home"}}); 
+					crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem1');
+					//Load the recent items into our recent items container.
+					//***remove***sessionCurrentUser = waf.directory.currentUser(); // Set the current user to default.
+					crmUtil.loadRecentItems('recentItemsBodyContainer');
+					//***note*** end - make this a function()
+					
+					//Switch our login and logout containers.
+					$$('loginComponent_signInStatusMessage').setValue("Signed in as: " + waf.directory.currentUser().fullName);
+					$$('loginComponent_loginContainer').hide();
+					$$('loginComponent_logoutContainer').show();
 				}
 				
 			}

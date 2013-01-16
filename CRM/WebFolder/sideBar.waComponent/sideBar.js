@@ -37,25 +37,27 @@ function constructor (id) {
 		
 	function quickAddLeads() {
 		leadDataSource.addNewElement();
-		leadDataSource.serverRefresh({onSuccess:function(event){
-            // the new entity has been initialized by the server
-            leadDataSource.firstName = $$(quickAddFirstNameLeads).getValue();
-			leadDataSource.lastName = $$(quickAddLastNameLeads).getValue();
-			leadDataSource.phone = $$(quickAddPhoneLeads).getValue();
-			leadDataSource.company = $$(quickAddCompanyLeads).getValue();
-			leadDataSource.save({
-				onSuccess:function(event) {
-					leadDataSource.autoDispatch();
-					crmUtil.newRecentItem("leads", "Lead: ", leadDataSource.firstName + " " + leadDataSource.lastName, leadDataSource.ID, 'recentItemsBodyContainer');        
-					//reset form
-					$$(quickAddFirstNameLeads).setValue();
-					$$(quickAddLastNameLeads).setValue();
-					$$(quickAddPhoneLeads).setValue();
-					$$(quickAddCompanyLeads).setValue();
-					$('#' + quickAddFirstNameLeads).focus();
-				}
-			});
-        }});
+		leadDataSource.serverRefresh({
+			onSuccess:function(event){
+	            // the new entity has been initialized by the server
+	            leadDataSource.firstName = $$(quickAddFirstNameLeads).getValue();
+				leadDataSource.lastName = $$(quickAddLastNameLeads).getValue();
+				leadDataSource.phone = $$(quickAddPhoneLeads).getValue();
+				leadDataSource.company = $$(quickAddCompanyLeads).getValue();
+				leadDataSource.save({
+					onSuccess:function(event) {
+						leadDataSource.autoDispatch();
+						crmUtil.newRecentItem("leads", "Lead: ", leadDataSource.firstName + " " + leadDataSource.lastName, leadDataSource.ID, 'recentItemsBodyContainer');        
+						//reset form
+						$$(quickAddFirstNameLeads).setValue();
+						$$(quickAddLastNameLeads).setValue();
+						$$(quickAddPhoneLeads).setValue();
+						$$(quickAddCompanyLeads).setValue();
+						$('#' + quickAddFirstNameLeads).focus();
+					}
+				});
+        	}
+    	});
 	}
 	
 	function quickAddContacts() {

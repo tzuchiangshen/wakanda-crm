@@ -5,43 +5,6 @@
 
 function constructor (id) {
 	var accountsReportsComponent = getHtmlId('accountsReportsComponent');
-	/*
-	var quickAddAccountName = getHtmlId('quickAddAccountName'),
-		quickAddPhone = getHtmlId('quickAddPhone'),
-		quickAddWebsite = getHtmlId('quickAddWebsite'),
-		quickAddCity = getHtmlId('quickAddCity'),
-		quickAddCountry = getHtmlId('quickAddCountry'),
-		recentItemsBodyContainer = getHtmlId('recentItemsBodyAccounts'),
-		accountDataSource = waf.sources.account;
-	
-	
-	function quickAdd() {
-		//Laurent: Tried to use an object datasource to bind to the quick add fields...problems.
-		accountDataSource.addNewElement();
-		accountDataSource.serverRefresh({
-			onSuccess:function(event){
-		        // the new entity has been initialized by the server
-		        //Now update the new entity with the form values.
-		        accountDataSource.name = $$(quickAddAccountName).getValue();
-				accountDataSource.phone = $$(quickAddPhone).getValue();
-				accountDataSource.website = $$(quickAddWebsite).getValue();
-				accountDataSource.billingCity = $$(quickAddCity).getValue();
-				accountDataSource.billingCountry = $$(quickAddCountry).getValue();
-				//Save the entity.
-				accountDataSource.save();
-				accountDataSource.autoDispatch();
-				//reset form
-				$$(quickAddAccountName).setValue();
-				$$(quickAddPhone).setValue();
-				$$(quickAddWebsite).setValue();
-				$$(quickAddCity).setValue();
-				$$(quickAddCountry).setValue();
-				
-				$('#' + quickAddAccountName).focus();
-			}
-   		});
-	}	
-	*/
 	// @region beginComponentDeclaration// @startlock
 	var $comp = this;
 	this.name = 'accounts';
@@ -49,18 +12,6 @@ function constructor (id) {
 
 	this.load = function (data) {// @lock
 		$$(accountsReportsComponent).loadComponent({path: '/reports.waComponent', userData: {menuItem: "accounts"}});
-		//Have to do this here in case user reloads page.
-		//sessionCurrentUser = waf.directory.currentUser(); // Set the current user
-		//Load the recent items into our recent items container.
-		//crmUtil.loadRecentItems(recentItemsBodyContainer);
-		/*
-		//Add event handler for return key to the quick add contacts.
-		$("#" + quickAddAccountName + ", #" + quickAddPhone + ", #" + quickAddWebsite + ", #" + quickAddCity + ", #" + quickAddCountry).live('keyup', function (e) {
-	   		if ( e.keyCode == 13 ){
-	   			quickAdd();
-	    	}
-		});
-		*/
 		
 	// @region namespaceDeclaration// @startlock
 	var button1 = {};	// @button

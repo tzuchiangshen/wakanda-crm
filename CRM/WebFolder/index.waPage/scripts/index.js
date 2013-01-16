@@ -78,7 +78,7 @@ var sessionCurrentUser;
 		sources.account.declareDependencies("owner");
 		
 		waf.widgets.menuBar1.crmGetSelectedMenuItem = function() {
-			//This function will allow me to determine which menuItem of menubar1 is highlighted.
+			//Laurent: This function will allow me to determine which menuItem of menubar1 is highlighted.
 			// Even if I navigate to another section without the user clicking on the menubar.
 			return this.$domNode.children('li').index(this.$domNode.children('.crm-menuSelected2'));
 		};
