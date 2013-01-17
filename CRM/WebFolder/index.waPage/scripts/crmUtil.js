@@ -36,7 +36,7 @@ var crmUtil = (function() {
 					$$('inputEmailAddress').setValue();
 					$$('iputPassword').setValue();
 					$$('inputVerifyPassword').setValue();
-					$$('signUpMessage').setValue();
+					$$('signUpMessage').setValue('');
 					
 					//***note*** make this a function()
 					$('#headerContainerBackground').css('background', '#f5f5f5');
@@ -47,14 +47,14 @@ var crmUtil = (function() {
 					$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "home"}}); 
 					crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem1');
 					//Load the recent items into our recent items container.
-					//***remove***sessionCurrentUser = waf.directory.currentUser(); // Set the current user to default.
 					crmUtil.loadRecentItems('recentItemsBodyContainer');
 					//***note*** end - make this a function()
 					
 					//Switch our login and logout containers.
 					$$('loginComponent_signInStatusMessage').setValue("Signed in as: " + waf.directory.currentUser().fullName);
-					$$('loginComponent_loginContainer').hide();
-					$$('loginComponent_logoutContainer').show();
+					$('#loginComponent_loginContainer').fadeOut(400); //hide()
+					$('#loginComponent_logoutContainer').fadeIn(900); //show() 
+					
 				}
 				
 			}

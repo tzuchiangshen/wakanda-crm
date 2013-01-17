@@ -30,16 +30,12 @@ function constructor (id) {
 	function signIn() {
 		if (waf.directory.loginByPassword($("#" + loginNameField).val(), $("#" + loginPasswordField).val())) {
 			//Our user signed in successfully.
-			//***remove***sessionCurrentUser = waf.directory.currentUser(); // Set the current user
-			
 			$$(statusMsg).setValue("Signed in as: " + waf.directory.currentUser().fullName);
 			$$(loginNameField).setValue("");
 			$$(loginPasswordField).setValue("");
 			$$(errorMsg).setValue("");
 			$$(loginNameField).focus();
 			toggleLogin("login");
-			
-			waf.sources.account.all();
 			
 			$('#headerContainerBackground').css('background', '#f5f5f5');
 			$('#headerContainerBackground').css('border-bottom', 'solid 1px lightgray');
@@ -49,7 +45,6 @@ function constructor (id) {
 			$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "home"}}); 
 			crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem1');
 			//Load the recent items into our recent items container.
-			//***remove***sessionCurrentUser = waf.directory.currentUser(); // Set the current user to default.
 			crmUtil.loadRecentItems('recentItemsBodyContainer');
 			
 		} else {

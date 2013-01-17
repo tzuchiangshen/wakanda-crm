@@ -168,6 +168,8 @@ function constructor (id) {
 			$$(quickAddMainContainer).hide();
 		}
 		
+		//Laurent - I get very funny behavior when I enable these.
+		/*
 		//Add event handler for return key to the quick add accounts.
 		$("#" + quickAddAccountName + ", #" + quickAddAccountPhone + ", #" + quickAddAccountWebsite + ", #" + quickAddAccountCity).live('keyup', function (e) {
 	   		if ( e.keyCode == 13 ){
@@ -188,6 +190,9 @@ function constructor (id) {
 	   			quickAddContacts();
 	    	}
 		});
+		*/
+		
+		
 	// @region namespaceDeclaration// @startlock
 	var quickAddContactsSaveButton = {};	// @button
 	var quickAddAccountsSaveButton = {};	// @button
