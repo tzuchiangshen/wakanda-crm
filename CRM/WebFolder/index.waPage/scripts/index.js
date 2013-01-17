@@ -21,7 +21,7 @@ var sessionCurrentUser;
 		// Use a local datasource object and bind it to the sign up input fields.
 		// This will make it easy to change your interface without having to make a change to 
 		// the signUp() function.
-		crmUtil.signUp(waf.sources.signUpObj);
+		crmUtil.signUp(signUpObj); //waf.sources.signUpObj
 		
 		//*** Anti-pattern ***
 		//Don't assign the value directly from the input fields.
