@@ -53,8 +53,9 @@ var crmUtil = (function() {
 	};
 	
 	
+	//***remove***
 	//Keep current menu item on main menubar hightlighted.
-	crmUtilObj.menuBarKeepHighlight = function(menuBarName, menuItem) {
+	//crmUtilObj.menuBarKeepHighlight = function(menuBarName, menuItem) {
 		//***remove***
 		/*
 		var menuBarSiblingsRef = '#' + menuBarName + ' li div',
@@ -67,7 +68,9 @@ var crmUtil = (function() {
 		$(menuItemRef).addClass('crm-menuSelected'); //highlight the selected menuitem.
 		$(menuItemContainerRef).addClass('crm-menuSelected2'); //mark the selected menuitem container.
 		*/
-	};
+	//};
+	//***end remove***
+	
 	
 	//Create New Recent Item
 	crmUtilObj.newRecentItem = function(dataClassName, titleKey, titleValue, entityKey, targetContainer) {
@@ -127,8 +130,8 @@ var crmUtil = (function() {
 				 		theEntityID = $this.data('entity');
 				 	//debugger;
 				 	var theNewPath = '/' + theDataClass + '.waComponent';
-				 	//$$('bodyComponent').loadComponent({path: theNewPath, userData: {view: "detail"}});
-				 	$$('bodyComponent').loadComponent({path: theNewPath});
+				 	$$('bodyComponent').loadComponent({path: theNewPath, userData: {view: "detail"}});
+				 	//$$('bodyComponent').loadComponent({path: theNewPath});
 				 	$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: theDataClass}});
 				 	
 				 	switch(theDataClass) {

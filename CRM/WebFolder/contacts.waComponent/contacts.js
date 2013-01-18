@@ -5,55 +5,22 @@
 
 function constructor (id) {
 	var contactsReportsComponent = getHtmlId('contactsReportsComponent');
-	/*
-	var quickAddFirstName = getHtmlId('quickAddFirstName'),
-		quickAddLastName = getHtmlId('quickAddLastName'),
-		quickAddTitle = getHtmlId('quickAddTitle'),
-		recentItemsBodyContainer = getHtmlId('recentItemsBodyContacts'),
-		contactDataSource = waf.sources.contact;
-			
-	function quickAdd() {
-		//Tried to use an object datasource to bind to the quick add fields...problems.
-		//console.log($$(quickAddFirstName).getValue());
-		
-		contactDataSource.addNewElement();
-		contactDataSource.serverRefresh({onSuccess:function(event){
-            // the new entity has been initialized by the server
-            contactDataSource.firstName = $$(quickAddFirstName).getValue();
-			contactDataSource.lastName = $$(quickAddLastName).getValue();
-			contactDataSource.title = $$(quickAddTitle).getValue();
-			contactDataSource.save();
-			contactDataSource.autoDispatch();
-			//reset form
-			$$('quickAddFirstName').setValue();
-			$$('quickAddLastName').setValue();
-			$$('quickAddTitle').setValue();
-			
-			$('#' + quickAddFirstName).focus();
-        }});
-	}
-	*/
+
 	// @region beginComponentDeclaration// @startlock
 	var $comp = this;
 	this.name = 'contacts';
 	// @endregion// @endlock
 
 	this.load = function (data) {// @lock
-		$$(id + "_tabView1").selectTab(1); //Laurent - I should not have to do this.
-		$$(contactsReportsComponent).loadComponent({path: '/reports.waComponent', userData: {menuItem: "contacts"}});
-		//Have to do this here in case user reloads page.
-		//sessionCurrentUser = waf.directory.currentUser(); // Set the current user
-		//Load the recent items into our recent items container.
-		//crmUtil.loadRecentItems(recentItemsBodyContainer);
+		if (data.userData.view == "detail") {
+			$$(id + "_tabView1").selectTab(2);
+		} else {
+			$$(id + "_tabView1").selectTab(1);
+		}
 		
-		/*
-		//Add event handler for return key to the quick add contacts.
-		$("#" + quickAddFirstName + ", #" + quickAddLastName+ ", #" + quickAddTitle).live('keyup', function (e) {
-	   		if ( e.keyCode == 13 ) {
-	   			quickAdd();
-	    	}
-		});
-		*/
+		//$$(id + "_tabView1").selectTab(1); //Laurent - I should not have to do this.
+		$$(contactsReportsComponent).loadComponent({path: '/reports.waComponent', userData: {menuItem: "contacts"}});
+		
 	// @region namespaceDeclaration// @startlock
 	var button2 = {};	// @button
 	var button1 = {};	// @button

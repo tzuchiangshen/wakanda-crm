@@ -12,7 +12,12 @@ function constructor (id) {
 	// @endregion// @endlock
 
 	this.load = function (data) {// @lock
-		$$(id + "_tabView2").selectTab(1);
+		if (data.userData.view == "detail") {
+			$$(id + "_tabView2").selectTab(2);
+		} else {
+			$$(id + "_tabView2").selectTab(1);
+		}
+		
 		$$(leadsReportsComponent).loadComponent({path: '/reports.waComponent', userData: {menuItem: "leads"}});
 			
 	// @region namespaceDeclaration// @startlock
