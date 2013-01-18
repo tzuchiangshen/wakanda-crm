@@ -10279,3 +10279,65 @@
 2013-01-17 21:27:43 [com.wakanda-software.CRM.ServerAdmin] INFO - Closing the project
 2013-01-17 21:27:43 [com.wakanda-software.CRM.ServerAdmin] INFO - Project closed (duration: 3 ms)
 2013-01-17 21:27:43 [com.wakanda-software.CRM] INFO - Solution closed (duration: 820 ms)
+2013-01-17 21:35:29 [com.wakanda-software.CRM] INFO - Opening the solution
+2013-01-17 21:35:29 [com.wakanda-software.CRM] INFO - Opening the users and groups directory
+2013-01-17 21:35:29 [com.wakanda-software.CRM] INFO - Users and groups directory opened (duration: 56 ms)
+2013-01-17 21:35:29 [com.wakanda-software.CRM.CRM] INFO - Opening the project
+2013-01-17 21:35:29 [com.wakanda-software.CRM.CRM] INFO - Opening the database
+2013-01-17 21:35:29 [com.wakanda-software.CRM.CRM] INFO - Database opened (duration: 12 ms)
+2013-01-17 21:35:29 [com.wakanda-software.CRM.CRM] INFO - Project opened (duration: 27 ms)
+2013-01-17 21:35:30 [com.wakanda-software.CRM.ServerAdmin] INFO - Opening the project
+2013-01-17 21:35:30 [com.wakanda-software.CRM.ServerAdmin] INFO - Project opened (duration: 6 ms)
+2013-01-17 21:35:30 [com.wakanda-software.CRM] INFO - Solution opened (duration: 124 ms)
+2013-01-17 21:35:30 [com.wakanda-software.CRM] INFO - Starting the solution
+2013-01-17 21:35:30 [com.wakanda-software.CRM.CRM] INFO - Starting the project
+2013-01-17 21:35:30 [com.wakanda-software.CRM.CRM] INFO - Starting the HTTP server
+2013-01-17 21:35:30 [com.wakanda-software.CRM.CRM] INFO - HTTP server started (duration: 43 ms)
+2013-01-17 21:35:30 [com.wakanda-software.CRM.CRM] INFO - Project started (duration: 106 ms)
+2013-01-17 21:35:30 [com.wakanda-software.CRM.ServerAdmin] INFO - Starting the project
+2013-01-17 21:35:30 [com.wakanda-software.CRM.ServerAdmin] INFO - Starting the HTTP server
+2013-01-17 21:35:30 [com.wakanda-software.CRM.ServerAdmin] INFO - HTTP server started (duration: 46 ms)
+2013-01-17 21:35:30 [com.wakanda-software.CRM.ServerAdmin] INFO - Project started (duration: 110 ms)
+2013-01-17 21:35:30 [com.wakanda-software.CRM.CRM] INFO - Executing the bootstrap(s)
+2013-01-17 21:35:30 [com.wakanda-software.CRM.CRM] INFO - Bootstrap(s) executed (duration: 18 ms)
+2013-01-17 21:35:30 [com.wakanda-software.CRM.ServerAdmin] INFO - Executing the bootstrap(s)
+2013-01-17 21:35:30 [com.wakanda-software.CRM.ServerAdmin] INFO - Bootstrap(s) executed (duration: 35 ms)
+2013-01-17 21:35:30 [com.wakanda-software.CRM] INFO - Solution started (duration: 272 ms)
+2013-01-17 21:37:31 [com.wakanda-software.CRM] INFO - Opening the solution
+2013-01-17 21:37:31 [com.wakanda-software.CRM] INFO - Opening the users and groups directory
+2013-01-17 21:37:31 [com.wakanda-software.CRM] INFO - Users and groups directory opened (duration: 17 ms)
+2013-01-17 21:37:31 [com.wakanda-software.CRM.CRM] INFO - Opening the project
+2013-01-17 21:37:31 [com.wakanda-software.CRM.CRM] INFO - Opening the database
+2013-01-17 21:37:31 [com.wakanda-software.CRM.CRM] INFO - Database opened (duration: 13 ms)
+2013-01-17 21:37:31 [com.wakanda-software.CRM.CRM] INFO - Project opened (duration: 27 ms)
+2013-01-17 21:37:31 [com.wakanda-software.CRM.ServerAdmin] INFO - Opening the project
+2013-01-17 21:37:31 [com.wakanda-software.CRM.ServerAdmin] INFO - Project opened (duration: 5 ms)
+2013-01-17 21:37:31 [com.wakanda-software.CRM] INFO - Solution opened (duration: 81 ms)
+2013-01-17 21:37:31 [com.wakanda-software.CRM] INFO - Starting the solution
+2013-01-17 21:37:31 [com.wakanda-software.CRM.CRM] INFO - Starting the project
+2013-01-17 21:37:31 [com.wakanda-software.CRM.CRM] INFO - Starting the HTTP server
+2013-01-17 21:37:31 [com.wakanda-software.CRM.CRM] INFO - HTTP server started (duration: 42 ms)
+2013-01-17 21:37:31 [com.wakanda-software.CRM.CRM] INFO - Project started (duration: 105 ms)
+2013-01-17 21:37:31 [com.wakanda-software.CRM.ServerAdmin] INFO - Starting the project
+2013-01-17 21:37:32 [com.wakanda-software.CRM.ServerAdmin] INFO - Starting the HTTP server
+2013-01-17 21:37:32 [com.wakanda-software.CRM.ServerAdmin] INFO - HTTP server started (duration: 46 ms)
+2013-01-17 21:37:32 [com.wakanda-software.CRM.ServerAdmin] INFO - Project started (duration: 110 ms)
+2013-01-17 21:37:32 [com.wakanda-software.CRM.CRM] INFO - Executing the bootstrap(s)
+2013-01-17 21:37:32 [com.wakanda-software.CRM.CRM] INFO - Bootstrap(s) executed (duration: 17 ms)
+2013-01-17 21:37:32 [com.wakanda-software.CRM.ServerAdmin] INFO - Executing the bootstrap(s)
+2013-01-17 21:37:32 [com.wakanda-software.CRM.ServerAdmin] INFO - Bootstrap(s) executed (duration: 11 ms)
+2013-01-17 21:37:32 [com.wakanda-software.CRM] INFO - Solution started (duration: 246 ms)
+2013-01-17 22:04:13 [com.wakanda-software.CRM] INFO - Stopping the solution
+2013-01-17 22:04:13 [com.wakanda-software.CRM.CRM] INFO - Stopping the project
+2013-01-17 22:04:14 [com.wakanda-software.CRM.CRM] INFO - Project stopped (duration: 1107 ms)
+2013-01-17 22:04:14 [com.wakanda-software.CRM.ServerAdmin] INFO - Stopping the project
+2013-01-17 22:04:16 [com.wakanda-software.CRM.ServerAdmin] INFO - Project stopped (duration: 2090 ms)
+2013-01-17 22:04:16 [com.wakanda-software.CRM] INFO - Solution stopped (duration: 3199 ms)
+2013-01-17 22:04:16 [com.wakanda-software.CRM] INFO - Closing the solution
+2013-01-17 22:04:16 [com.wakanda-software.CRM.CRM] INFO - Closing the project
+2013-01-17 22:04:16 [com.wakanda-software.CRM.CRM] INFO - Closing the database
+2013-01-17 22:04:16 [com.wakanda-software.CRM.CRM] INFO - Database closed (duration: 407 ms)
+2013-01-17 22:04:16 [com.wakanda-software.CRM.CRM] INFO - Project closed (duration: 410 ms)
+2013-01-17 22:04:16 [com.wakanda-software.CRM.ServerAdmin] INFO - Closing the project
+2013-01-17 22:04:16 [com.wakanda-software.CRM.ServerAdmin] INFO - Project closed (duration: 4 ms)
+2013-01-17 22:04:17 [com.wakanda-software.CRM] INFO - Solution closed (duration: 822 ms)

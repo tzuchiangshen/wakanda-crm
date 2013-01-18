@@ -43,7 +43,8 @@ function constructor (id) {
 			$$("bodyContainer").show(); //show	
 			waf.widgets.bodyComponent.loadComponent({path: '/home.waComponent'}); 
 			$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "home"}}); 
-			crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem1');
+			//crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem1');
+			waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem1');
 			//Load the recent items into our recent items container.
 			crmUtil.loadRecentItems('recentItemsBodyContainer');
 			

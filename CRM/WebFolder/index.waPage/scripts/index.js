@@ -77,7 +77,8 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		//Contacts
 		$$('bodyComponent').loadComponent({path: '/contacts.waComponent'});
 		$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "contacts"}});
-		crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem4');
+		//crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem4');
+		waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem4');
 	};// @lock
 
 	menuItem3.click = function menuItem3_click (event)// @startlock
@@ -85,7 +86,8 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		//Accounts
 		$$('bodyComponent').loadComponent({path: '/accounts.waComponent'});
 		$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "accounts"}});
-		crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem3');
+		//crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem3');
+		waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem3');
 	};// @lock
 
 	menuItem2.click = function menuItem2_click (event)// @startlock
@@ -93,7 +95,8 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		//Leads
 		$$('bodyComponent').loadComponent({path: '/leads.waComponent'});
 		$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "leads"}});
-		crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem2');
+		//crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem2');
+		waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem2');
 	};// @lock
 
 	menuItem1.click = function menuItem1_click (event)// @startlock
@@ -101,7 +104,8 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		//Home
 		$$('bodyComponent').loadComponent({path: '/home.waComponent'});
 		$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "home"}});
-		crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem1');
+		//crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem1');
+		waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem1');
 	};// @lock
 
 	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock

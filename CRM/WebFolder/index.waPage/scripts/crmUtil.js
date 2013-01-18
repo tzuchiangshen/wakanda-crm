@@ -55,6 +55,8 @@ var crmUtil = (function() {
 	
 	//Keep current menu item on main menubar hightlighted.
 	crmUtilObj.menuBarKeepHighlight = function(menuBarName, menuItem) {
+		//***remove***
+		/*
 		var menuBarSiblingsRef = '#' + menuBarName + ' li div',
 			menuItemRef = '#' + menuItem + ' div',
 			menuItemContainerRef = '#' + menuItem,
@@ -64,6 +66,7 @@ var crmUtil = (function() {
 		$(menuBarContainerSiblingsRef).removeClass('crm-menuSelected2'); 
 		$(menuItemRef).addClass('crm-menuSelected'); //highlight the selected menuitem.
 		$(menuItemContainerRef).addClass('crm-menuSelected2'); //mark the selected menuitem container.
+		*/
 	};
 	
 	//Create New Recent Item
