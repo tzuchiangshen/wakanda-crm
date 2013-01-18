@@ -130,17 +130,20 @@ var crmUtil = (function() {
 				 	
 				 	switch(theDataClass) {
 						case "accounts":
-						crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem3');
+						//crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem3');
+						waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem3');
 						waf.sources.account.selectByKey($this.data('entity'));
 						break;
 							
 						case "contacts":
-						crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem4');
+						//crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem4');
+						waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem4');
 						waf.sources.contact.selectByKey($this.data('entity'));
 						break;
 							
 						case "leads":
-						crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem2');
+						//crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem2');
+						waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem2');
 						waf.sources.lead.selectByKey($this.data('entity'));
 						break;
 					}

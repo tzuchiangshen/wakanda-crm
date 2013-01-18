@@ -14,36 +14,38 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	var documentEvent = {};	// @document
 // @endregion// @endlock
 
-var sessionCurrentUser;
-
 // eventHandlers// @lock
 
 	menuItem8.click = function menuItem8_click (event)// @startlock
 	{// @endlock
 		$$('bodyComponent').loadComponent({path: '/underConstruction.waComponent'});
 		$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "home"}});
-		crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem8');
+		//crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem8');
+		waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem8');
 	};// @lock
 
 	menuItem7.click = function menuItem7_click (event)// @startlock
 	{// @endlock
 		$$('bodyComponent').loadComponent({path: '/underConstruction.waComponent'});
 		$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "home"}});
-		crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem7');
+		//crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem7');
+		waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem7');
 	};// @lock
 
 	menuItem6.click = function menuItem6_click (event)// @startlock
 	{// @endlock
 		$$('bodyComponent').loadComponent({path: '/underConstruction.waComponent'});
 		$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "home"}});
-		crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem6');
+		//crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem6');
+		waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem6');
 	};// @lock
 
 	menuItem5.click = function menuItem5_click (event)// @startlock
 	{// @endlock
 		$$('bodyComponent').loadComponent({path: '/underConstruction.waComponent'});
 		$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "home"}});
-		crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem5');
+		//crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem5');
+		waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem5');
 	};// @lock
 
 	signUpButton.click = function signUpButton_click (event)// @startlock
@@ -113,6 +115,13 @@ var sessionCurrentUser;
 			//Laurent: This function will allow me to determine which menuItem of menubar1 is highlighted.
 			// Even if I navigate to another section without the user clicking on the menubar.
 			return this.$domNode.children('li').index(this.$domNode.children('.crm-menuSelected2'));
+		};
+		
+		waf.widgets.menuBar1.crmSetSelectedMenuItem = function(menuItem) {
+			this.$domNode.find('div').removeClass('crm-menuSelected');//unhighlight all other menuitems div.
+			this.$domNode.children('li').removeClass('crm-menuSelected2'); //unmark list item containers.
+			this.$domNode.find('#' + menuItem + ' div').addClass('crm-menuSelected'); //highlight the selected menuitem div.
+			this.$domNode.find('#' + menuItem).addClass('crm-menuSelected2'); //mark the selected menuitem container.
 		};
 		
 		//Move our signup section into place.
