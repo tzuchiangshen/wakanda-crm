@@ -39,6 +39,7 @@ function constructor (id) {
 	// @endregion// @endlock
 
 	this.load = function (data) {// @lock
+		$$(id + "_tabView1").selectTab(1); //Laurent - I should not have to do this.
 		$$(contactsReportsComponent).loadComponent({path: '/reports.waComponent', userData: {menuItem: "contacts"}});
 		//Have to do this here in case user reloads page.
 		//sessionCurrentUser = waf.directory.currentUser(); // Set the current user

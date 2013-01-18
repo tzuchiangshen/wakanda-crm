@@ -47,6 +47,10 @@ function constructor (id) {
 			//Load the recent items into our recent items container.
 			crmUtil.loadRecentItems('recentItemsBodyContainer');
 			
+			waf.sources.account.all();
+			waf.sources.contact.all();
+			waf.sources.lead.all();
+			
 		} else {
 			$$(errorMsg).setValue("Invalid login.");
 			$$(statusMsg).setValue("");
@@ -103,6 +107,10 @@ function constructor (id) {
 			$('#recentItemsBodyContainer').html('');
 			//waf.widgets.bodyComponent.loadComponent("home.waComponent");
 			toggleLogin("logout");
+			
+			waf.sources.account.all();
+			waf.sources.contact.all();
+			waf.sources.lead.all();
 		}
 	};// @lock
 

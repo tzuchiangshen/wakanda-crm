@@ -11,18 +11,6 @@ var crmUtil = (function() {
 	
 	//Sign Up New User
 	crmUtilObj.signUp = function(signUpObj) {
-		//Fix. Don't pass waf.sources.signUpObj as parameter. Pass signUpObj.
-		//Laurent: Can't pass signUpObj as paramater to addUser().
-		// I Get this error: "Uncaught TypeError: Converting circular structure to JSON waf-optimize:2285"
-		/*
-		var signUpData = {
-			name: waf.sources.signUpObj.name,
-			email: waf.sources.signUpObj.email,
-			password: waf.sources.signUpObj.password,
-			verifyPassword: waf.sources.signUpObj.verifyPassword	
-		};
-		*/
-		
 		waf.ds.User.addUser({
 			onSuccess: function(event) {
 				$$("signUpMessage").setValue(event.result.errorMessage);

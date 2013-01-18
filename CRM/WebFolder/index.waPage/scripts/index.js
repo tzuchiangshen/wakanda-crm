@@ -2,6 +2,10 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var menuItem8 = {};	// @menuItem
+	var menuItem7 = {};	// @menuItem
+	var menuItem6 = {};	// @menuItem
+	var menuItem5 = {};	// @menuItem
 	var signUpButton = {};	// @button
 	var menuItem4 = {};	// @menuItem
 	var menuItem3 = {};	// @menuItem
@@ -14,6 +18,34 @@ var sessionCurrentUser;
 
 // eventHandlers// @lock
 
+	menuItem8.click = function menuItem8_click (event)// @startlock
+	{// @endlock
+		$$('bodyComponent').loadComponent({path: '/underConstruction.waComponent'});
+		$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "home"}});
+		crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem8');
+	};// @lock
+
+	menuItem7.click = function menuItem7_click (event)// @startlock
+	{// @endlock
+		$$('bodyComponent').loadComponent({path: '/underConstruction.waComponent'});
+		$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "home"}});
+		crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem7');
+	};// @lock
+
+	menuItem6.click = function menuItem6_click (event)// @startlock
+	{// @endlock
+		$$('bodyComponent').loadComponent({path: '/underConstruction.waComponent'});
+		$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "home"}});
+		crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem6');
+	};// @lock
+
+	menuItem5.click = function menuItem5_click (event)// @startlock
+	{// @endlock
+		$$('bodyComponent').loadComponent({path: '/underConstruction.waComponent'});
+		$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "home"}});
+		crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem5');
+	};// @lock
+
 	signUpButton.click = function signUpButton_click (event)// @startlock
 	{// @endlock
 		//Sign Up
@@ -21,7 +53,7 @@ var sessionCurrentUser;
 		// Use a local datasource object and bind it to the sign up input fields.
 		// This will make it easy to change your interface without having to make a change to 
 		// the signUp() function.
-		crmUtil.signUp(signUpObj); //waf.sources.signUpObj
+		crmUtil.signUp(signUpObj);
 		
 		//*** Anti-pattern ***
 		//Don't assign the value directly from the input fields.
@@ -73,9 +105,9 @@ var sessionCurrentUser;
 	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
 	{// @endlock
 		//Let's make sure we load the owner with the Lead, Contact, and Account.
-		sources.lead.declareDependencies("owner");
-		sources.contact.declareDependencies("owner");
-		sources.account.declareDependencies("owner");
+		waf.sources.lead.declareDependencies("owner");
+		waf.sources.contact.declareDependencies("owner");
+		waf.sources.account.declareDependencies("owner");
 		
 		waf.widgets.menuBar1.crmGetSelectedMenuItem = function() {
 			//Laurent: This function will allow me to determine which menuItem of menubar1 is highlighted.
@@ -98,6 +130,10 @@ var sessionCurrentUser;
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("menuItem8", "click", menuItem8.click, "WAF");
+	WAF.addListener("menuItem7", "click", menuItem7.click, "WAF");
+	WAF.addListener("menuItem6", "click", menuItem6.click, "WAF");
+	WAF.addListener("menuItem5", "click", menuItem5.click, "WAF");
 	WAF.addListener("signUpButton", "click", signUpButton.click, "WAF");
 	WAF.addListener("menuItem4", "click", menuItem4.click, "WAF");
 	WAF.addListener("menuItem3", "click", menuItem3.click, "WAF");
