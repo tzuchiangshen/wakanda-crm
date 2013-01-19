@@ -36,7 +36,8 @@ var crmUtil = (function() {
 					$$("bodyContainer").show(); //show	
 					waf.widgets.bodyComponent.loadComponent({path: '/home.waComponent'}); 
 					$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "home"}}); 
-					crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem1');
+					//crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem1');
+					waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem1');
 					//Load the recent items into our recent items container.
 					crmUtil.loadRecentItems('recentItemsBodyContainer');
 					//***note*** end - make this a function()
@@ -74,22 +75,37 @@ var crmUtil = (function() {
 	
 	//Create New Recent Item
 	crmUtilObj.newRecentItem = function(dataClassName, titleKey, titleValue, entityKey, targetContainer) {
-		var recentItem = ds.RecentItem.newEntity(); // create the entity
-		recentItem.dataClassName.setValue(dataClassName);
-		recentItem.title.setValue(titleKey + titleValue); 
-		recentItem.entityKey.setValue(entityKey);
-		recentItem.sortOrder.setValue(0);
-		//sortOrder
-		recentItem.save({
-        	onSuccess:function(event) {
-        		ds.RecentItem.reorderItems();
-        		crmUtilObj.loadRecentItems(targetContainer);
-        	},
-        	
-        	onError: function(error) {
-        
-        	}
-        });
+			
+			/*
+			waf.ds.RecentItem.all({
+				onSuccess: function(event) {
+					alert(event.entityCollection.length);
+				}
+			});
+			*/
+			
+			/**/
+			//***Enhancement Needed*** This code does not care about duplicates. 
+			var recentItem = ds.RecentItem.newEntity(); // create the entity
+			recentItem.dataClassName.setValue(dataClassName);
+			recentItem.title.setValue(titleKey + titleValue); 
+			recentItem.entityKey.setValue(entityKey);
+			recentItem.sortOrder.setValue(0);
+			
+			recentItem.save({
+	        	onSuccess:function(event) {
+	        		ds.RecentItem.reorderItems();
+	        		crmUtilObj.loadRecentItems(targetContainer);
+	        	},
+	        	
+	        	onError: function(error) {
+	        		//console.log(error.error[0].errCode + ": " + error.error[0].message);
+	        		if (error.error[0].errCode == 9998)
+	        		 crmUtilObj.loadRecentItems(targetContainer);
+	        	}
+	        });
+	        //***End Enhancement Needed*** This code does not care about duplicates.
+	        
 	};
 	
 	//Load Recent Items - Try Again!
@@ -100,8 +116,9 @@ var crmUtil = (function() {
 			theTitle,
 			recentItemsCollection,
 			theEntityKey;
-			
-		waf.ds.RecentItem.query("owner.ID = :1", sessionCurrentUser.ID, {
+		
+		//waf.ds.RecentItem.query("owner.ID = :1", sessionCurrentUser.ID, {	
+		waf.ds.RecentItem.all({
 			orderBy: "sortOrder",
 			onSuccess: function(event) {
 				recentItemsCollection = event.entityCollection;

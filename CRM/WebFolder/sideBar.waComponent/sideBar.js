@@ -68,7 +68,7 @@ function constructor (id) {
 			contactDataSource.lastName = $$(quickAddLastNameContacts).getValue();
 			contactDataSource.phone = $$(quickAddPhoneContacts).getValue();
 			contactDataSource.emailAccnt = $$(quickAddEmailContacts).getValue();
-			debugger;
+			
 			contactDataSource.save({
 				onSuccess:function(event){
 					contactDataSource.autoDispatch();

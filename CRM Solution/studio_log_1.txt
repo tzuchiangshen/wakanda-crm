@@ -7779,3 +7779,1122 @@
 2013-01-18 09:01:25 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
 2013-01-18 09:01:25 [JSDEBUGGER] INFO - WARNING : context doesn't exist anymore,[object Object]
 2013-01-18 09:01:25 [JSDEBUGGER] INFO - WARNING : context do not exists any more,[object Object]
+2013-01-18 12:41:05 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2013-01-18 12:41:05 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2013-01-18 12:41:05 [JSDEBUGGER] INFO - LOG : Right> setReady from crossfireClient_ontemplatesloaded
+2013-01-18 12:41:05 [JSDEBUGGER] INFO - LOG : Bottom> setReady from crossfireClient_ontemplatesloaded
+2013-01-18 12:41:05 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 12:41:05 [JSDEBUGGER] INFO - WARNING : Right> Received a "break" event without "contextcreated" event,4315012896
+2013-01-18 12:41:05 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 12:41:05 [JSDEBUGGER] INFO - LOG : calling getstack from the context,Context{id: "4315012896stackSize: 0", }
+2013-01-18 12:41:05 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 12:41:05 [JSDEBUGGER] INFO - WARNING : context doesn't exist anymore,[object Object]
+2013-01-18 12:41:05 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 12:41:05 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 12:41:05 [JSDEBUGGER] INFO - WARNING : Bottom> Received a "break" event without "contextcreated" event,4315012896
+2013-01-18 12:41:05 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 12:41:05 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 12:41:05 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 12:41:05 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 12:41:05 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 12:41:05 [JSDEBUGGER] INFO - LOG : Bottom> getBreakpoints from crossfireClient_onready_breakpointListener,[object Object]
+2013-01-18 12:41:05 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 12:41:05 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - LOG : Bottom> setReady from crossfireClient_ontemplatesloaded
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - LOG : Right> setReady from crossfireClient_ontemplatesloaded
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - WARNING : Right> Received a "break" event without "contextcreated" event,4349705232
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - LOG : calling getstack from the context,Context{id: "4349705232stackSize: 0", }
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - WARNING : context doesn't exist anymore,[object Object]
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - WARNING : Bottom> Received a "break" event without "contextcreated" event,4349705232
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - LOG : Bottom> getBreakpoints from crossfireClient_onready_breakpointListener,[object Object]
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextslisted,event internally:,[object Object],(request_seq: 2)
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - ERROR : contextcreated already received with this id
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextslisted,event internally:,[object Object],(request_seq: 2)
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - ERROR : contextcreated already received with this id
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 0)
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 0)
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stackready,event internally:,[object Object],(request_seq: 100001)
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4349705232,0,1,100001
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100001)
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100001)
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:07:29 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:07:34 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:07:34 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:07:34 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:07:34 [JSDEBUGGER] INFO - LOG : calling getstack from the context,Context{id: "4349705232stackSize: 0", is current}
+2013-01-18 14:07:34 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:07:34 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 7)
+2013-01-18 14:07:34 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 7)
+2013-01-18 14:07:34 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stackready,event internally:,[object Object],(request_seq: 100003)
+2013-01-18 14:07:34 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4349705232,0,4,100003
+2013-01-18 14:07:34 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100003)
+2013-01-18 14:07:34 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-18 14:07:34 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100003)
+2013-01-18 14:07:34 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-18 14:07:34 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:07:34 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:07:34 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:07:34 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:07:34 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:07:34 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:07:34 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:07:34 [JSDEBUGGER] INFO - LOG : calling getstack from the context,Context{id: "4349705232stackSize: 0", is current}
+2013-01-18 14:07:34 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:07:35 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 12)
+2013-01-18 14:07:35 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 12)
+2013-01-18 14:07:35 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stackready,event internally:,[object Object],(request_seq: 100005)
+2013-01-18 14:07:35 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4349705232,0,7,100005
+2013-01-18 14:07:35 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100005)
+2013-01-18 14:07:35 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-18 14:07:35 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100005)
+2013-01-18 14:07:35 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-18 14:07:35 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:07:35 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:07:55 [JSDEBUGGER] INFO - LOG : Right> evaluate ,4349705232,0,(this.entityKey),100006
+2013-01-18 14:07:55 [JSDEBUGGER] INFO - LOG : Right> evaluate ,4349705232,0,(this.entityKey),100007
+2013-01-18 14:07:55 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 100006)
+2013-01-18 14:07:55 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 100006)
+2013-01-18 14:07:55 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 100007)
+2013-01-18 14:07:55 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 100007)
+2013-01-18 14:08:11 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:08:11 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:08:11 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:08:11 [JSDEBUGGER] INFO - LOG : calling getstack from the context,Context{id: "4349705232stackSize: 0", is current}
+2013-01-18 14:08:11 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:08:11 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 19)
+2013-01-18 14:08:11 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 19)
+2013-01-18 14:08:11 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stackready,event internally:,[object Object],(request_seq: 100009)
+2013-01-18 14:08:11 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4349705232,0,12,100009
+2013-01-18 14:08:11 [JSDEBUGGER] INFO - LOG : Right> evaluate ,4349705232,0,(this.entityKey),100010
+2013-01-18 14:08:11 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100009)
+2013-01-18 14:08:11 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-18 14:08:11 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100009)
+2013-01-18 14:08:11 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-18 14:08:11 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:08:12 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 100010)
+2013-01-18 14:08:12 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 100010)
+2013-01-18 14:08:20 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4349705232,0,17,100011
+2013-01-18 14:08:21 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100011)
+2013-01-18 14:08:21 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-18 14:08:21 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100011)
+2013-01-18 14:08:21 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-18 14:08:21 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:08:21 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:08:21 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:08:21 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:08:21 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:08:25 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:08:25 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:08:25 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:08:25 [JSDEBUGGER] INFO - LOG : calling getstack from the context,Context{id: "4349705232stackSize: 0", is current}
+2013-01-18 14:08:25 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:08:25 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 26)
+2013-01-18 14:08:25 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 26)
+2013-01-18 14:08:25 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stackready,event internally:,[object Object],(request_seq: 100013)
+2013-01-18 14:08:25 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4349705232,0,20,100013
+2013-01-18 14:08:25 [JSDEBUGGER] INFO - LOG : Right> evaluate ,4349705232,0,(this.entityKey),100014
+2013-01-18 14:08:26 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100013)
+2013-01-18 14:08:26 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-18 14:08:26 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100013)
+2013-01-18 14:08:26 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-18 14:08:26 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:08:26 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4349705232,0,25,100015
+2013-01-18 14:08:26 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 100014)
+2013-01-18 14:08:26 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 100014)
+2013-01-18 14:08:26 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100015)
+2013-01-18 14:08:26 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-18 14:08:26 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100015)
+2013-01-18 14:08:26 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-18 14:08:26 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:08:26 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:08:26 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:08:26 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:08:26 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - LOG : Right> setReady from crossfireClient_ontemplatesloaded
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - LOG : Bottom> setReady from crossfireClient_ontemplatesloaded
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - WARNING : Right> Received a "break" event without "contextcreated" event,4318069824
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - LOG : calling getstack from the context,Context{id: "4318069824stackSize: 0", }
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - WARNING : context doesn't exist anymore,[object Object]
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - WARNING : Bottom> Received a "break" event without "contextcreated" event,4318069824
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - LOG : Bottom> getBreakpoints from crossfireClient_onready_breakpointListener,[object Object]
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextslisted,event internally:,[object Object],(request_seq: 34)
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - ERROR : contextcreated already received with this id
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextslisted,event internally:,[object Object],(request_seq: 34)
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - ERROR : contextcreated already received with this id
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 32)
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 32)
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stackready,event internally:,[object Object],(request_seq: 100001)
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4318069824,0,1,100001
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100001)
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100001)
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:09:49 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:09:52 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:52 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:52 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:52 [JSDEBUGGER] INFO - LOG : calling getstack from the context,Context{id: "4318069824stackSize: 0", is current}
+2013-01-18 14:09:52 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:52 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 39)
+2013-01-18 14:09:52 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 39)
+2013-01-18 14:09:52 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stackready,event internally:,[object Object],(request_seq: 100003)
+2013-01-18 14:09:52 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4318069824,0,4,100003
+2013-01-18 14:09:53 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100003)
+2013-01-18 14:09:53 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-18 14:09:53 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100003)
+2013-01-18 14:09:53 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-18 14:09:53 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:09:53 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:09:53 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:09:53 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:09:57 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:57 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:57 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:57 [JSDEBUGGER] INFO - LOG : calling getstack from the context,Context{id: "4318069824stackSize: 0", is current}
+2013-01-18 14:09:57 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:57 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 44)
+2013-01-18 14:09:57 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 44)
+2013-01-18 14:09:57 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stackready,event internally:,[object Object],(request_seq: 100005)
+2013-01-18 14:09:57 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4318069824,0,7,100005
+2013-01-18 14:09:57 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100005)
+2013-01-18 14:09:57 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-18 14:09:57 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100005)
+2013-01-18 14:09:57 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-18 14:09:57 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:09:57 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:09:57 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:57 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:58 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:58 [JSDEBUGGER] INFO - LOG : calling getstack from the context,Context{id: "4318069824stackSize: 0", is current}
+2013-01-18 14:09:58 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:58 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 49)
+2013-01-18 14:09:58 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 49)
+2013-01-18 14:09:58 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stackready,event internally:,[object Object],(request_seq: 100007)
+2013-01-18 14:09:58 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4318069824,0,12,100007
+2013-01-18 14:09:58 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100007)
+2013-01-18 14:09:58 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-18 14:09:58 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100007)
+2013-01-18 14:09:58 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-18 14:09:58 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:09:59 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:59 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:59 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:59 [JSDEBUGGER] INFO - LOG : calling getstack from the context,Context{id: "4318069824stackSize: 0", is current}
+2013-01-18 14:09:59 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:09:59 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 54)
+2013-01-18 14:09:59 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 54)
+2013-01-18 14:09:59 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stackready,event internally:,[object Object],(request_seq: 100009)
+2013-01-18 14:09:59 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4318069824,0,18,100009
+2013-01-18 14:09:59 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100009)
+2013-01-18 14:09:59 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-18 14:09:59 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100009)
+2013-01-18 14:09:59 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-18 14:09:59 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:10:00 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:10:00 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:10:00 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:10:00 [JSDEBUGGER] INFO - LOG : calling getstack from the context,Context{id: "4318069824stackSize: 0", is current}
+2013-01-18 14:10:00 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:10:00 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 59)
+2013-01-18 14:10:00 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 59)
+2013-01-18 14:10:00 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stackready,event internally:,[object Object],(request_seq: 100011)
+2013-01-18 14:10:00 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4318069824,0,24,100011
+2013-01-18 14:10:00 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100011)
+2013-01-18 14:10:00 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-18 14:10:00 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100011)
+2013-01-18 14:10:00 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-18 14:10:01 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:10:01 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:10:01 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:10:01 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:10:01 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:10:01 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:10:01 [JSDEBUGGER] INFO - LOG : calling getstack from the context,Context{id: "4318069824stackSize: 0", is current}
+2013-01-18 14:10:01 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:10:01 [JSDEBUGGER] INFO - WARNING : context doesn't exist anymore,[object Object]
+2013-01-18 14:10:01 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:10:01 [JSDEBUGGER] INFO - WARNING : context doesn't exist anymore,[object Object]
+2013-01-18 14:10:01 [JSDEBUGGER] INFO - WARNING : context do not exists any more,[object Object]
+2013-01-18 14:10:02 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,enabledpanels,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:10:02 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,enabledpanels,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - LOG : Bottom> setReady from crossfireClient_ontemplatesloaded
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - LOG : Right> setReady from crossfireClient_ontemplatesloaded
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - WARNING : Right> Received a "break" event without "contextcreated" event,4315233392
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - LOG : calling getstack from the context,Context{id: "4315233392stackSize: 0", }
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - WARNING : context doesn't exist anymore,[object Object]
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - WARNING : Bottom> Received a "break" event without "contextcreated" event,4315233392
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - LOG : Bottom> getBreakpoints from crossfireClient_onready_breakpointListener,[object Object]
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 65)
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 65)
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stackready,event internally:,[object Object],(request_seq: 100001)
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4315233392,0,2,100001
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4315233392,0,1,100002
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextslisted,event internally:,[object Object],(request_seq: 67)
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - ERROR : contextcreated already received with this id
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextslisted,event internally:,[object Object],(request_seq: 67)
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - ERROR : contextcreated already received with this id
+2013-01-18 14:46:57 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:46:58 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100001)
+2013-01-18 14:46:58 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-18 14:46:58 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100001)
+2013-01-18 14:46:58 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-18 14:46:58 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100002)
+2013-01-18 14:46:58 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-18 14:46:58 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100002)
+2013-01-18 14:46:58 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-18 14:46:58 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,consoleerror,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:46:58 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:46:58 [JSDEBUGGER] INFO - DEBUG : crossfireClient_onmessage_consoleListener_mapData - html:,<!--
+* This file is part of Wakanda software, licensed by 4D under
+*  (i) the GNU General Public License version 3 (GNU GPL v3), or
+*  (ii) the Affero General Public License version 3 (AGPL v3) or
+*  (iii) a commercial license.
+* This file remains the exclusive property of 4D and/or its licensors
+* and is protected by national and international legislations.
+* In any event, Licensee's compliance with the terms and conditions
+* of the applicable license constitutes a prerequisite to any use of this file.
+* Except as otherwise expressly stated in the applicable license,
+* such license does not include any other license or rights on this file,
+* 4D's and/or its licensors' trademarks and/or other proprietary rights.
+* Consequently, no title, copyright or other proprietary rights
+* other than those specified in the applicable license is granted.
+-->
+	<span class="syntaxColor-string">Exception Error : The entity# 1315 of the datastore class "RecentItem" cannot be saved</span>
+   	
+2013-01-18 14:46:58 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,consoleerror,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:47:18 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4315233392,0,1,100003
+2013-01-18 14:47:19 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100003)
+2013-01-18 14:47:19 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-18 14:47:19 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100003)
+2013-01-18 14:47:19 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-18 14:47:19 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:47:19 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:47:19 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:47:19 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:47:27 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4315233392,0,9,100004
+2013-01-18 14:47:27 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100004)
+2013-01-18 14:47:27 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-18 14:47:27 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100004)
+2013-01-18 14:47:27 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-18 14:47:27 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:47:27 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:47:27 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-18 14:50:28 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2013-01-18 14:50:28 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:50:28 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2013-01-18 14:50:28 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:50:28 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:50:28 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:51:47 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:51:47 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:51:47 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-18 14:51:47 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 08:40:15 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2013-01-19 08:40:15 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2013-01-19 08:40:15 [JSDEBUGGER] INFO - LOG : Right> setReady from crossfireClient_ontemplatesloaded
+2013-01-19 08:40:15 [JSDEBUGGER] INFO - LOG : Bottom> setReady from crossfireClient_ontemplatesloaded
+2013-01-19 08:40:15 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 08:40:15 [JSDEBUGGER] INFO - WARNING : Right> Received a "break" event without "contextcreated" event,4351539872
+2013-01-19 08:40:15 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 08:40:15 [JSDEBUGGER] INFO - LOG : calling getstack from the context,Context{id: "4351539872stackSize: 0", }
+2013-01-19 08:40:15 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 08:40:15 [JSDEBUGGER] INFO - WARNING : context doesn't exist anymore,[object Object]
+2013-01-19 08:40:15 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 08:40:15 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 08:40:15 [JSDEBUGGER] INFO - WARNING : Bottom> Received a "break" event without "contextcreated" event,4351539872
+2013-01-19 08:40:15 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 08:40:15 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 08:40:15 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 08:40:15 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 08:40:15 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 08:40:15 [JSDEBUGGER] INFO - LOG : Bottom> getBreakpoints from crossfireClient_onready_breakpointListener,[object Object]
+2013-01-19 08:40:15 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 08:40:15 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:12:27 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2013-01-19 09:12:27 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2013-01-19 09:12:27 [JSDEBUGGER] INFO - LOG : Bottom> setReady from crossfireClient_ontemplatesloaded
+2013-01-19 09:12:27 [JSDEBUGGER] INFO - LOG : Right> setReady from crossfireClient_ontemplatesloaded
+2013-01-19 09:12:27 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:12:27 [JSDEBUGGER] INFO - WARNING : Right> Received a "break" event without "contextcreated" event,4348890704
+2013-01-19 09:12:27 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:12:27 [JSDEBUGGER] INFO - LOG : calling getstack from the context,Context{id: "4348890704stackSize: 0", }
+2013-01-19 09:12:27 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:12:27 [JSDEBUGGER] INFO - WARNING : context doesn't exist anymore,[object Object]
+2013-01-19 09:12:27 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:12:27 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:12:27 [JSDEBUGGER] INFO - WARNING : Bottom> Received a "break" event without "contextcreated" event,4348890704
+2013-01-19 09:12:27 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:12:27 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:12:27 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:12:27 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:12:27 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:12:27 [JSDEBUGGER] INFO - LOG : Bottom> getBreakpoints from crossfireClient_onready_breakpointListener,[object Object]
+2013-01-19 09:12:27 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:12:27 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:12:27 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 0)
+2013-01-19 09:12:27 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 0)
+2013-01-19 09:12:27 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stackready,event internally:,[object Object],(request_seq: 100001)
+2013-01-19 09:12:27 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4348890704,0,2,100001
+2013-01-19 09:12:27 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4348890704,0,1,100002
+2013-01-19 09:12:28 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextslisted,event internally:,[object Object],(request_seq: 2)
+2013-01-19 09:12:28 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:12:28 [JSDEBUGGER] INFO - ERROR : contextcreated already received with this id
+2013-01-19 09:12:28 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:12:28 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextslisted,event internally:,[object Object],(request_seq: 2)
+2013-01-19 09:12:28 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:12:28 [JSDEBUGGER] INFO - ERROR : contextcreated already received with this id
+2013-01-19 09:12:28 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:12:28 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100001)
+2013-01-19 09:12:28 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-19 09:12:28 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100001)
+2013-01-19 09:12:28 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-19 09:12:28 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:12:28 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:12:28 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100002)
+2013-01-19 09:12:28 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-19 09:12:28 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100002)
+2013-01-19 09:12:28 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-19 09:12:28 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,consoleerror,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:12:28 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:12:28 [JSDEBUGGER] INFO - DEBUG : crossfireClient_onmessage_consoleListener_mapData - html:,<!--
+* This file is part of Wakanda software, licensed by 4D under
+*  (i) the GNU General Public License version 3 (GNU GPL v3), or
+*  (ii) the Affero General Public License version 3 (AGPL v3) or
+*  (iii) a commercial license.
+* This file remains the exclusive property of 4D and/or its licensors
+* and is protected by national and international legislations.
+* In any event, Licensee's compliance with the terms and conditions
+* of the applicable license constitutes a prerequisite to any use of this file.
+* Except as otherwise expressly stated in the applicable license,
+* such license does not include any other license or rights on this file,
+* 4D's and/or its licensors' trademarks and/or other proprietary rights.
+* Consequently, no title, copyright or other proprietary rights
+* other than those specified in the applicable license is granted.
+-->
+	<span class="syntaxColor-string">Exception Error : Wrong field reference in database Model</span>
+   	
+2013-01-19 09:12:28 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,consoleerror,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:13:04 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4348890704,0,1,100003
+2013-01-19 09:13:04 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100003)
+2013-01-19 09:13:04 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-19 09:13:04 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100003)
+2013-01-19 09:13:04 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-19 09:13:04 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:13:04 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:13:04 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:13:04 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:40:43 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2013-01-19 09:40:43 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2013-01-19 09:40:43 [JSDEBUGGER] INFO - LOG : Bottom> setReady from crossfireClient_ontemplatesloaded
+2013-01-19 09:40:43 [JSDEBUGGER] INFO - LOG : Right> setReady from crossfireClient_ontemplatesloaded
+2013-01-19 09:40:43 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:40:43 [JSDEBUGGER] INFO - WARNING : Right> Received a "break" event without "contextcreated" event,4318750304
+2013-01-19 09:40:43 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:40:43 [JSDEBUGGER] INFO - LOG : calling getstack from the context,Context{id: "4318750304stackSize: 0", }
+2013-01-19 09:40:43 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:40:43 [JSDEBUGGER] INFO - WARNING : context doesn't exist anymore,[object Object]
+2013-01-19 09:40:43 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:40:43 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:40:43 [JSDEBUGGER] INFO - WARNING : Bottom> Received a "break" event without "contextcreated" event,4318750304
+2013-01-19 09:40:43 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:40:43 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:40:43 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:40:43 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:40:43 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:40:43 [JSDEBUGGER] INFO - LOG : Bottom> getBreakpoints from crossfireClient_onready_breakpointListener,[object Object]
+2013-01-19 09:40:43 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:40:43 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:40:43 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 8)
+2013-01-19 09:40:43 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 8)
+2013-01-19 09:40:43 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stackready,event internally:,[object Object],(request_seq: 100001)
+2013-01-19 09:40:43 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4318750304,1,2,100001
+2013-01-19 09:40:43 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4318750304,1,1,100002
+2013-01-19 09:40:44 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextslisted,event internally:,[object Object],(request_seq: 10)
+2013-01-19 09:40:44 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:40:44 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:40:44 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:40:44 [JSDEBUGGER] INFO - ERROR : contextcreated already received with this id
+2013-01-19 09:40:44 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:40:44 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextslisted,event internally:,[object Object],(request_seq: 10)
+2013-01-19 09:40:44 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:40:44 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:40:44 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:40:44 [JSDEBUGGER] INFO - ERROR : contextcreated already received with this id
+2013-01-19 09:40:44 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:40:44 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100001)
+2013-01-19 09:40:44 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-19 09:40:44 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100001)
+2013-01-19 09:40:44 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-19 09:40:44 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:40:44 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:40:44 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:40:44 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100002)
+2013-01-19 09:40:44 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-19 09:40:44 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100002)
+2013-01-19 09:40:44 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-19 09:40:44 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,consoleerror,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:40:44 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:40:44 [JSDEBUGGER] INFO - DEBUG : crossfireClient_onmessage_consoleListener_mapData - html:,<!--
+* This file is part of Wakanda software, licensed by 4D under
+*  (i) the GNU General Public License version 3 (GNU GPL v3), or
+*  (ii) the Affero General Public License version 3 (AGPL v3) or
+*  (iii) a commercial license.
+* This file remains the exclusive property of 4D and/or its licensors
+* and is protected by national and international legislations.
+* In any event, Licensee's compliance with the terms and conditions
+* of the applicable license constitutes a prerequisite to any use of this file.
+* Except as otherwise expressly stated in the applicable license,
+* such license does not include any other license or rights on this file,
+* 4D's and/or its licensors' trademarks and/or other proprietary rights.
+* Consequently, no title, copyright or other proprietary rights
+* other than those specified in the applicable license is granted.
+-->
+	<span class="syntaxColor-string">Exception Error : 'null' is not an object (evaluating 'moveRecentItem.sortOrder')</span>
+   	
+2013-01-19 09:40:44 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,consoleerror,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:40:50 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2013-01-19 09:40:50 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:40:50 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2013-01-19 09:40:50 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:40:50 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2013-01-19 09:40:50 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:40:50 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2013-01-19 09:40:50 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:40:50 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:40:50 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:40:50 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:40:50 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:41:04 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2013-01-19 09:41:04 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:41:04 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2013-01-19 09:41:04 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:41:04 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:41:04 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:41:42 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:41:42 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:41:42 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:41:42 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:41:42 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:41:42 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:41:42 [JSDEBUGGER] INFO - LOG : calling getstack from the context,Context{id: "4348890704stackSize: 0", }
+2013-01-19 09:41:42 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:41:42 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:41:42 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 16)
+2013-01-19 09:41:42 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 16)
+2013-01-19 09:41:42 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stackready,event internally:,[object Object],(request_seq: 100004)
+2013-01-19 09:41:42 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4348890704,0,11,100004
+2013-01-19 09:41:42 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100004)
+2013-01-19 09:41:42 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-19 09:41:42 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100004)
+2013-01-19 09:41:42 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-19 09:41:42 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:41:42 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:41:45 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:41:45 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:41:45 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:41:45 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:41:45 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:41:45 [JSDEBUGGER] INFO - WARNING : crossfireClient_oncontextdestroyed_contextsListener - context unknown or already destroyed:,[object Object]
+2013-01-19 09:41:45 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:41:45 [JSDEBUGGER] INFO - WARNING : crossfireClient_oncontextdestroyed_contextsListener - context unknown or already destroyed:,[object Object]
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - LOG : Right> setReady from crossfireClient_ontemplatesloaded
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - LOG : Bottom> setReady from crossfireClient_ontemplatesloaded
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - WARNING : Right> Received a "break" event without "contextcreated" event,4315495248
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - LOG : calling getstack from the context,Context{id: "4315495248stackSize: 0", }
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - WARNING : context doesn't exist anymore,[object Object]
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - WARNING : Bottom> Received a "break" event without "contextcreated" event,4315495248
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - LOG : Bottom> getBreakpoints from crossfireClient_onready_breakpointListener,[object Object]
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 22)
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 22)
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stackready,event internally:,[object Object],(request_seq: 100001)
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4315495248,1,1,100001
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextslisted,event internally:,[object Object],(request_seq: 24)
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - ERROR : contextcreated already received with this id
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextslisted,event internally:,[object Object],(request_seq: 24)
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - ERROR : contextcreated already received with this id
+2013-01-19 09:45:46 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:45:47 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100001)
+2013-01-19 09:45:47 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-19 09:45:47 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100001)
+2013-01-19 09:45:47 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-19 09:45:47 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:45:47 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:45:47 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:45:53 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 200001)
+2013-01-19 09:45:53 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 200001)
+2013-01-19 09:45:57 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:45:57 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:45:57 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:45:57 [JSDEBUGGER] INFO - LOG : calling getstack from the context,Context{id: "4315495248stackSize: 0", is current}
+2013-01-19 09:45:57 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:45:57 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 30)
+2013-01-19 09:45:57 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 30)
+2013-01-19 09:45:57 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stackready,event internally:,[object Object],(request_seq: 200003)
+2013-01-19 09:45:57 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4315495248,1,4,200003
+2013-01-19 09:45:58 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 200003)
+2013-01-19 09:45:58 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-19 09:45:58 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 200003)
+2013-01-19 09:45:58 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-19 09:45:58 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:45:58 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:45:58 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:45:58 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:45:58 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:45:58 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:45:58 [JSDEBUGGER] INFO - LOG : calling getstack from the context,Context{id: "4315495248stackSize: 0", is current}
+2013-01-19 09:45:58 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:45:58 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 35)
+2013-01-19 09:45:58 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 35)
+2013-01-19 09:45:58 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stackready,event internally:,[object Object],(request_seq: 200005)
+2013-01-19 09:45:58 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4315495248,1,7,200005
+2013-01-19 09:45:59 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 200005)
+2013-01-19 09:45:59 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-19 09:45:59 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 200005)
+2013-01-19 09:45:59 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-19 09:45:59 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:45:59 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:45:59 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:46:37 [JSDEBUGGER] INFO - LOG : Right> evaluate ,4315495248,1,(ds.RecentItem.find("ID = 1338")),200006
+2013-01-19 09:46:37 [JSDEBUGGER] INFO - LOG : Right> evaluate ,4315495248,1,(ds.RecentItem.find("ID = 1338")),200007
+2013-01-19 09:46:37 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 200006)
+2013-01-19 09:46:37 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 200006)
+2013-01-19 09:46:37 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 200007)
+2013-01-19 09:46:37 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 200007)
+2013-01-19 09:46:56 [JSDEBUGGER] INFO - LOG : Right> evaluate ,4315495248,1,(ds.RecentItem.query(1338)),200008
+2013-01-19 09:46:56 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 200008)
+2013-01-19 09:46:56 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 200008)
+2013-01-19 09:47:14 [JSDEBUGGER] INFO - LOG : Right> evaluate ,4315495248,1,(ds.RecentItem.find(1338)),200009
+2013-01-19 09:47:14 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 200009)
+2013-01-19 09:47:14 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 200009)
+2013-01-19 09:47:39 [JSDEBUGGER] INFO - LOG : Right> evaluate ,4315495248,1,(ds.RecentItem.find({ID:1338})),200010
+2013-01-19 09:47:40 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 200010)
+2013-01-19 09:47:40 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 200010)
+2013-01-19 09:47:58 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:47:58 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:12 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:12 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:16 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2013-01-19 09:48:16 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:16 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2013-01-19 09:48:16 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:16 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:16 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:16 [JSDEBUGGER] INFO - LOG : Right> evaluate ,4315495248,1,(ds.RecentItem.find("ID = 1338")),200011
+2013-01-19 09:48:16 [JSDEBUGGER] INFO - LOG : Right> evaluate ,4315495248,1,(ds.RecentItem.query(1338)),200012
+2013-01-19 09:48:16 [JSDEBUGGER] INFO - LOG : Right> evaluate ,4315495248,1,(ds.RecentItem.find(1338)),200013
+2013-01-19 09:48:16 [JSDEBUGGER] INFO - LOG : Right> evaluate ,4315495248,1,(ds.RecentItem.find({ID:1338})),200014
+2013-01-19 09:48:16 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 200011)
+2013-01-19 09:48:16 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 200011)
+2013-01-19 09:48:16 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 200012)
+2013-01-19 09:48:16 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 200012)
+2013-01-19 09:48:16 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 200013)
+2013-01-19 09:48:16 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 200013)
+2013-01-19 09:48:16 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 200014)
+2013-01-19 09:48:16 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 200014)
+2013-01-19 09:48:26 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2013-01-19 09:48:26 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:26 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2013-01-19 09:48:26 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:27 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:27 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:38 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:38 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:38 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:38 [JSDEBUGGER] INFO - LOG : calling getstack from the context,Context{id: "4315495248stackSize: 0", is current}
+2013-01-19 09:48:38 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:38 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 49)
+2013-01-19 09:48:38 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 49)
+2013-01-19 09:48:38 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stackready,event internally:,[object Object],(request_seq: 200016)
+2013-01-19 09:48:38 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4315495248,1,17,200016
+2013-01-19 09:48:38 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4315495248,1,16,200017
+2013-01-19 09:48:38 [JSDEBUGGER] INFO - LOG : Right> evaluate ,4315495248,1,(ds.RecentItem.find("ID = 1338")),200018
+2013-01-19 09:48:38 [JSDEBUGGER] INFO - LOG : Right> evaluate ,4315495248,1,(ds.RecentItem.query(1338)),200019
+2013-01-19 09:48:38 [JSDEBUGGER] INFO - LOG : Right> evaluate ,4315495248,1,(ds.RecentItem.find(1338)),200020
+2013-01-19 09:48:38 [JSDEBUGGER] INFO - LOG : Right> evaluate ,4315495248,1,(ds.RecentItem.find({ID:1338})),200021
+2013-01-19 09:48:38 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 200016)
+2013-01-19 09:48:38 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-19 09:48:38 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 200016)
+2013-01-19 09:48:38 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-19 09:48:38 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:48:38 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:48:38 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:48:39 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 200017)
+2013-01-19 09:48:39 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-19 09:48:39 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 200017)
+2013-01-19 09:48:39 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-19 09:48:39 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,consoleerror,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:39 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:48:39 [JSDEBUGGER] INFO - DEBUG : crossfireClient_onmessage_consoleListener_mapData - html:,<!--
+* This file is part of Wakanda software, licensed by 4D under
+*  (i) the GNU General Public License version 3 (GNU GPL v3), or
+*  (ii) the Affero General Public License version 3 (AGPL v3) or
+*  (iii) a commercial license.
+* This file remains the exclusive property of 4D and/or its licensors
+* and is protected by national and international legislations.
+* In any event, Licensee's compliance with the terms and conditions
+* of the applicable license constitutes a prerequisite to any use of this file.
+* Except as otherwise expressly stated in the applicable license,
+* such license does not include any other license or rights on this file,
+* 4D's and/or its licensors' trademarks and/or other proprietary rights.
+* Consequently, no title, copyright or other proprietary rights
+* other than those specified in the applicable license is granted.
+-->
+	<span class="syntaxColor-string">Exception Error : 'null' is not an object (evaluating 'moveRecentItem.sortOrder')</span>
+   	
+2013-01-19 09:48:39 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,consoleerror,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:39 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 200018)
+2013-01-19 09:48:39 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 200018)
+2013-01-19 09:48:39 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 200019)
+2013-01-19 09:48:39 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 200019)
+2013-01-19 09:48:39 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 200020)
+2013-01-19 09:48:39 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 200020)
+2013-01-19 09:48:39 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 200021)
+2013-01-19 09:48:39 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 200021)
+2013-01-19 09:48:42 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:42 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,resume,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:42 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:42 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:42 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:42 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:42 [JSDEBUGGER] INFO - LOG : calling getstack from the context,Context{id: "4315495248stackSize: 0", is current}
+2013-01-19 09:48:42 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:42 [JSDEBUGGER] INFO - WARNING : context doesn't exist anymore,[object Object]
+2013-01-19 09:48:42 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:42 [JSDEBUGGER] INFO - WARNING : context doesn't exist anymore,[object Object]
+2013-01-19 09:48:42 [JSDEBUGGER] INFO - WARNING : context do not exists any more,[object Object]
+2013-01-19 09:48:43 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,enabledpanels,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:43 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,enabledpanels,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:50 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2013-01-19 09:48:50 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2013-01-19 09:48:50 [JSDEBUGGER] INFO - LOG : Right> setReady from crossfireClient_ontemplatesloaded
+2013-01-19 09:48:50 [JSDEBUGGER] INFO - LOG : Bottom> setReady from crossfireClient_ontemplatesloaded
+2013-01-19 09:48:50 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:50 [JSDEBUGGER] INFO - WARNING : Right> Received a "break" event without "contextcreated" event,4318731488
+2013-01-19 09:48:50 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:50 [JSDEBUGGER] INFO - LOG : calling getstack from the context,Context{id: "4318731488stackSize: 0", }
+2013-01-19 09:48:50 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:50 [JSDEBUGGER] INFO - WARNING : context doesn't exist anymore,[object Object]
+2013-01-19 09:48:50 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:50 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:50 [JSDEBUGGER] INFO - WARNING : Bottom> Received a "break" event without "contextcreated" event,4318731488
+2013-01-19 09:48:50 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:50 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:50 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:50 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:50 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:50 [JSDEBUGGER] INFO - LOG : Bottom> getBreakpoints from crossfireClient_onready_breakpointListener,[object Object]
+2013-01-19 09:48:50 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:50 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:51 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextslisted,event internally:,[object Object],(request_seq: 62)
+2013-01-19 09:48:51 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextslisted,event internally:,[object Object],(request_seq: 62)
+2013-01-19 09:48:51 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 60)
+2013-01-19 09:48:51 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 60)
+2013-01-19 09:48:51 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stackready,event internally:,[object Object],(request_seq: 100001)
+2013-01-19 09:48:51 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4318731488,0,2,100001
+2013-01-19 09:48:51 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4318731488,0,1,100002
+2013-01-19 09:48:52 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100001)
+2013-01-19 09:48:52 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-19 09:48:52 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100001)
+2013-01-19 09:48:52 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-19 09:48:52 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:48:53 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100002)
+2013-01-19 09:48:53 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-19 09:48:53 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100002)
+2013-01-19 09:48:53 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-19 09:48:53 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,consoleerror,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:48:53 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:48:53 [JSDEBUGGER] INFO - DEBUG : crossfireClient_onmessage_consoleListener_mapData - html:,<!--
+* This file is part of Wakanda software, licensed by 4D under
+*  (i) the GNU General Public License version 3 (GNU GPL v3), or
+*  (ii) the Affero General Public License version 3 (AGPL v3) or
+*  (iii) a commercial license.
+* This file remains the exclusive property of 4D and/or its licensors
+* and is protected by national and international legislations.
+* In any event, Licensee's compliance with the terms and conditions
+* of the applicable license constitutes a prerequisite to any use of this file.
+* Except as otherwise expressly stated in the applicable license,
+* such license does not include any other license or rights on this file,
+* 4D's and/or its licensors' trademarks and/or other proprietary rights.
+* Consequently, no title, copyright or other proprietary rights
+* other than those specified in the applicable license is granted.
+-->
+	<span class="syntaxColor-string">Exception Error : Wrong field reference in database Model</span>
+   	
+2013-01-19 09:48:53 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,consoleerror,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:49:10 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2013-01-19 09:49:10 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Right> setReady from crossfireClient_ontemplatesloaded
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Bottom> setReady from crossfireClient_ontemplatesloaded
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - WARNING : Right> Received a "break" event without "contextcreated" event,4349081792
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : calling getstack from the context,Context{id: "4349081792stackSize: 0", }
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - WARNING : context doesn't exist anymore,[object Object]
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - WARNING : Bottom> Received a "break" event without "contextcreated" event,4349081792
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Bottom> getBreakpoints from crossfireClient_onready_breakpointListener,[object Object]
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextslisted,event internally:,[object Object],(request_seq: 69)
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextslisted,event internally:,[object Object],(request_seq: 69)
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 67)
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 67)
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stackready,event internally:,[object Object],(request_seq: 100001)
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4349081792,0,2,100001
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4349081792,0,1,100002
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100001)
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100001)
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100002)
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100002)
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,consoleerror,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - DEBUG : crossfireClient_onmessage_consoleListener_mapData - html:,<!--
+* This file is part of Wakanda software, licensed by 4D under
+*  (i) the GNU General Public License version 3 (GNU GPL v3), or
+*  (ii) the Affero General Public License version 3 (AGPL v3) or
+*  (iii) a commercial license.
+* This file remains the exclusive property of 4D and/or its licensors
+* and is protected by national and international legislations.
+* In any event, Licensee's compliance with the terms and conditions
+* of the applicable license constitutes a prerequisite to any use of this file.
+* Except as otherwise expressly stated in the applicable license,
+* such license does not include any other license or rights on this file,
+* 4D's and/or its licensors' trademarks and/or other proprietary rights.
+* Consequently, no title, copyright or other proprietary rights
+* other than those specified in the applicable license is granted.
+-->
+	<span class="syntaxColor-string">Exception Error : Wrong field reference in database Model</span>
+   	
+2013-01-19 09:49:11 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,consoleerror,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Bottom> setReady from crossfireClient_ontemplatesloaded
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Right> setReady from crossfireClient_ontemplatesloaded
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - WARNING : Right> Received a "break" event without "contextcreated" event,4414683248
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : calling getstack from the context,Context{id: "4414683248stackSize: 0", }
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - WARNING : context doesn't exist anymore,[object Object]
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - WARNING : Bottom> Received a "break" event without "contextcreated" event,4414683248
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Bottom> getBreakpoints from crossfireClient_onready_breakpointListener,[object Object]
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextslisted,event internally:,[object Object],(request_seq: 76)
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextslisted,event internally:,[object Object],(request_seq: 76)
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 74)
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 74)
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stackready,event internally:,[object Object],(request_seq: 100001)
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4414683248,0,2,100001
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4414683248,0,1,100002
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100001)
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100001)
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100002)
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100002)
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,consoleerror,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - DEBUG : crossfireClient_onmessage_consoleListener_mapData - html:,<!--
+* This file is part of Wakanda software, licensed by 4D under
+*  (i) the GNU General Public License version 3 (GNU GPL v3), or
+*  (ii) the Affero General Public License version 3 (AGPL v3) or
+*  (iii) a commercial license.
+* This file remains the exclusive property of 4D and/or its licensors
+* and is protected by national and international legislations.
+* In any event, Licensee's compliance with the terms and conditions
+* of the applicable license constitutes a prerequisite to any use of this file.
+* Except as otherwise expressly stated in the applicable license,
+* such license does not include any other license or rights on this file,
+* 4D's and/or its licensors' trademarks and/or other proprietary rights.
+* Consequently, no title, copyright or other proprietary rights
+* other than those specified in the applicable license is granted.
+-->
+	<span class="syntaxColor-string">Exception Error : Wrong field reference in database Model</span>
+   	
+2013-01-19 09:49:35 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,consoleerror,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:52:48 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Right> setReady from crossfireClient_ontemplatesloaded
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Bottom> setReady from crossfireClient_ontemplatesloaded
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - WARNING : Right> Received a "break" event without "contextcreated" event,4414444176
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : calling getstack from the context,Context{id: "4414444176stackSize: 0", }
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - WARNING : context doesn't exist anymore,[object Object]
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - WARNING : Bottom> Received a "break" event without "contextcreated" event,4414444176
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Bottom> getBreakpoints from crossfireClient_onready_breakpointListener,[object Object]
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 81)
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 81)
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stackready,event internally:,[object Object],(request_seq: 100001)
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4414444176,0,2,100001
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4414444176,0,1,100002
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextslisted,event internally:,[object Object],(request_seq: 83)
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - ERROR : contextcreated already received with this id
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextslisted,event internally:,[object Object],(request_seq: 83)
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - ERROR : contextcreated already received with this id
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100001)
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100001)
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100002)
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100002)
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,consoleerror,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - DEBUG : crossfireClient_onmessage_consoleListener_mapData - html:,<!--
+* This file is part of Wakanda software, licensed by 4D under
+*  (i) the GNU General Public License version 3 (GNU GPL v3), or
+*  (ii) the Affero General Public License version 3 (AGPL v3) or
+*  (iii) a commercial license.
+* This file remains the exclusive property of 4D and/or its licensors
+* and is protected by national and international legislations.
+* In any event, Licensee's compliance with the terms and conditions
+* of the applicable license constitutes a prerequisite to any use of this file.
+* Except as otherwise expressly stated in the applicable license,
+* such license does not include any other license or rights on this file,
+* 4D's and/or its licensors' trademarks and/or other proprietary rights.
+* Consequently, no title, copyright or other proprietary rights
+* other than those specified in the applicable license is granted.
+-->
+	<span class="syntaxColor-string">Exception Error : 'undefined' is not an object (evaluating 'ds.RecentItems.query')</span>
+   	
+2013-01-19 09:52:49 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,consoleerror,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:52:54 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2013-01-19 09:52:54 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:52:54 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2013-01-19 09:52:54 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:52:54 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:52:54 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:52:54 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2013-01-19 09:52:54 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:52:54 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2013-01-19 09:52:54 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:52:55 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2013-01-19 09:52:55 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:52:55 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2013-01-19 09:52:55 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:52:55 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:52:55 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:52:55 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:52:55 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:53:05 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2013-01-19 09:53:05 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:53:05 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2013-01-19 09:53:05 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:53:05 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:53:05 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:54:13 [JSDEBUGGER] INFO - LOG : Right> evaluate ,4414444176,0,(this.sortOrder),100003
+2013-01-19 09:54:13 [JSDEBUGGER] INFO - LOG : Right> evaluate ,4414444176,0,(this.sortOrder),100004
+2013-01-19 09:54:13 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 100003)
+2013-01-19 09:54:13 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 100003)
+2013-01-19 09:54:14 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 100004)
+2013-01-19 09:54:14 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 100004)
+2013-01-19 09:54:18 [JSDEBUGGER] INFO - LOG : Right> evaluate ,4414444176,0,(this),100005
+2013-01-19 09:54:18 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 100005)
+2013-01-19 09:54:18 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 100005)
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - LOG : Right> setReady from crossfireClient_ontemplatesloaded
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - LOG : Bottom> setReady from crossfireClient_ontemplatesloaded
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - WARNING : Right> Received a "break" event without "contextcreated" event,4315454032
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - LOG : calling getstack from the context,Context{id: "4315454032stackSize: 0", }
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - WARNING : context doesn't exist anymore,[object Object]
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - WARNING : Bottom> Received a "break" event without "contextcreated" event,4315454032
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - LOG : Bottom> getBreakpoints from crossfireClient_onready_breakpointListener,[object Object]
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextslisted,event internally:,[object Object],(request_seq: 93)
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextslisted,event internally:,[object Object],(request_seq: 93)
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,break,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 91)
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stacksloaded,event internally:,[object Object],(request_seq: 91)
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,stackready,event internally:,[object Object],(request_seq: 100001)
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4315454032,0,2,100001
+2013-01-19 09:57:31 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4315454032,0,1,100002
+2013-01-19 09:57:32 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100001)
+2013-01-19 09:57:32 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-19 09:57:32 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100001)
+2013-01-19 09:57:32 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-19 09:57:32 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:57:32 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:57:32 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100002)
+2013-01-19 09:57:32 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-19 09:57:32 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100002)
+2013-01-19 09:57:32 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-19 09:57:32 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,consoleerror,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:57:32 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:57:32 [JSDEBUGGER] INFO - DEBUG : crossfireClient_onmessage_consoleListener_mapData - html:,<!--
+* This file is part of Wakanda software, licensed by 4D under
+*  (i) the GNU General Public License version 3 (GNU GPL v3), or
+*  (ii) the Affero General Public License version 3 (AGPL v3) or
+*  (iii) a commercial license.
+* This file remains the exclusive property of 4D and/or its licensors
+* and is protected by national and international legislations.
+* In any event, Licensee's compliance with the terms and conditions
+* of the applicable license constitutes a prerequisite to any use of this file.
+* Except as otherwise expressly stated in the applicable license,
+* such license does not include any other license or rights on this file,
+* 4D's and/or its licensors' trademarks and/or other proprietary rights.
+* Consequently, no title, copyright or other proprietary rights
+* other than those specified in the applicable license is granted.
+-->
+	<span class="syntaxColor-string">Exception Error : 'undefined' is not an object (evaluating 'ds.RecentItems.query')</span>
+   	
+2013-01-19 09:57:32 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,consoleerror,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:57:46 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2013-01-19 09:57:46 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:57:46 [JSDEBUGGER] INFO - WARNING : the event type "contextcreated" was given througt the "event" property instead of the "type" property
+2013-01-19 09:57:46 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:57:46 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:57:46 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextdestroyed,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:57:46 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:57:46 [JSDEBUGGER] INFO - WARNING : Right> Received a "break" event without "contextcreated" event,4414726112
+2013-01-19 09:57:46 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:57:46 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:57:46 [JSDEBUGGER] INFO - WARNING : Bottom> Received a "break" event without "contextcreated" event,4414726112
+2013-01-19 09:57:46 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-19 09:58:02 [JSDEBUGGER] INFO - LOG : Right> evaluate ,4315454032,0,(dupItem),100003
+2013-01-19 09:58:02 [JSDEBUGGER] INFO - LOG : Right> evaluate ,4315454032,0,(dupItem),100004
+2013-01-19 09:58:02 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 100003)
+2013-01-19 09:58:02 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 100003)
+2013-01-19 09:58:02 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 100004)
+2013-01-19 09:58:02 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,evaluated,event internally:,[object Object],(request_seq: 100004)
+2013-01-19 09:58:33 [JSDEBUGGER] INFO - LOG : Right> getObjectProperties ,4315454032,0,1,100005
+2013-01-19 09:58:33 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100005)
+2013-01-19 09:58:33 [JSDEBUGGER] INFO - LOG : Bottom> Frame_onobjectpropertiesreceived: undefined,[object Object]
+2013-01-19 09:58:33 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,objectpropertiesreceived,event internally:,[object Object],(request_seq: 100005)
+2013-01-19 09:58:33 [JSDEBUGGER] INFO - LOG : Right> Frame_onobjectpropertiesreceived: [object Object],[object Object]
+2013-01-19 09:58:33 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:58:33 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:58:33 [JSDEBUGGER] INFO - WARNING : path undefined
+2013-01-19 09:58:33 [JSDEBUGGER] INFO - WARNING : path undefined
