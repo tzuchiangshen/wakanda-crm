@@ -21,12 +21,24 @@ function constructor (id) {
 		$$(leadsReportsComponent).loadComponent({path: '/reports.waComponent', userData: {menuItem: "leads"}});
 			
 	// @region namespaceDeclaration// @startlock
+	var convertButton = {};	// @button
 	var button1 = {};	// @button
 	var leadsCancelButton = {};	// @button
 	var leadsDataGrid = {};	// @dataGrid
 	// @endregion// @endlock
 
 	// eventHandlers// @lock
+
+	convertButton.click = function convertButton_click (event)// @startlock
+	{// @endlock
+		//Convert The Lead.
+		waf.sources.lead.converted = true;
+		waf.sources.lead.save({
+			onSuccess: function(event) {
+				
+			} //onSuccess
+		}); //waf.sources.lead.save
+	};// @lock
 
 	button1.click = function button1_click (event)// @startlock
 	{// @endlock
@@ -48,6 +60,7 @@ function constructor (id) {
 	};// @lock
 
 	// @region eventManager// @startlock
+	WAF.addListener(this.id + "_convertButton", "click", convertButton.click, "WAF");
 	WAF.addListener(this.id + "_button1", "click", button1.click, "WAF");
 	WAF.addListener(this.id + "_leadsCancelButton", "click", leadsCancelButton.click, "WAF");
 	WAF.addListener(this.id + "_leadsDataGrid", "onRowDblClick", leadsDataGrid.onRowDblClick, "WAF");

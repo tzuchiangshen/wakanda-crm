@@ -50,7 +50,7 @@ function constructor (id) {
 			
 			waf.sources.account.all();
 			waf.sources.contact.all();
-			waf.sources.lead.all();
+			waf.sources.lead.query("converted == false");
 			
 		} else {
 			$$(errorMsg).setValue("Invalid login.");

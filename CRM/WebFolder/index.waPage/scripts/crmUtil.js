@@ -75,37 +75,24 @@ var crmUtil = (function() {
 	
 	//Create New Recent Item
 	crmUtilObj.newRecentItem = function(dataClassName, titleKey, titleValue, entityKey, targetContainer) {
-			
-			/*
-			waf.ds.RecentItem.all({
-				onSuccess: function(event) {
-					alert(event.entityCollection.length);
-				}
-			});
-			*/
-			
-			/**/
-			//***Enhancement Needed*** This code does not care about duplicates. 
-			var recentItem = ds.RecentItem.newEntity(); // create the entity
-			recentItem.dataClassName.setValue(dataClassName);
-			recentItem.title.setValue(titleKey + titleValue); 
-			recentItem.entityKey.setValue(entityKey);
-			recentItem.sortOrder.setValue(0);
-			
-			recentItem.save({
-	        	onSuccess:function(event) {
-	        		ds.RecentItem.reorderItems();
-	        		crmUtilObj.loadRecentItems(targetContainer);
-	        	},
-	        	
-	        	onError: function(error) {
-	        		//console.log(error.error[0].errCode + ": " + error.error[0].message);
-	        		if (error.error[0].errCode == 9998)
-	        		 crmUtilObj.loadRecentItems(targetContainer);
-	        	}
-	        });
-	        //***End Enhancement Needed*** This code does not care about duplicates.
-	        
+		var recentItem = ds.RecentItem.newEntity(); // create the entity
+		recentItem.dataClassName.setValue(dataClassName);
+		recentItem.title.setValue(titleKey + titleValue); 
+		recentItem.entityKey.setValue(entityKey);
+		recentItem.sortOrder.setValue(0);
+		
+		recentItem.save({
+        	onSuccess:function(event) {
+        		ds.RecentItem.reorderItems();
+        		crmUtilObj.loadRecentItems(targetContainer);
+        	},
+        	
+        	onError: function(error) {
+        		//console.log(error.error[0].errCode + ": " + error.error[0].message);
+        		if (error.error[0].errCode == 9998)
+        		 crmUtilObj.loadRecentItems(targetContainer);
+        	}
+        });
 	};
 	
 	//Load Recent Items - Try Again!
@@ -145,27 +132,23 @@ var crmUtil = (function() {
 					var $this = $(this),
 				 		theDataClass = $this.data('class'),
 				 		theEntityID = $this.data('entity');
-				 	//debugger;
+				 	
 				 	var theNewPath = '/' + theDataClass + '.waComponent';
 				 	$$('bodyComponent').loadComponent({path: theNewPath, userData: {view: "detail"}});
-				 	//$$('bodyComponent').loadComponent({path: theNewPath});
 				 	$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: theDataClass}});
 				 	
 				 	switch(theDataClass) {
 						case "accounts":
-						//crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem3');
 						waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem3');
 						waf.sources.account.selectByKey($this.data('entity'));
 						break;
 							
 						case "contacts":
-						//crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem4');
 						waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem4');
 						waf.sources.contact.selectByKey($this.data('entity'));
 						break;
 							
 						case "leads":
-						//crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem2');
 						waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem2');
 						waf.sources.lead.selectByKey($this.data('entity'));
 						break;
