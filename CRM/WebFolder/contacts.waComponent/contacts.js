@@ -18,7 +18,6 @@ function constructor (id) {
 			$$(id + "_tabView1").selectTab(1);
 		}
 		
-		//$$(id + "_tabView1").selectTab(1); //Laurent - I should not have to do this.
 		$$(contactsReportsComponent).loadComponent({path: '/reports.waComponent', userData: {menuItem: "contacts"}});
 		
 	// @region namespaceDeclaration// @startlock

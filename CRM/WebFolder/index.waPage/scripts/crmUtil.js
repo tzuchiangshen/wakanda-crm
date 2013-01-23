@@ -72,6 +72,37 @@ var crmUtil = (function() {
 	//};
 	//***end remove***
 	
+	//Create Recent Items Event Handler.
+	//Call this once at Startup.
+	crmUtilObj.setRecentItemsEventHandler = function() {
+		$('.recentItem').live('click', function(e) {
+			$this = $(this);
+		 	theDataClass = $this.data('class');
+		 	theEntityID = $this.data('entity');
+		 	theConverted = $this.data('converted');
+		 	theNewPath = '/' + theDataClass + '.waComponent';
+			theView = "detail";	
+		 	$$('bodyComponent').loadComponent({path: theNewPath, userData: {view: theView}});
+		 	$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: theDataClass}});
+		 	
+		 	switch(theDataClass) {
+				case "accounts":
+				waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem3');
+				waf.sources.account.selectByKey($this.data('entity'));
+				break;
+					
+				case "contacts":
+				waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem4');
+				waf.sources.contact.selectByKey($this.data('entity'));
+				break;
+					
+				case "leads":
+				waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem2');
+				waf.sources.lead.selectByKey($this.data('entity'));
+				break;
+			}
+		}); // end - event handlers for recent items link.
+	};
 	
 	//Create New Recent Item
 	crmUtilObj.newRecentItem = function(dataClassName, titleKey, titleValue, entityKey, targetContainer) {
@@ -132,7 +163,9 @@ var crmUtil = (function() {
 				
 				$('#' + targetContainer).html(myHTML);	
 				
+				//***Anti-Pattern
 				//set event handler on recent item links
+				/*
 				$('.recentItem').live('click', function(e) {
 					$this = $(this);
 				 	theDataClass = $this.data('class');
@@ -160,6 +193,9 @@ var crmUtil = (function() {
 						break;
 					}
 				}); // end - event handlers for recent items link.
+				*/
+				//***end Anti-Pattern
+				
 			} //onSuccess
 		}); //waf.ds.RecentItem.query();
 	}; //end - crmUtilObj.loadRecentItems

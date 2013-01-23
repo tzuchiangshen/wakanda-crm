@@ -43,11 +43,12 @@ function constructor (id) {
 		
 		waf.sources.lead.convertLead({
 			onSuccess: function(event) {
+				debugger;
 				crmUtil.loadRecentItems('recentItemsBodyContainer');
 				waf.sources.account.all();
 				waf.sources.contact.all({
 					onSuccess: function(event) {
-						//waf.sources.contact.selectByKey($this.data('entity'));
+						waf.sources.contact.selectByKey(event.result);
 						$$('bodyComponent').loadComponent({path: '/contacts.waComponent'});
 						$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "contacts"}});
 						waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem4');
