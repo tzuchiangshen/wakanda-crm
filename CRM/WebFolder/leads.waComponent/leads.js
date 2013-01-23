@@ -45,10 +45,18 @@ function constructor (id) {
 			onSuccess: function(event) {
 				crmUtil.loadRecentItems('recentItemsBodyContainer');
 				waf.sources.account.all();
-				waf.sources.contact.all();
+				waf.sources.contact.all({
+					onSuccess: function(event) {
+						//waf.sources.contact.selectByKey($this.data('entity'));
+						$$('bodyComponent').loadComponent({path: '/contacts.waComponent'});
+						$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "contacts"}});
+						waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem4');
+	
+					}
+				});
 				waf.sources.lead.query("converted == false", {
 					onSuccess: function(event) {
-						$$(id + "_tabView2").selectTab(1);
+						//$$(id + "_tabView2").selectTab(1);
 					} //onSuccess
 				});
 			}

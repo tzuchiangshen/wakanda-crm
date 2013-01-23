@@ -139,16 +139,6 @@ var crmUtil = (function() {
 				 	theEntityID = $this.data('entity');
 				 	theConverted = $this.data('converted');
 				 	theNewPath = '/' + theDataClass + '.waComponent';
-				 	/*
-				 	if (theDataClass == "leads") {
-					 	if (theConverted == true) {
-					 		theNewPath = '/message.waComponent';
-					 	}
-					 }	
-					debugger;
-					*/
-					
-					
 					theView = "detail";	
 				 	$$('bodyComponent').loadComponent({path: theNewPath, userData: {view: theView}});
 				 	$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: theDataClass}});
