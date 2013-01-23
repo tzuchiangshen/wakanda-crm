@@ -21,13 +21,13 @@ var crmUtil = (function() {
 					signUpObj.email = "";
 					signUpObj.password = "";
 					signUpObj.verifyPassword = "";
-					waf.sources.signUpObj.autoDispatch();
+					waf.sources.signUpObj.sync();
 					
-					$$('inputUsername').setValue();
-					$$('inputEmailAddress').setValue();
-					$$('iputPassword').setValue();
-					$$('inputVerifyPassword').setValue();
-					$$('signUpMessage').setValue('');
+//					$$('inputUsername').setValue();
+//					$$('inputEmailAddress').setValue();
+//					$$('iputPassword').setValue();
+//					$$('inputVerifyPassword').setValue();
+//					$$('signUpMessage').setValue('');
 					
 					//***note*** make this a function()
 					$('#headerContainerBackground').css('background', '#f5f5f5');
@@ -99,9 +99,9 @@ var crmUtil = (function() {
 	crmUtilObj.loadRecentItems = function(targetContainer) {
 		var myHTML,
 			sessionCurrentUser = WAF.directory.currentUser(),
-			theDataClass,
-			theTitle,
-			recentItemsCollection,
+			theDataClass, theView, convertedString, 
+			theTitle, theNewPath, $this, theConverted,
+			recentItemsCollection, theEntityID,
 			theEntityKey;
 		
 		//waf.ds.RecentItem.query("owner.ID = :1", sessionCurrentUser.ID, {	
@@ -113,10 +113,15 @@ var crmUtil = (function() {
 					myHTML = '<ul class="recentItemsList">';
 					recentItemsCollection.forEach({
 						onSuccess: function(evRecentItem) {	
+							if (evRecentItem.entity.converted.getValue()) {
+								convertedString = "true";
+							} else {
+								convertedString = "false";
+							}
 							theDataClass = evRecentItem.entity.dataClassName.getValue();
 							theEntityKey = evRecentItem.entity.entityKey.getValue();
 							theTitle = evRecentItem.entity.title.getValue() + " : " + evRecentItem.entity.sortOrder.getValue();
-							myHTML += '<li><a data-class="' + theDataClass + '"data-entity="' + theEntityKey + '" class="recentItem" href="#">' + theTitle + '</a></li>'; 
+							myHTML += '<li><a data-converted="' + convertedString + '" data-class="' + theDataClass + '"data-entity="' + theEntityKey + '" class="recentItem" href="#">' + theTitle + '</a></li>'; 
 						}			
 					});	
 					myHTML += '</ul>';	
@@ -129,12 +134,23 @@ var crmUtil = (function() {
 				
 				//set event handler on recent item links
 				$('.recentItem').live('click', function(e) {
-					var $this = $(this),
-				 		theDataClass = $this.data('class'),
-				 		theEntityID = $this.data('entity');
-				 	
-				 	var theNewPath = '/' + theDataClass + '.waComponent';
-				 	$$('bodyComponent').loadComponent({path: theNewPath, userData: {view: "detail"}});
+					$this = $(this);
+				 	theDataClass = $this.data('class');
+				 	theEntityID = $this.data('entity');
+				 	theConverted = $this.data('converted');
+				 	theNewPath = '/' + theDataClass + '.waComponent';
+				 	/*
+				 	if (theDataClass == "leads") {
+					 	if (theConverted == true) {
+					 		theNewPath = '/message.waComponent';
+					 	}
+					 }	
+					debugger;
+					*/
+					
+					
+					theView = "detail";	
+				 	$$('bodyComponent').loadComponent({path: theNewPath, userData: {view: theView}});
 				 	$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: theDataClass}});
 				 	
 				 	switch(theDataClass) {
