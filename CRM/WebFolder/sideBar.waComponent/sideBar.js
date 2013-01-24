@@ -34,7 +34,8 @@ function constructor (id) {
 		accountDataSource = waf.sources.account,
 		contactDataSource = waf.sources.contact,
 		leadDataSource = waf.sources.lead;
-		
+	
+	/*	
 	function quickAddLeads() {
 		leadDataSource.addNewElement();
 		leadDataSource.serverRefresh({
@@ -59,7 +60,9 @@ function constructor (id) {
         	}
     	});
 	}
+	*/
 	
+	/*
 	function quickAddContacts() {
 		contactDataSource.addNewElement();
 		contactDataSource.serverRefresh({onSuccess:function(event){
@@ -81,9 +84,12 @@ function constructor (id) {
 					$('#' + quickAddFirstNameContacts).focus();
 				}
 			}); //end - save()
-        }}); //end - serverRefresh()
+        }); //end - serverRefresh()
 	}
+	*/
 	
+	
+	/*
 	function quickAddAccounts() {
 		accountDataSource.addNewElement();
 		accountDataSource.serverRefresh({
@@ -111,6 +117,8 @@ function constructor (id) {
 			}
    		});
 	} //end - function quickAddAccounts()
+	*/
+	
 	
 	
 	// @region beginComponentDeclaration// @startlock
@@ -173,6 +181,7 @@ function constructor (id) {
 		//Add event handler for return key to the quick add accounts.
 		$("#" + quickAddAccountName + ", #" + quickAddAccountPhone + ", #" + quickAddAccountWebsite + ", #" + quickAddAccountCity).live('keyup', function (e) {
 	   		if ( e.keyCode == 13 ){
+	   			console.log('account quick add return key');
 	   			quickAddAccounts();
 	    	}
 		});
@@ -180,6 +189,7 @@ function constructor (id) {
 		//Add event handler for return key to the quick add leads.
 		$("#" + quickAddFirstNameLeads + ", #" + quickAddLastNameLeads + ", #" + quickAddCompanyLeads + ", #" + quickAddPhoneLeads).live('keyup', function (e) {
 	   		if ( e.keyCode == 13 ){
+	   			console.log('leads quick add return key');
 	   			quickAddLeads();
 	    	}
 		});
@@ -187,6 +197,7 @@ function constructor (id) {
 		//Add event handler for return key to the quick add contacts.
 		$("#" + quickAddFirstNameContacts + ", #" + quickAddLastNameContacts + ", #" + quickAddPhoneContacts + ", #" + quickAddEmailContacts).live('keyup', function (e) {
 	   		if ( e.keyCode == 13 ){
+	   			console.log('contacts quick add return key');
 	   			quickAddContacts();
 	    	}
 		});
@@ -203,17 +214,20 @@ function constructor (id) {
 
 	quickAddContactsSaveButton.click = function quickAddContactsSaveButton_click (event)// @startlock
 	{// @endlock
-		quickAddContacts();
+		crmUtil.quickAddContacts();
+		//quickAddContacts();
 	};// @lock
 
 	quickAddAccountsSaveButton.click = function quickAddAccountsSaveButton_click (event)// @startlock
 	{// @endlock
-		quickAddAccounts();
+		crmUtil.quickAddAccounts();
+		//quickAddAccounts();
 	};// @lock
 
 	quickAddLeadsSaveButton.click = function quickAddLeadsSaveButton_click (event)// @startlock
 	{// @endlock
-		quickAddLeads();
+		crmUtil.quickAddLeads();
+		//quickAddLeads();
 	};// @lock
 
 	// @region eventManager// @startlock

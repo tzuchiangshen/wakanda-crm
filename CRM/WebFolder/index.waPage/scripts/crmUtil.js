@@ -72,6 +72,126 @@ var crmUtil = (function() {
 	//};
 	//***end remove***
 	
+	crmUtilObj.quickAddContacts = function() {
+		waf.sources.contact.addNewElement();
+		waf.sources.contact.serverRefresh({
+			onSuccess:function(event){
+	            // the new entity has been initialized by the server
+	            waf.sources.contact.firstName = waf.widgets.sideBarComponent_quickAddFirstNameContacts.getValue();
+				waf.sources.contact.lastName = waf.widgets.sideBarComponent_quickAddLastNameContacts.getValue();
+				waf.sources.contact.phone = waf.widgets.sideBarComponent_quickAddPhoneContacts.getValue();
+				waf.sources.contact.emailAccnt = waf.widgets.sideBarComponent_quickAddEmailContacts.getValue();
+				
+				waf.sources.contact.save({
+					onSuccess:function(event){
+						waf.sources.contact.autoDispatch();
+						crmUtil.newRecentItem("contacts", "Contact: ", waf.sources.contact.firstName + " " + waf.sources.contact.lastName, waf.sources.contact.ID, 'recentItemsBodyContainer');
+						//reset form
+						/*
+						$$(quickAddFirstNameContacts).setValue();
+						$$(quickAddLastNameContacts).setValue();
+						$$(quickAddPhoneContacts).setValue();
+						$$(quickAddEmailContacts).setValue();
+						$('#' + quickAddFirstNameContacts).focus();
+						*/
+						waf.widgets.sideBarComponent_quickAddFirstNameContacts.setValue();
+						waf.widgets.sideBarComponent_quickAddLastNameContacts.setValue();
+						waf.widgets.sideBarComponent_quickAddPhoneContacts.setValue();
+						waf.widgets.sideBarComponent_quickAddEmailContacts.setValue();
+						waf.widgets.sideBarComponent_quickAddFirstNameContacts.focus();
+					}
+				}); //end - save()
+			}
+        }); //end - serverRefresh()
+	};
+	
+	crmUtilObj.quickAddLeads = function() {
+		waf.sources.lead.addNewElement();
+		waf.sources.lead.serverRefresh({
+			onSuccess:function(event){
+	            // the new entity has been initialized by the server
+	            waf.sources.lead.firstName = waf.widgets.sideBarComponent_quickAddFirstNameLeads.getValue();
+				waf.sources.lead.lastName = waf.widgets.sideBarComponent_quickAddLastNameLeads.getValue();
+				waf.sources.lead.phone = waf.widgets.sideBarComponent_quickAddPhoneLeads.getValue();
+				waf.sources.lead.company = waf.widgets.sideBarComponent_quickAddCompanyLeads.getValue();
+				waf.sources.lead.save({
+					onSuccess:function(event) {
+						waf.sources.lead.autoDispatch();
+						crmUtil.newRecentItem("leads", "Lead: ", waf.sources.lead.firstName + " " + waf.sources.lead.lastName, waf.sources.lead.ID, 'recentItemsBodyContainer');        
+						//reset form
+						waf.widgets.sideBarComponent_quickAddFirstNameLeads.setValue();
+						waf.widgets.sideBarComponent_quickAddLastNameLeads.setValue();
+						waf.widgets.sideBarComponent_quickAddPhoneLeads.setValue();
+						waf.widgets.sideBarComponent_quickAddCompanyLeads.setValue();
+						waf.widgets.sideBarComponent_quickAddFirstNameLeads.focus();
+						/*
+						$$(quickAddFirstNameLeads).setValue();
+						$$(quickAddLastNameLeads).setValue();
+						$$(quickAddPhoneLeads).setValue();
+						$$(quickAddCompanyLeads).setValue();
+						$('#' + quickAddFirstNameLeads).focus();
+						*/
+					}
+				});
+        	}
+    	});
+	};
+	
+	crmUtilObj.quickAddAccounts = function() {
+		waf.sources.account.addNewElement();
+		waf.sources.account.serverRefresh({
+			onSuccess:function(event){
+		        // the new entity has been initialized by the server
+		        //Now update the new entity with the form values.
+		        waf.sources.account.name = waf.widgets.sideBarComponent_quickAddAccountName.getValue(); //$$(quickAddAccountName).getValue()
+				waf.sources.account.phone = waf.widgets.sideBarComponent_quickAddAccountPhone.getValue(); //$$(quickAddAccountPhone).getValue()
+				waf.sources.account.website = waf.widgets.sideBarComponent_quickAddAccountWebsite.getValue(); //$$(quickAddAccountWebsite).getValue()
+				waf.sources.account.billingCity = waf.widgets.sideBarComponent_quickAddAccountCity.getValue(); //$$(quickAddAccountCity).getValue()
+				//Save the entity.
+				waf.sources.account.save({
+					onSuccess:function(event){
+						waf.sources.account.autoDispatch();
+						crmUtil.newRecentItem("accounts", "Account: ", waf.sources.account.name, waf.sources.account.ID, 'recentItemsBodyContainer');
+						//reset form
+						waf.widgets.sideBarComponent_quickAddAccountName.setValue();
+						waf.widgets.sideBarComponent_quickAddAccountPhone.setValue();
+						waf.widgets.sideBarComponent_quickAddAccountWebsite.setValue();
+						waf.widgets.sideBarComponent_quickAddAccountCity.setValue();
+						waf.widgets.sideBarComponent_quickAddAccountName.focus();
+					}
+				});	
+			}
+   		});
+	};
+	
+	
+	//Create Quick Add Account Event Handler for Return Key.
+	crmUtilObj.setQuickAddAccountReturnKey = function() {
+		$('.quickAddAccount').live('keyup', function (e) {
+	   		if ( e.keyCode == 13 ){
+	   			crmUtilObj.quickAddAccounts();
+	    	}
+		});
+	};
+	
+	//Create Quick Add Lead Event Handler for Return Key.
+	crmUtilObj.setQuickAddLeadReturnKey = function() {
+		$('.quickAddLead').live('keyup', function (e) {
+	   		if ( e.keyCode == 13 ){
+	   			crmUtilObj.quickAddLeads();
+	    	}
+		});
+	};
+	
+	//Create Quick Add Contact Event Handler for Return Key.
+	crmUtilObj.setQuickAddContactReturnKey = function() {
+		$('.quickAddContact').live('keyup', function (e) {
+	   		if ( e.keyCode == 13 ){
+	   			crmUtilObj.quickAddContacts();
+	    	}
+		});
+	};
+	
 	//Create Recent Items Event Handler.
 	//Call this once at Startup.
 	crmUtilObj.setRecentItemsEventHandler = function() {

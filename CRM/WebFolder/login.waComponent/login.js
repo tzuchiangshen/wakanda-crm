@@ -48,6 +48,11 @@ function constructor (id) {
 			
 			//Create the Event Handler for the Recent Items.
 			crmUtil.setRecentItemsEventHandler();
+			//Create Quick Add Return Key Event Handler.
+			crmUtil.setQuickAddAccountReturnKey();
+			crmUtil.setQuickAddContactReturnKey();
+			crmUtil.setQuickAddLeadReturnKey();
+			
 			//Load the recent items into our recent items container.
 			crmUtil.loadRecentItems('recentItemsBodyContainer');
 			
@@ -112,9 +117,9 @@ function constructor (id) {
 			//waf.widgets.bodyComponent.loadComponent("home.waComponent");
 			toggleLogin("logout");
 			
-			waf.sources.account.all();
-			waf.sources.contact.all();
-			waf.sources.lead.all();
+			waf.sources.account.setEntityCollection();
+			waf.sources.contact.setEntityCollection();
+			waf.sources.lead.setEntityCollection();
 		}
 	};// @lock
 

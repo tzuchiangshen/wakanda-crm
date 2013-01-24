@@ -9528,3 +9528,45 @@
 2013-01-23 06:32:22 [JSDEBUGGER] INFO - LOG : Bottom> getBreakpoints from crossfireClient_onready_breakpointListener,[object Object]
 2013-01-23 06:32:22 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
 2013-01-23 06:32:22 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-23 13:57:38 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2013-01-23 13:57:38 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2013-01-23 13:57:38 [JSDEBUGGER] INFO - LOG : Right> setReady from crossfireClient_ontemplatesloaded
+2013-01-23 13:57:38 [JSDEBUGGER] INFO - LOG : Bottom> setReady from crossfireClient_ontemplatesloaded
+2013-01-23 13:57:38 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-23 13:57:38 [JSDEBUGGER] INFO - WARNING : Right> Received a "break" event without "contextcreated" event,4315296080
+2013-01-23 13:57:38 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-23 13:57:38 [JSDEBUGGER] INFO - LOG : calling getstack from the context,Context{id: "4315296080stackSize: 0", }
+2013-01-23 13:57:38 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-23 13:57:38 [JSDEBUGGER] INFO - WARNING : context doesn't exist anymore,[object Object]
+2013-01-23 13:57:38 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-23 13:57:38 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-23 13:57:38 [JSDEBUGGER] INFO - WARNING : Bottom> Received a "break" event without "contextcreated" event,4315296080
+2013-01-23 13:57:38 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-23 13:57:38 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-23 13:57:38 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-23 13:57:38 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2013-01-23 13:57:38 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2013-01-23 13:57:38 [JSDEBUGGER] INFO - LOG : Bottom> getBreakpoints from crossfireClient_onready_breakpointListener,[object Object]
+2013-01-23 13:57:38 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-23 13:57:38 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-23 18:37:09 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2013-01-23 18:37:09 [JSDEBUGGER] INFO - WARNING : undefined> getStacks() should be named getStack()
+2013-01-23 18:37:09 [JSDEBUGGER] INFO - LOG : Bottom> setReady from crossfireClient_ontemplatesloaded
+2013-01-23 18:37:09 [JSDEBUGGER] INFO - LOG : Right> setReady from crossfireClient_ontemplatesloaded
+2013-01-23 18:37:09 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-23 18:37:09 [JSDEBUGGER] INFO - WARNING : Right> Received a "break" event without "contextcreated" event,4315703392
+2013-01-23 18:37:09 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-23 18:37:09 [JSDEBUGGER] INFO - LOG : calling getstack from the context,Context{id: "4315703392stackSize: 0", }
+2013-01-23 18:37:09 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-23 18:37:09 [JSDEBUGGER] INFO - WARNING : context doesn't exist anymore,[object Object]
+2013-01-23 18:37:09 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,contextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-23 18:37:09 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,exception,event internally:,[object Object],(request_seq: undefined)
+2013-01-23 18:37:09 [JSDEBUGGER] INFO - WARNING : Bottom> Received a "break" event without "contextcreated" event,4315703392
+2013-01-23 18:37:09 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,contextcreated,event internally:,[object Object],(request_seq: undefined)
+2013-01-23 18:37:09 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-23 18:37:09 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,currentcontextchange,event internally:,[object Object],(request_seq: undefined)
+2013-01-23 18:37:09 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2013-01-23 18:37:09 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,ready,event internally:,[object Object],(request_seq: undefined)
+2013-01-23 18:37:09 [JSDEBUGGER] INFO - LOG : Bottom> getBreakpoints from crossfireClient_onready_breakpointListener,[object Object]
+2013-01-23 18:37:09 [JSDEBUGGER] INFO - LOG : Right> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
+2013-01-23 18:37:09 [JSDEBUGGER] INFO - LOG : Bottom> Dispatch received ,breakpointsloaded,event internally:,[object Object],(request_seq: undefined)
