@@ -107,6 +107,7 @@ function constructor (id) {
 	logoutButton.click = function logoutButton_click (event)// @startlock
 	{// @endlock
 		if (WAF.directory.logout()) {
+			$$("signUpMessage").setValue("");
 			$('#headerContainerBackground').css('background', 'white');
 			$$("signUpContainer").show(); //show
 			$$("bodyContainer").hide(); //hide

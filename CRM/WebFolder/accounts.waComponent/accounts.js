@@ -11,11 +11,13 @@ function constructor (id) {
 	// @endregion// @endlock
 
 	this.load = function (data) {// @lock
-		if (data.userData.view == "detail") {
-			$$(id + "_tabView1").selectTab(2);
-		} else {
-			$$(id + "_tabView1").selectTab(1);
-		}
+		setTimeout(function() {
+			if (data.userData.view == "detail") {
+				$$(id + "_tabView1").selectTab(2);
+			} else {
+				$$(id + "_tabView1").selectTab(1);
+			}
+		}, 40);
 		
 		$$(accountsReportsComponent).loadComponent({path: '/reports.waComponent', userData: {menuItem: "accounts"}});
 		

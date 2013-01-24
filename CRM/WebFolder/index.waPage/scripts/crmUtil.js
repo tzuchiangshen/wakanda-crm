@@ -16,18 +16,11 @@ var crmUtil = (function() {
 				$$("signUpMessage").setValue(event.result.errorMessage);
 				
 				if (waf.directory.currentUser() !== null) {
-					//Laurent the code below does not set my Sign Up input fields to blank. Should it?
 					signUpObj.name = "";
 					signUpObj.email = "";
 					signUpObj.password = "";
 					signUpObj.verifyPassword = "";
 					waf.sources.signUpObj.sync();
-					
-//					$$('inputUsername').setValue();
-//					$$('inputEmailAddress').setValue();
-//					$$('iputPassword').setValue();
-//					$$('inputVerifyPassword').setValue();
-//					$$('signUpMessage').setValue('');
 					
 					//***note*** make this a function()
 					$('#headerContainerBackground').css('background', '#f5f5f5');
@@ -247,7 +240,7 @@ var crmUtil = (function() {
 	};
 	
 	//Load Recent Items - Try Again!
-	crmUtilObj.loadRecentItems = function(targetContainer) {
+	crmUtilObj.loadRecentItems = function(targetContainer, recentItemsArr) {
 		var myHTML,
 			sessionCurrentUser = WAF.directory.currentUser(),
 			theDataClass, theView, convertedString, 
@@ -255,69 +248,47 @@ var crmUtil = (function() {
 			recentItemsCollection, theEntityID,
 			theEntityKey;
 		
-		//waf.ds.RecentItem.query("owner.ID = :1", sessionCurrentUser.ID, {	
-		waf.ds.RecentItem.all({
-			orderBy: "sortOrder",
-			onSuccess: function(event) {
-				recentItemsCollection = event.entityCollection;
-				if (recentItemsCollection.length > 0) {	
-					myHTML = '<ul class="recentItemsList">';
-					recentItemsCollection.forEach({
-						onSuccess: function(evRecentItem) {	
-							if (evRecentItem.entity.converted.getValue()) {
-								convertedString = "true";
-							} else {
-								convertedString = "false";
-							}
-							theDataClass = evRecentItem.entity.dataClassName.getValue();
-							theEntityKey = evRecentItem.entity.entityKey.getValue();
-							theTitle = evRecentItem.entity.title.getValue() + " : " + evRecentItem.entity.sortOrder.getValue();
-							myHTML += '<li><a data-converted="' + convertedString + '" data-class="' + theDataClass + '"data-entity="' + theEntityKey + '" class="recentItem" href="#">' + theTitle + '</a></li>'; 
-						}			
-					});	
-					myHTML += '</ul>';	
-					
-				} else {
-					myHTML = 'No recent Items.';
-				}
-				
-				$('#' + targetContainer).html(myHTML);	
-				
-				//***Anti-Pattern
-				//set event handler on recent item links
-				/*
-				$('.recentItem').live('click', function(e) {
-					$this = $(this);
-				 	theDataClass = $this.data('class');
-				 	theEntityID = $this.data('entity');
-				 	theConverted = $this.data('converted');
-				 	theNewPath = '/' + theDataClass + '.waComponent';
-					theView = "detail";	
-				 	$$('bodyComponent').loadComponent({path: theNewPath, userData: {view: theView}});
-				 	$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: theDataClass}});
-				 	
-				 	switch(theDataClass) {
-						case "accounts":
-						waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem3');
-						waf.sources.account.selectByKey($this.data('entity'));
-						break;
-							
-						case "contacts":
-						waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem4');
-						waf.sources.contact.selectByKey($this.data('entity'));
-						break;
-							
-						case "leads":
-						waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem2');
-						waf.sources.lead.selectByKey($this.data('entity'));
-						break;
+		if (recentItemsArr == null) {
+			waf.ds.RecentItem.all({
+				orderBy: "sortOrder",
+				onSuccess: function(event) {
+					recentItemsCollection = event.entityCollection;
+					if (recentItemsCollection.length > 0) {	
+						myHTML = '<ul class="recentItemsList">';
+						recentItemsCollection.forEach({
+							onSuccess: function(evRecentItem) {	
+								theDataClass = evRecentItem.entity.dataClassName.getValue();
+								theEntityKey = evRecentItem.entity.entityKey.getValue();
+								theTitle = evRecentItem.entity.title.getValue(); // + " : " + evRecentItem.entity.sortOrder.getValue();
+								myHTML += '<li><a data-class="' + theDataClass + '"data-entity="' + theEntityKey + '" class="recentItem" href="#">' + theTitle + '</a></li>'; //data-converted="' + convertedString + '"
+							}			
+						});	
+						myHTML += '</ul>';	
+						
+					} else {
+						myHTML = 'No recent Items.';
 					}
-				}); // end - event handlers for recent items link.
-				*/
-				//***end Anti-Pattern
+					
+					$('#' + targetContainer).html(myHTML);	
+				} //onSuccess
+			}); //waf.ds.RecentItem.query();
+		} else {
+			//We have a recent items array.
+			if (recentItemsArr.length > 0) {
+				myHTML = '<ul class="recentItemsList">';
 				
-			} //onSuccess
-		}); //waf.ds.RecentItem.query();
+				recentItemsArr.forEach(function(recentItem) {
+					theDataClass = recentItem.dataClassName;
+					theEntityKey= recentItem.entityKey;
+					theTitle = recentItem.title;
+					myHTML += '<li><a data-class="' + theDataClass + '"data-entity="' + theEntityKey + '" class="recentItem" href="#">' + theTitle + '</a></li>'; //data-converted="' + convertedString + '"
+				});
+				myHTML += '</ul>';	
+			} else {
+				myHTML = 'No recent Items.';
+			}
+			$('#' + targetContainer).html(myHTML);	
+		}
 	}; //end - crmUtilObj.loadRecentItems
 	
 	return crmUtilObj;

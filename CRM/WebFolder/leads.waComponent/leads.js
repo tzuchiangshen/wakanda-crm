@@ -13,14 +13,13 @@ function constructor (id) {
 	// @endregion// @endlock
 
 	this.load = function (data) {// @lock
-
-		if (data.userData.view == "detail") {
-			$$(id + "_tabView2").selectTab(2);
-//		} else if (data.userData.view == "converted") {	
-//			$$(id + "_tabView2").selectTab(3);
-		} else {
-			$$(id + "_tabView2").selectTab(1);
-		}
+		setTimeout(function() {
+			if (data.userData.view == "detail") {
+				$$(id + "_tabView2").selectTab(2);
+			} else {
+				$$(id + "_tabView2").selectTab(1);
+			}
+		}, 40);
 		
 		
 		
@@ -43,20 +42,19 @@ function constructor (id) {
 		
 		waf.sources.lead.convertLead({
 			onSuccess: function(event) {
-				debugger;
-				crmUtil.loadRecentItems('recentItemsBodyContainer');
+				crmUtil.loadRecentItems('recentItemsBodyContainer', event.result.recentItemsArray);
 				waf.sources.account.all();
 				waf.sources.contact.all({
-					onSuccess: function(event) {
-						waf.sources.contact.selectByKey(event.result);
-						$$('bodyComponent').loadComponent({path: '/contacts.waComponent'});
+					onSuccess: function(evContact) {
+						waf.sources.contact.selectByKey(event.result.contactID);
+						$$('bodyComponent').loadComponent({path: '/contacts.waComponent', userData: {view: "detail"}});
 						$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "contacts"}});
 						waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem4');
 	
 					}
 				});
 				waf.sources.lead.query("converted == false", {
-					onSuccess: function(event) {
+					onSuccess: function(evLead) {
 						//$$(id + "_tabView2").selectTab(1);
 					} //onSuccess
 				});
