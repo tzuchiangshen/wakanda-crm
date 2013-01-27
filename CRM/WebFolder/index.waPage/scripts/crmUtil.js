@@ -38,11 +38,9 @@ var crmUtil = (function() {
 					//Switch our login and logout containers.
 					$$('loginComponent_signInStatusMessage').setValue("Signed in as: " + waf.directory.currentUser().fullName);
 					$('#loginComponent_loginContainer').fadeOut(400); //hide()
-					$('#loginComponent_logoutContainer').fadeIn(900); //show() 
-					
-				}
-				
-			}
+					$('#loginComponent_logoutContainer').fadeIn(900); //show() 			
+				} //end - if (waf.directory.currentUser() !== null)
+			} //end - onSuccess
 		}, signUpObj);	//end - waf.ds.User.addUser
 	};
 	
@@ -63,13 +61,6 @@ var crmUtil = (function() {
 						waf.sources.contact.autoDispatch();
 						crmUtil.newRecentItem("contacts", "Contact: ", waf.sources.contact.firstName + " " + waf.sources.contact.lastName, waf.sources.contact.ID, 'recentItemsBodyContainer');
 						//reset form
-						/*
-						$$(quickAddFirstNameContacts).setValue();
-						$$(quickAddLastNameContacts).setValue();
-						$$(quickAddPhoneContacts).setValue();
-						$$(quickAddEmailContacts).setValue();
-						$('#' + quickAddFirstNameContacts).focus();
-						*/
 						waf.widgets.sideBarComponent_quickAddFirstNameContacts.setValue();
 						waf.widgets.sideBarComponent_quickAddLastNameContacts.setValue();
 						waf.widgets.sideBarComponent_quickAddPhoneContacts.setValue();
@@ -100,13 +91,6 @@ var crmUtil = (function() {
 						waf.widgets.sideBarComponent_quickAddPhoneLeads.setValue();
 						waf.widgets.sideBarComponent_quickAddCompanyLeads.setValue();
 						waf.widgets.sideBarComponent_quickAddFirstNameLeads.focus();
-						/*
-						$$(quickAddFirstNameLeads).setValue();
-						$$(quickAddLastNameLeads).setValue();
-						$$(quickAddPhoneLeads).setValue();
-						$$(quickAddCompanyLeads).setValue();
-						$('#' + quickAddFirstNameLeads).focus();
-						*/
 					}
 				});
         	}
@@ -171,11 +155,15 @@ var crmUtil = (function() {
 	//Create Recent Items Event Handler.
 	//Call this once at Startup.
 	crmUtilObj.setRecentItemsEventHandler = function() {
+		var theSortOrder, theDataClass,  theEntityID,
+			$this, theNewPath, theView;
+			
 		$('.recentItem').live('click', function(e) {
 			$this = $(this);
+			theSortOrder = $this.data('sortorder');
 		 	theDataClass = $this.data('class');
 		 	theEntityID = $this.data('entity');
-		 	theConverted = $this.data('converted');
+		 	//theConverted = $this.data('converted');
 		 	theNewPath = '/' + theDataClass + '.waComponent';
 			theView = "detail";	
 		 	$$('bodyComponent').loadComponent({path: theNewPath, userData: {view: theView}});
@@ -213,20 +201,6 @@ var crmUtil = (function() {
 				crmUtil.loadRecentItems('recentItemsBodyContainer', event.result);
 			}
 		});
-		
-		/*
-		recentItem.save({
-        	onSuccess:function(event) {
-        		ds.RecentItem.reorderItems();
-        		crmUtilObj.loadRecentItems(targetContainer);
-        	},
-        	
-        	onError: function(error) {
-        		if (error.error[0].errCode == 9998)
-        		 crmUtilObj.loadRecentItems(targetContainer);
-        	}
-        });
-        */
 	};
 	
 	//Load Recent Items - Try Again!
@@ -235,7 +209,7 @@ var crmUtil = (function() {
 			sessionCurrentUser = WAF.directory.currentUser(),
 			theDataClass, theView, convertedString, 
 			theTitle, theNewPath, $this, theConverted,
-			recentItemsCollection, theEntityID,
+			recentItemsCollection, theEntityID, theSortOrder,
 			theEntityKey;
 		
 		if (recentItemsArr == null) {
@@ -247,10 +221,11 @@ var crmUtil = (function() {
 						myHTML = '<ul class="recentItemsList">';
 						recentItemsCollection.forEach({
 							onSuccess: function(evRecentItem) {	
+								theSortOrder = evRecentItem.entity.sortOrder.getValue();
 								theDataClass = evRecentItem.entity.dataClassName.getValue();
 								theEntityKey = evRecentItem.entity.entityKey.getValue();
-								theTitle = evRecentItem.entity.title.getValue(); // + " : " + evRecentItem.entity.sortOrder.getValue();
-								myHTML += '<li><a data-class="' + theDataClass + '"data-entity="' + theEntityKey + '" class="recentItem" href="#">' + theTitle + '</a></li>'; //data-converted="' + convertedString + '"
+								theTitle = evRecentItem.entity.title.getValue(); 
+								myHTML += '<li><a data-class="' + theDataClass + '"data-entity="' + theEntityKey + '"data-sortorder="' + theSortOrder + '" class="recentItem" href="#">' + theTitle + '</a></li>'; //data-converted="' + convertedString + '"
 							}			
 						});	
 						myHTML += '</ul>';	
@@ -261,17 +236,19 @@ var crmUtil = (function() {
 					
 					$('#' + targetContainer).html(myHTML);	
 				} //onSuccess
-			}); //waf.ds.RecentItem.query();
+			}); 
+			
 		} else {
 			//We have a recent items array.
 			if (recentItemsArr.length > 0) {
 				myHTML = '<ul class="recentItemsList">';
 				
 				recentItemsArr.forEach(function(recentItem) {
+					theSortOrder = recentItem.sortOrder;
 					theDataClass = recentItem.dataClassName;
 					theEntityKey= recentItem.entityKey;
 					theTitle = recentItem.title;
-					myHTML += '<li><a data-class="' + theDataClass + '"data-entity="' + theEntityKey + '" class="recentItem" href="#">' + theTitle + '</a></li>'; //data-converted="' + convertedString + '"
+					myHTML += '<li><a data-class="' + theDataClass + '"data-entity="' + theEntityKey + '"data-sortorder="' + theSortOrder + '" class="recentItem" href="#">' + theTitle + '</a></li>'; //data-converted="' + convertedString + '"
 				});
 				myHTML += '</ul>';	
 			} else {

@@ -26,6 +26,8 @@ function constructor (id) {
 	$$(leadsReportsComponent).loadComponent({path: '/reports.waComponent', userData: {menuItem: "leads"}});
 			
 	// @region namespaceDeclaration// @startlock
+	var button5 = {};	// @button
+	var dataGrid1 = {};	// @dataGrid
 	var button3 = {};	// @button
 	var button2 = {};	// @button
 	var convertButton = {};	// @button
@@ -35,6 +37,18 @@ function constructor (id) {
 	// @endregion// @endlock
 
 	// eventHandlers// @lock
+
+	button5.click = function button5_click (event)// @startlock
+	{// @endlock
+		//Activity Navigate to List
+		$$(id + "_tabView2").selectTab(2);
+	};// @lock
+
+	dataGrid1.onRowDblClick = function dataGrid1_onRowDblClick (event)// @startlock
+	{// @endlock
+		//Activity Navigate to Detail
+		$$(id + "_tabView2").selectTab(4);
+	};// @lock
 
 	button3.click = function button3_click (event)// @startlock
 	{// @endlock
@@ -96,6 +110,8 @@ function constructor (id) {
 	};// @lock
 
 	// @region eventManager// @startlock
+	WAF.addListener(this.id + "_button5", "click", button5.click, "WAF");
+	WAF.addListener(this.id + "_dataGrid1", "onRowDblClick", dataGrid1.onRowDblClick, "WAF");
 	WAF.addListener(this.id + "_button3", "click", button3.click, "WAF");
 	WAF.addListener(this.id + "_button2", "click", button2.click, "WAF");
 	WAF.addListener(this.id + "_convertButton", "click", convertButton.click, "WAF");

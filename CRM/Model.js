@@ -9,4 +9,4 @@ include('classes/account.js');
 include('classes/contact.js');
 include('classes/lead.js');
 include('classes/recentItem.js');
-include('scripts/required.js');
+include('classes/activity.js');
