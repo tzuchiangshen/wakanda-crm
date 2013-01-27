@@ -19,11 +19,11 @@ function constructor (id) {
 			} else {
 				$$(id + "_tabView2").selectTab(1);
 			}
-		}, 40);
+	}, 40);
 		
 		
 		
-		$$(leadsReportsComponent).loadComponent({path: '/reports.waComponent', userData: {menuItem: "leads"}});
+	$$(leadsReportsComponent).loadComponent({path: '/reports.waComponent', userData: {menuItem: "leads"}});
 			
 	// @region namespaceDeclaration// @startlock
 	var button3 = {};	// @button
@@ -42,7 +42,7 @@ function constructor (id) {
 		
 		waf.sources.lead.convertLead({
 			onSuccess: function(event) {
-				crmUtil.loadRecentItems('recentItemsBodyContainer', event.result.recentItemsArray);
+				crmUtil.loadRecentItems('recentItemsBodyContainer', event.result.recentItemArray);
 				waf.sources.account.all();
 				waf.sources.contact.all({
 					onSuccess: function(evContact) {
@@ -60,43 +60,6 @@ function constructor (id) {
 				});
 			}
 		});
-		
-		/*
-		waf.sources.lead.converted = true;
-		waf.sources.lead.save({
-			onSuccess: function(event) {
-				var contactID = event.dataSource.contactEntityKey;
-				
-				//Is there a recent item for this lead?
-				
-				
-				//Laurent should I pass in event.datSource as userData?
-				ds.RecentItem.find("entityKey = :1 && dataClassName = :2", event.dataSource.ID, "leads", {
-					onSuccess: function(ev2) {
-						
-						ev2.entity.converted.setValue(true);
-						ev2.entity.dataClassName.setValue("contacts");
-						ev2.entity.entityKey.setValue(contactID);
-						ev2.entity.title.setValue("Contact: " + event.dataSource.firstName + " " + event.dataSource.lastName);
-						ev2.entity.save({
-							onSuccess: function(ev) {
-								crmUtil.loadRecentItems('recentItemsBodyContainer');
-							}
-						});
-					}
-				});
-				
-				waf.sources.account.all();
-				waf.sources.contact.all();
-				waf.sources.lead.query("converted == false", {
-					onSuccess: function(event) {
-						$$(id + "_tabView2").selectTab(1);
-					} //onSuccess
-				});
-			} //onSuccess
-		}); //waf.sources.lead.save
-		//end - Convert The Lead.
-		*/
 	};// @lock
 
 	button2.click = function button2_click (event)// @startlock

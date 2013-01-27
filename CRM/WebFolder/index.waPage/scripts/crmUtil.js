@@ -47,23 +47,6 @@ var crmUtil = (function() {
 	};
 	
 	
-	//***remove***
-	//Keep current menu item on main menubar hightlighted.
-	//crmUtilObj.menuBarKeepHighlight = function(menuBarName, menuItem) {
-		//***remove***
-		/*
-		var menuBarSiblingsRef = '#' + menuBarName + ' li div',
-			menuItemRef = '#' + menuItem + ' div',
-			menuItemContainerRef = '#' + menuItem,
-			menuBarContainerSiblingsRef = '#' + menuBarName + ' li';
-			
-		$(menuBarSiblingsRef).removeClass('crm-menuSelected'); //unhighlight all other menuitems.
-		$(menuBarContainerSiblingsRef).removeClass('crm-menuSelected2'); 
-		$(menuItemRef).addClass('crm-menuSelected'); //highlight the selected menuitem.
-		$(menuItemContainerRef).addClass('crm-menuSelected2'); //mark the selected menuitem container.
-		*/
-	//};
-	//***end remove***
 	
 	crmUtilObj.quickAddContacts = function() {
 		waf.sources.contact.addNewElement();
@@ -225,6 +208,13 @@ var crmUtil = (function() {
 		recentItem.entityKey.setValue(entityKey);
 		recentItem.sortOrder.setValue(0);
 		
+		ds.RecentItem.newRecentItem(dataClassName, titleKey, titleValue, entityKey, {
+			onSuccess: function(event) {
+				crmUtil.loadRecentItems('recentItemsBodyContainer', event.result);
+			}
+		});
+		
+		/*
 		recentItem.save({
         	onSuccess:function(event) {
         		ds.RecentItem.reorderItems();
@@ -232,11 +222,11 @@ var crmUtil = (function() {
         	},
         	
         	onError: function(error) {
-        		//console.log(error.error[0].errCode + ": " + error.error[0].message);
         		if (error.error[0].errCode == 9998)
         		 crmUtilObj.loadRecentItems(targetContainer);
         	}
         });
+        */
 	};
 	
 	//Load Recent Items - Try Again!
