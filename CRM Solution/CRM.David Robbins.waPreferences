@@ -1,1 +1,1 @@
-﻿<?xml version="1.0" encoding="UTF-8"?><configuration RIAServerType="default"><solutionExplorer><tabs currentIndex="3"><locator path="../CRM/Model.waModel"/><locator path="../CRM/serverTest.js"/><locator path="../CRM/WebFolder/leads.waComponent/leads.html"/></tabs></solutionExplorer></configuration>
+﻿<?xml version="1.0" encoding="UTF-8"?><configuration RIAServerType="default"><solutionExplorer><tabs currentIndex="1"><locator path="../CRM/Model.waModel"/></tabs></solutionExplorer></configuration>

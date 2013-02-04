@@ -93,6 +93,7 @@ function constructor (id) {
 	button1.click = function button1_click (event)// @startlock
 	{// @endlock
 		// Add your code here
+		waf.sources.lead.save();
 		$$(id + "_tabView2").selectTab(1);
 	};// @lock
 
