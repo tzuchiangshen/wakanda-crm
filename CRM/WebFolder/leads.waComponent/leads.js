@@ -5,14 +5,21 @@
 
 function constructor (id) {
 	var leadsReportsComponent = getHtmlId('leadsReportsComponent'),
-		convertLeadTitleDetail = getHtmlId('convertLeadTitleDetail');
-	
+		convertLeadTitleDetail = getHtmlId('convertLeadTitleDetail'),
+		additionaInfoContainer = getHtmlId('additionaInfoContainer'),
+		leadAddressContainer = getHtmlId('leadAddressContainer'),
+		activityToggleText = getHtmlId('activityToggleText');
+		
 	// @region beginComponentDeclaration// @startlock
 	var $comp = this;
 	this.name = 'leads';
 	// @endregion// @endlock
 
 	this.load = function (data) {// @lock
+		$('#' + activityToggleText).attr('unselectable','on');
+		$("#" + additionaInfoContainer).css("top", "626px");
+		$("#" + additionaInfoContainer).hide();
+		
 		setTimeout(function() {
 			if (data.userData.view == "detail") {
 				$$(id + "_tabView2").selectTab(2);
@@ -26,6 +33,7 @@ function constructor (id) {
 	$$(leadsReportsComponent).loadComponent({path: '/reports.waComponent', userData: {menuItem: "leads"}});
 			
 	// @region namespaceDeclaration// @startlock
+	var showActivities = {};	// @container
 	var button5 = {};	// @button
 	var dataGrid1 = {};	// @dataGrid
 	var button3 = {};	// @button
@@ -37,6 +45,23 @@ function constructor (id) {
 	// @endregion// @endlock
 
 	// eventHandlers// @lock
+
+	showActivities.click = function showActivities_click (event)// @startlock
+	{// @endlock
+		if ($$(activityToggleText).getValue() == "Activity") {
+			$$(activityToggleText).setValue('Address');
+			$("#" + leadAddressContainer).animate({ 'top': "626px"}, 600, function(){});
+			$('#' + leadAddressContainer).hide();
+			$('#' + additionaInfoContainer).show();
+			$("#" + additionaInfoContainer).animate({ 'top': "295px"}, 600, function(){});
+		} else {
+			$$(activityToggleText).setValue('Activity');
+			$("#" + additionaInfoContainer).animate({ 'top': "626px"}, 600, function(){});
+			$('#' + additionaInfoContainer).hide();
+			$('#' + leadAddressContainer).show();
+			$("#" + leadAddressContainer).animate({ 'top': "295px"}, 600, function(){});
+		}
+	};// @lock
 
 	button5.click = function button5_click (event)// @startlock
 	{// @endlock
@@ -111,6 +136,7 @@ function constructor (id) {
 	};// @lock
 
 	// @region eventManager// @startlock
+	WAF.addListener(this.id + "_showActivities", "click", showActivities.click, "WAF");
 	WAF.addListener(this.id + "_button5", "click", button5.click, "WAF");
 	WAF.addListener(this.id + "_dataGrid1", "onRowDblClick", dataGrid1.onRowDblClick, "WAF");
 	WAF.addListener(this.id + "_button3", "click", button3.click, "WAF");

@@ -122,6 +122,7 @@ function constructor (id) {
 			waf.sources.account.setEntityCollection();
 			waf.sources.contact.setEntityCollection();
 			waf.sources.lead.setEntityCollection();
+			waf.sources.activity.setEntityCollection();
 		}
 	};// @lock
 
