@@ -33,6 +33,7 @@ function constructor (id) {
 	$$(leadsReportsComponent).loadComponent({path: '/reports.waComponent', userData: {menuItem: "leads"}});
 			
 	// @region namespaceDeclaration// @startlock
+	var button4 = {};	// @button
 	var showActivities = {};	// @container
 	var button5 = {};	// @button
 	var dataGrid1 = {};	// @dataGrid
@@ -45,6 +46,13 @@ function constructor (id) {
 	// @endregion// @endlock
 
 	// eventHandlers// @lock
+
+	button4.click = function button4_click (event)// @startlock
+	{// @endlock
+		//Save Activity
+		waf.sources.activity.save();
+		$$(id + "_tabView2").selectTab(2);
+	};// @lock
 
 	showActivities.click = function showActivities_click (event)// @startlock
 	{// @endlock
@@ -65,7 +73,7 @@ function constructor (id) {
 
 	button5.click = function button5_click (event)// @startlock
 	{// @endlock
-		//Activity Navigate to List
+		//Activity Navigate to Lead Detail and Activity List
 		$$(id + "_tabView2").selectTab(2);
 	};// @lock
 
@@ -117,7 +125,7 @@ function constructor (id) {
 
 	button1.click = function button1_click (event)// @startlock
 	{// @endlock
-		// Add your code here
+		//Save Lead.
 		waf.sources.lead.save();
 		$$(id + "_tabView2").selectTab(1);
 	};// @lock
@@ -136,6 +144,7 @@ function constructor (id) {
 	};// @lock
 
 	// @region eventManager// @startlock
+	WAF.addListener(this.id + "_button4", "click", button4.click, "WAF");
 	WAF.addListener(this.id + "_showActivities", "click", showActivities.click, "WAF");
 	WAF.addListener(this.id + "_button5", "click", button5.click, "WAF");
 	WAF.addListener(this.id + "_dataGrid1", "onRowDblClick", dataGrid1.onRowDblClick, "WAF");
