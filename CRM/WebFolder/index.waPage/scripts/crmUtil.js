@@ -7,6 +7,23 @@ var crmUtil = (function() {
 	
 	var crmUtilObj = {}; //This is the object we will return to create our module.
 	
+	crmUtilObj.setDisableLeadsQuickAdd = function(toggle) {
+		if (toggle == "disable") {
+			waf.widgets.sideBarComponent_quickAddFirstNameLeads.disable();
+			waf.widgets.sideBarComponent_quickAddLastNameLeads.disable();
+			waf.widgets.sideBarComponent_quickAddPhoneLeads.disable();
+			waf.widgets.sideBarComponent_quickAddCompanyLeads.disable(); //quickAddLeadsSaveButton
+			waf.widgets.sideBarComponent_quickAddLeadsSaveButton.disable();
+		} else {
+			waf.widgets.sideBarComponent_quickAddFirstNameLeads.enable();
+			waf.widgets.sideBarComponent_quickAddLastNameLeads.enable();
+			waf.widgets.sideBarComponent_quickAddPhoneLeads.enable();
+			waf.widgets.sideBarComponent_quickAddCompanyLeads.enable(); //quickAddLeadsSaveButton
+			waf.widgets.sideBarComponent_quickAddLeadsSaveButton.enable();
+			waf.widgets.sideBarComponent_quickAddFirstNameLeads.focus();
+		}
+	};
+	
 	crmUtilObj.testMessage = function() {console.log("Wakanda CRM Utility Module is Active.");};
 	
 	//Sign Up New User
@@ -43,8 +60,6 @@ var crmUtil = (function() {
 			} //end - onSuccess
 		}, signUpObj);	//end - waf.ds.User.addUser
 	};
-	
-	
 	
 	crmUtilObj.quickAddContacts = function() {
 		waf.sources.contact.addNewElement();
