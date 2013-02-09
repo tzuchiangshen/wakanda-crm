@@ -7,6 +7,40 @@ var crmUtil = (function() {
 	
 	var crmUtilObj = {}; //This is the object we will return to create our module.
 	
+	crmUtilObj.setDisableAccountsQuickAdd = function(toggle) {
+		if (toggle == "disable") {
+			waf.widgets.sideBarComponent_quickAddAccountName.disable();
+			waf.widgets.sideBarComponent_quickAddAccountPhone.disable();
+			waf.widgets.sideBarComponent_quickAddAccountWebsite.disable();
+			waf.widgets.sideBarComponent_quickAddAccountCity.disable();
+			waf.widgets.sideBarComponent_quickAddAccountsSaveButton.disable();
+		} else {
+			waf.widgets.sideBarComponent_quickAddAccountName.enable();
+			waf.widgets.sideBarComponent_quickAddAccountPhone.enable();
+			waf.widgets.sideBarComponent_quickAddAccountWebsite.enable();
+			waf.widgets.sideBarComponent_quickAddAccountCity.enable();
+			waf.widgets.sideBarComponent_quickAddAccountsSaveButton.enable();
+			waf.widgets.sideBarComponent_quickAddAccountName.focus();
+		}
+	};
+	
+	crmUtilObj.setDisableContactsQuickAdd = function(toggle) {
+		if (toggle == "disable") {
+			waf.widgets.sideBarComponent_quickAddFirstNameContacts.disable();
+			waf.widgets.sideBarComponent_quickAddLastNameContacts.disable();
+			waf.widgets.sideBarComponent_quickAddPhoneContacts.disable();
+			waf.widgets.sideBarComponent_quickAddEmailContacts.disable();
+			waf.widgets.sideBarComponent_quickAddContactsSaveButton.disable();
+		} else {
+			waf.widgets.sideBarComponent_quickAddFirstNameContacts.enable();
+			waf.widgets.sideBarComponent_quickAddLastNameContacts.enable();
+			waf.widgets.sideBarComponent_quickAddPhoneContacts.enable();
+			waf.widgets.sideBarComponent_quickAddEmailContacts.enable();
+			waf.widgets.sideBarComponent_quickAddContactsSaveButton.enable();
+			waf.widgets.sideBarComponent_quickAddFirstNameContacts.focus();
+		}
+	};
+	
 	crmUtilObj.setDisableLeadsQuickAdd = function(toggle) {
 		if (toggle == "disable") {
 			waf.widgets.sideBarComponent_quickAddFirstNameLeads.disable();
@@ -139,7 +173,6 @@ var crmUtil = (function() {
    		});
 	};
 	
-	
 	//Create Quick Add Account Event Handler for Return Key.
 	crmUtilObj.setQuickAddAccountReturnKey = function() {
 		$('.quickAddAccount').live('keyup', function (e) {
@@ -186,16 +219,19 @@ var crmUtil = (function() {
 		 	
 		 	switch(theDataClass) {
 				case "accounts":
+				crmUtilObj.setDisableAccountsQuickAdd('disable');
 				waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem3');
 				waf.sources.account.selectByKey($this.data('entity'));
 				break;
 					
 				case "contacts":
+				crmUtilObj.setDisableContactsQuickAdd('disable');
 				waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem4');
 				waf.sources.contact.selectByKey($this.data('entity'));
 				break;
 					
 				case "leads":
+				crmUtilObj.setDisableLeadsQuickAdd('disable');
 				waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem2');
 				waf.sources.lead.selectByKey($this.data('entity'));
 				break;

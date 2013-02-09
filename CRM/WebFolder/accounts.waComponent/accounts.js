@@ -4,7 +4,9 @@
 // Add the code that needs to be shared between components here
 
 function constructor (id) {
-	var accountsReportsComponent = getHtmlId('accountsReportsComponent');
+	var accountsReportsComponent = getHtmlId('accountsReportsComponent'),
+		firstNameInputfield = getHtmlId('textField2');
+		
 	// @region beginComponentDeclaration// @startlock
 	var $comp = this;
 	this.name = 'accounts';
@@ -22,6 +24,7 @@ function constructor (id) {
 		$$(accountsReportsComponent).loadComponent({path: '/reports.waComponent', userData: {menuItem: "accounts"}});
 		
 	// @region namespaceDeclaration// @startlock
+	var newAccountButton = {};	// @button
 	var button1 = {};	// @button
 	var button2 = {};	// @button
 	var accountsDataGrid = {};	// @dataGrid
@@ -29,13 +32,31 @@ function constructor (id) {
 
 	// eventHandlers// @lock
 
+	newAccountButton.click = function newAccountButton_click (event)// @startlock
+	{// @endlock
+		//New Account Button.
+		waf.sources.account.addNewElement();
+		waf.sources.account.serverRefresh({
+			onSuccess: function(event) {
+				$$(id + "_tabView1").selectTab(2);
+				$$(firstNameInputfield).focus();
+				//crmUtil.setDisableLeadsQuickAdd("disable");
+			}
+		});
+	};// @lock
+
 	button1.click = function button1_click (event)// @startlock
 	{// @endlock
+		//Save button
+		waf.sources.account.save();
+		crmUtil.setDisableAccountsQuickAdd("enable");
 		$$(id + "_tabView1").selectTab(1);
 	};// @lock
 
 	button2.click = function button2_click (event)// @startlock
 	{// @endlock
+		//Cancel button.
+		crmUtil.setDisableAccountsQuickAdd("enable");
 		$$(id + "_tabView1").selectTab(1);
 	};// @lock
 
@@ -44,9 +65,11 @@ function constructor (id) {
 		//Add recent item.
 		crmUtil.newRecentItem("accounts", "Account: ", waf.sources.account.name, waf.sources.account.ID, 'recentItemsBodyContainer');
 		$$(id + "_tabView1").selectTab(2);
+		crmUtil.setDisableAccountsQuickAdd("disable");
 	};// @lock
 
 	// @region eventManager// @startlock
+	WAF.addListener(this.id + "_newAccountButton", "click", newAccountButton.click, "WAF");
 	WAF.addListener(this.id + "_button1", "click", button1.click, "WAF");
 	WAF.addListener(this.id + "_button2", "click", button2.click, "WAF");
 	WAF.addListener(this.id + "_accountsDataGrid", "onRowDblClick", accountsDataGrid.onRowDblClick, "WAF");

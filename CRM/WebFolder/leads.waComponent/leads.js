@@ -58,7 +58,6 @@ function constructor (id) {
 	newLeadButton.click = function newLeadButton_click (event)// @startlock
 	{// @endlock
 		//New Lead
-		/**/
 		waf.sources.lead.addNewElement();
 		waf.sources.lead.serverRefresh({
 			onSuccess: function(event) {
@@ -67,7 +66,6 @@ function constructor (id) {
 				crmUtil.setDisableLeadsQuickAdd("disable");
 			}
 		});
-		
 	};// @lock
 
 	showAddress.click = function showAddress_click (event)// @startlock
