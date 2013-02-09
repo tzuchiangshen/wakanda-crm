@@ -238,6 +238,9 @@ function constructor (id) {
 	leadsCancelButton.click = function leadsCancelButton_click (event)// @startlock
 	{// @endlock
 		// Add your code here
+		if (waf.sources.lead.isNewElement()) {
+			waf.sources.lead.removeCurrentReference();
+		}
 		crmUtil.setDisableLeadsQuickAdd("enable");
 		$$(id + "_tabView2").selectTab(1);
 	};// @lock

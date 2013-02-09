@@ -36,13 +36,27 @@ function constructor (id) {
 	{// @endlock
 		//New Account Button.
 		waf.sources.account.addNewElement();
+		
+		/*
+		waf.sources.account.newAccount({
+			onSuccess: function(event) {
+				waf.sources.account.setCurrentEntity(event.result);
+				$$(id + "_tabView1").selectTab(2);
+				$$(firstNameInputfield).focus();
+				crmUtil.setDisableAccountsQuickAdd("disable");
+			}
+		});
+		*/
+		
+		/**/
 		waf.sources.account.serverRefresh({
 			onSuccess: function(event) {
 				$$(id + "_tabView1").selectTab(2);
 				$$(firstNameInputfield).focus();
-				//crmUtil.setDisableLeadsQuickAdd("disable");
+				crmUtil.setDisableAccountsQuickAdd("disable");
 			}
 		});
+		
 	};// @lock
 
 	button1.click = function button1_click (event)// @startlock
@@ -56,6 +70,9 @@ function constructor (id) {
 	button2.click = function button2_click (event)// @startlock
 	{// @endlock
 		//Cancel button.
+		if (waf.sources.account.isNewElement()) {
+			waf.sources.account.removeCurrentReference();
+		}
 		crmUtil.setDisableAccountsQuickAdd("enable");
 		$$(id + "_tabView1").selectTab(1);
 	};// @lock

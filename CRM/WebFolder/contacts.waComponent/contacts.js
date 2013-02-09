@@ -57,6 +57,9 @@ function constructor (id) {
 	button1.click = function button1_click (event)// @startlock
 	{// @endlock
 		//Cancel Contact Detail.
+		if (waf.sources.contact.isNewElement()) {
+			waf.sources.contact.removeCurrentReference();
+		}
 		crmUtil.setDisableContactsQuickAdd("enable");
 		$$(id + "_tabView1").selectTab(1);
 	};// @lock
