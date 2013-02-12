@@ -31,7 +31,7 @@ function constructor (id) {
 			} else {
 				$$(id + "_tabView2").selectTab(1);
 			}
-	}, 40);
+		}, 40);
 		
 		
 		

@@ -110,6 +110,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		waf.sources.lead.declareDependencies("owner");
 		waf.sources.contact.declareDependencies("owner");
 		waf.sources.account.declareDependencies("owner");
+		waf.sources.activity.declareDependencies("owner");
 		
 		waf.widgets.menuBar1.crmGetSelectedMenuItem = function() {
 			//Laurent: This function will allow me to determine which menuItem of menubar1 is highlighted.

@@ -9,30 +9,43 @@ var crmUtil = (function() {
 	
 	crmUtilObj.setDisableAccountsQuickAdd = function(toggle) {
 		if (toggle == "disable") {
+			//waf.widgets.sideBarComponent_quickAddMainContainer.hide();
+			/**/
 			waf.widgets.sideBarComponent_quickAddAccountName.disable();
 			waf.widgets.sideBarComponent_quickAddAccountPhone.disable();
 			waf.widgets.sideBarComponent_quickAddAccountWebsite.disable();
 			waf.widgets.sideBarComponent_quickAddAccountCity.disable();
 			waf.widgets.sideBarComponent_quickAddAccountsSaveButton.disable();
+			
 		} else {
+//			waf.widgets.sideBarComponent_quickAddMainContainer.show();
+//			waf.widgets.sideBarComponent_quickAddAccountName.focus();
+			/**/
 			waf.widgets.sideBarComponent_quickAddAccountName.enable();
 			waf.widgets.sideBarComponent_quickAddAccountPhone.enable();
 			waf.widgets.sideBarComponent_quickAddAccountWebsite.enable();
 			waf.widgets.sideBarComponent_quickAddAccountCity.enable();
 			waf.widgets.sideBarComponent_quickAddAccountsSaveButton.enable();
 			waf.widgets.sideBarComponent_quickAddAccountName.focus();
+			
 		}
 	};
 	
 	crmUtilObj.setDisableContactsQuickAdd = function(toggle) {
 		if (toggle == "disable") {
+			//waf.widgets.sideBarComponent_quickAddMainContainer.hide();
+			/**/
 	  		//$('#sideBarComponent_quickAddFirstNameContacts').attr('disabled', 'disabled');
 			waf.widgets.sideBarComponent_quickAddFirstNameContacts.disable();
 			waf.widgets.sideBarComponent_quickAddLastNameContacts.disable();
 			waf.widgets.sideBarComponent_quickAddPhoneContacts.disable();
 			waf.widgets.sideBarComponent_quickAddEmailContacts.disable();
 			waf.widgets.sideBarComponent_quickAddContactsSaveButton.disable();
+			
 		} else {
+//			waf.widgets.sideBarComponent_quickAddMainContainer.show();
+//			waf.widgets.sideBarComponent_quickAddFirstNameContacts.focus();
+			/**/
 			//$('#sideBarComponent_quickAddFirstNameContacts').removeAttr('disabled');
 			waf.widgets.sideBarComponent_quickAddFirstNameContacts.enable();
 			waf.widgets.sideBarComponent_quickAddLastNameContacts.enable();
@@ -40,23 +53,31 @@ var crmUtil = (function() {
 			waf.widgets.sideBarComponent_quickAddEmailContacts.enable();
 			waf.widgets.sideBarComponent_quickAddContactsSaveButton.enable();
 			waf.widgets.sideBarComponent_quickAddFirstNameContacts.focus();
+			
 		}
 	};
 	
 	crmUtilObj.setDisableLeadsQuickAdd = function(toggle) {
 		if (toggle == "disable") {
+			//waf.widgets.sideBarComponent_quickAddMainContainer.hide();
+			/**/
 			waf.widgets.sideBarComponent_quickAddFirstNameLeads.disable();
 			waf.widgets.sideBarComponent_quickAddLastNameLeads.disable();
 			waf.widgets.sideBarComponent_quickAddPhoneLeads.disable();
 			waf.widgets.sideBarComponent_quickAddCompanyLeads.disable(); //quickAddLeadsSaveButton
 			waf.widgets.sideBarComponent_quickAddLeadsSaveButton.disable();
+			
 		} else {
+			//waf.widgets.sideBarComponent_quickAddMainContainer.show();
+			//waf.widgets.sideBarComponent_quickAddFirstNameLeads.focus();
+			/**/
 			waf.widgets.sideBarComponent_quickAddFirstNameLeads.enable();
 			waf.widgets.sideBarComponent_quickAddLastNameLeads.enable();
 			waf.widgets.sideBarComponent_quickAddPhoneLeads.enable();
 			waf.widgets.sideBarComponent_quickAddCompanyLeads.enable(); //quickAddLeadsSaveButton
 			waf.widgets.sideBarComponent_quickAddLeadsSaveButton.enable();
 			waf.widgets.sideBarComponent_quickAddFirstNameLeads.focus();
+			
 		}
 	};
 	
