@@ -20,15 +20,13 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	{// @endlock
 		$$('bodyComponent').loadComponent({path: '/underConstruction.waComponent'});
 		$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "home"}});
-		//crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem8');
 		waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem8');
 	};// @lock
 
 	menuItem7.click = function menuItem7_click (event)// @startlock
 	{// @endlock
-		$$('bodyComponent').loadComponent({path: '/underConstruction.waComponent'});
+		$$('bodyComponent').loadComponent({path: '/activity.waComponent'});
 		$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "home"}});
-		//crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem7');
 		waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem7');
 	};// @lock
 
@@ -36,7 +34,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	{// @endlock
 		$$('bodyComponent').loadComponent({path: '/underConstruction.waComponent'});
 		$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "home"}});
-		//crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem6');
 		waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem6');
 	};// @lock
 
@@ -44,7 +41,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	{// @endlock
 		$$('bodyComponent').loadComponent({path: '/underConstruction.waComponent'});
 		$$('sideBarComponent').loadComponent({path: '/sideBar.waComponent', userData: {menuItem: "home"}});
-		//crmUtil.menuBarKeepHighlight('menuBar1', 'menuItem5');
 		waf.widgets.menuBar1.crmSetSelectedMenuItem('menuItem5');
 	};// @lock
 

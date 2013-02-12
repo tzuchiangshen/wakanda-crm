@@ -26,12 +26,14 @@ var crmUtil = (function() {
 	
 	crmUtilObj.setDisableContactsQuickAdd = function(toggle) {
 		if (toggle == "disable") {
+	  		//$('#sideBarComponent_quickAddFirstNameContacts').attr('disabled', 'disabled');
 			waf.widgets.sideBarComponent_quickAddFirstNameContacts.disable();
 			waf.widgets.sideBarComponent_quickAddLastNameContacts.disable();
 			waf.widgets.sideBarComponent_quickAddPhoneContacts.disable();
 			waf.widgets.sideBarComponent_quickAddEmailContacts.disable();
 			waf.widgets.sideBarComponent_quickAddContactsSaveButton.disable();
 		} else {
+			//$('#sideBarComponent_quickAddFirstNameContacts').removeAttr('disabled');
 			waf.widgets.sideBarComponent_quickAddFirstNameContacts.enable();
 			waf.widgets.sideBarComponent_quickAddLastNameContacts.enable();
 			waf.widgets.sideBarComponent_quickAddPhoneContacts.enable();

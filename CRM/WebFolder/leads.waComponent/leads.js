@@ -5,6 +5,7 @@
 
 function constructor (id) {
 	var leadsReportsComponent = getHtmlId('leadsReportsComponent'),
+		activityComponent = getHtmlId('activityComponent'),
 		convertLeadTitleDetail = getHtmlId('convertLeadTitleDetail'),
 		additionaInfoContainer = getHtmlId('additionaInfoContainer'),
 		leadAddressContainer = getHtmlId('leadAddressContainer'),
@@ -35,6 +36,7 @@ function constructor (id) {
 		
 		
 	$$(leadsReportsComponent).loadComponent({path: '/reports.waComponent', userData: {menuItem: "leads"}});
+	$$(activityComponent).loadComponent({path: '/activityDetail.waComponent'});
 			
 	// @region namespaceDeclaration// @startlock
 	var newLeadButton = {};	// @button
@@ -222,8 +224,8 @@ function constructor (id) {
 	convertButton.click = function convertButton_click (event)// @startlock
 	{// @endlock
 		//Convert Lead - Show Dialog Button
+		waf.sources.lead.save();
 		$('#' + id + "_convertLeadTitleDetail").html("( " + waf.sources.lead.firstName + " " + waf.sources.lead.lastName + " : " + waf.sources.lead.company + " )");
-		//convertLeadTitleDetail.setValue("(" + waf.sources.lead.firstName + " " + waf.sources.lead.lastName + ")");
 		$$(id + "_tabView2").selectTab(3);
 	};// @lock
 

@@ -80,9 +80,11 @@ function constructor (id) {
 	accountsDataGrid.onRowDblClick = function accountsDataGrid_onRowDblClick (event)// @startlock
 	{// @endlock
 		//Add recent item.
-		crmUtil.newRecentItem("accounts", "Account: ", waf.sources.account.name, waf.sources.account.ID, 'recentItemsBodyContainer');
-		$$(id + "_tabView1").selectTab(2);
 		crmUtil.setDisableAccountsQuickAdd("disable");
+		crmUtil.newRecentItem("accounts", "Account: ", waf.sources.account.name, waf.sources.account.ID, 'recentItemsBodyContainer');
+		$$(firstNameInputfield).focus();
+		$$(id + "_tabView1").selectTab(2);
+		
 	};// @lock
 
 	// @region eventManager// @startlock
