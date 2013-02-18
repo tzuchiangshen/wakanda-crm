@@ -203,7 +203,9 @@ var crmUtil = (function() {
 	
 	//Create Quick Add Account Event Handler for Return Key.
 	crmUtilObj.setQuickAddAccountReturnKey = function() {
-		$('.quickAddAccount').live('keyup', function (e) {
+		$(document).off('keyup', '.quickAddAccount');
+		
+		$(document).on('keyup', '.quickAddAccount', function (e) {
 	   		if ( e.keyCode == 13 ){
 	   			crmUtilObj.quickAddAccounts();
 	    	}
@@ -212,7 +214,9 @@ var crmUtil = (function() {
 	
 	//Create Quick Add Lead Event Handler for Return Key.
 	crmUtilObj.setQuickAddLeadReturnKey = function() {
-		$('.quickAddLead').live('keyup', function (e) {
+		$(document).off('keyup', '.quickAddLead');
+		
+		$(document).on('keyup', '.quickAddLead', function (e) {
 	   		if ( e.keyCode == 13 ){
 	   			crmUtilObj.quickAddLeads();
 	    	}
@@ -221,7 +225,9 @@ var crmUtil = (function() {
 	
 	//Create Quick Add Contact Event Handler for Return Key.
 	crmUtilObj.setQuickAddContactReturnKey = function() {
-		$('.quickAddContact').live('keyup', function (e) {
+		$(document).off('keyup', '.quickAddContact');
+		
+		$(document).on('keyup', '.quickAddContact', function (e) {
 	   		if ( e.keyCode == 13 ){
 	   			crmUtilObj.quickAddContacts();
 	    	}
