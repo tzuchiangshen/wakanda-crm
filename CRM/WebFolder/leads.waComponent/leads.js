@@ -11,7 +11,9 @@ function constructor (id) {
 		leadAddressContainer = getHtmlId('leadAddressContainer'),
 		activityToggleText = getHtmlId('activityToggleText'),
 		firstNameInputfield = getHtmlId('textField1'),
-		leadsActivityDetailContainer = getHtmlId('leadsActivityDetailContainer');
+		leadsActivityDetailContainer = getHtmlId('leadsActivityDetailContainer'),
+		accordian1 = getHtmlId('accordian1'),
+		leadTitle = getHtmlId('leadTitle');
 		
 		var firstNameQuick = getHtmlId('quickAddFirstNameLeads');
 		
@@ -31,8 +33,9 @@ function constructor (id) {
 			$$(leadsActivityDetailContainer).hide();
 		}, 40);
 		
-	$$(leadsReportsComponent).loadComponent({path: '/reports.waComponent', userData: {menuItem: "leads"}});
-	//$$(activityComponent).loadComponent({path: '/activityDetail.waComponent'});
+		$$(leadsReportsComponent).loadComponent({path: '/reports.waComponent', userData: {menuItem: "leads"}});
+		//$$(activityComponent).loadComponent({path: '/activityDetail.waComponent'});
+		
 			
 	// @region namespaceDeclaration// @startlock
 	var leadsActivityDetailSaveButton = {};	// @button
@@ -83,6 +86,7 @@ function constructor (id) {
 				$$(id + "_tabView2").selectTab(2);
 				$$(firstNameInputfield).focus();
 				crmUtil.setDisableLeadsQuickAdd("disable");
+				$$(leadTitle).setValue("Lead Information");
 			}
 		});
 	};// @lock
@@ -95,6 +99,8 @@ function constructor (id) {
 		waf.sources.activity.save({
 			onSuccess: function(event) {
 				//$$(id + "_tabView2").selectTab(4);
+				$$(id + "_dataGrid2").hide();
+				$$(leadsActivityDetailContainer).show();
 			}
 		});
 	};// @lock
@@ -107,6 +113,8 @@ function constructor (id) {
 		waf.sources.activity.save({
 			onSuccess: function(event) {
 				//$$(id + "_tabView2").selectTab(4);
+				$$(id + "_dataGrid2").hide();
+				$$(leadsActivityDetailContainer).show();
 			}
 		});
 	};// @lock
@@ -175,6 +183,7 @@ function constructor (id) {
 		crmUtil.newRecentItem("leads", "Lead: ", waf.sources.lead.firstName + " " + waf.sources.lead.lastName, waf.sources.lead.ID, 'recentItemsBodyContainer');        
 		$$(id + "_tabView2").selectTab(2);
 		crmUtil.setDisableLeadsQuickAdd("disable");
+		$$(leadTitle).setValue("Lead Information: " + waf.sources.lead.firstName + " " + waf.sources.lead.lastName);
 	};// @lock
 
 	// @region eventManager// @startlock
