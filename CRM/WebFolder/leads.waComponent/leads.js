@@ -5,12 +5,13 @@
 
 function constructor (id) {
 	var leadsReportsComponent = getHtmlId('leadsReportsComponent'),
-		activityComponent = getHtmlId('activityComponent'),
+		//activityComponent = getHtmlId('activityComponent'),
 		convertLeadTitleDetail = getHtmlId('convertLeadTitleDetail'),
 		additionaInfoContainer = getHtmlId('additionaInfoContainer'),
 		leadAddressContainer = getHtmlId('leadAddressContainer'),
 		activityToggleText = getHtmlId('activityToggleText'),
-		firstNameInputfield = getHtmlId('textField1');
+		firstNameInputfield = getHtmlId('textField1'),
+		leadsActivityDetailContainer = getHtmlId('leadsActivityDetailContainer');
 		
 		var firstNameQuick = getHtmlId('quickAddFirstNameLeads');
 		
@@ -20,33 +21,26 @@ function constructor (id) {
 	// @endregion// @endlock
 
 	this.load = function (data) {// @lock
-		//$('#' + activityToggleText).attr('unselectable','on');
-		$("#" + additionaInfoContainer).css("left", "1500px");
-		//$("#" + additionaInfoContainer).css("top", "626px");
-		$("#" + additionaInfoContainer).hide();
-		
 		setTimeout(function() {
 			if (data.userData.view == "detail") {
 				$$(id + "_tabView2").selectTab(2);
 			} else {
 				$$(id + "_tabView2").selectTab(1);
 			}
+			
+			$$(leadsActivityDetailContainer).hide();
 		}, 40);
 		
-		
-		
 	$$(leadsReportsComponent).loadComponent({path: '/reports.waComponent', userData: {menuItem: "leads"}});
-	$$(activityComponent).loadComponent({path: '/activityDetail.waComponent'});
+	//$$(activityComponent).loadComponent({path: '/activityDetail.waComponent'});
 			
 	// @region namespaceDeclaration// @startlock
+	var leadsActivityDetailSaveButton = {};	// @button
+	var leadsActivityDetailCancelButton = {};	// @button
+	var dataGrid2 = {};	// @dataGrid
 	var newLeadButton = {};	// @button
-	var showAddress = {};	// @container
 	var addEventButton = {};	// @button
 	var addTaskButton = {};	// @button
-	var button4 = {};	// @button
-	var showActivities = {};	// @container
-	var button5 = {};	// @button
-	var dataGrid1 = {};	// @dataGrid
 	var button3 = {};	// @button
 	var button2 = {};	// @button
 	var convertButton = {};	// @button
@@ -56,6 +50,29 @@ function constructor (id) {
 	// @endregion// @endlock
 
 	// eventHandlers// @lock
+
+	leadsActivityDetailSaveButton.click = function leadsActivityDetailSaveButton_click (event)// @startlock
+	{// @endlock
+		waf.sources.activity.save({
+			onSuccess: function(event) {
+				$$(id + "_dataGrid2").show();
+				$$(leadsActivityDetailContainer).hide();
+			}
+		});
+		
+	};// @lock
+
+	leadsActivityDetailCancelButton.click = function leadsActivityDetailCancelButton_click (event)// @startlock
+	{// @endlock
+		$$(id + "_dataGrid2").show();
+		$$(leadsActivityDetailContainer).hide();
+	};// @lock
+
+	dataGrid2.onRowDblClick = function dataGrid2_onRowDblClick (event)// @startlock
+	{// @endlock
+		$$(id + "_dataGrid2").hide();
+		$$(leadsActivityDetailContainer).show();
+	};// @lock
 
 	newLeadButton.click = function newLeadButton_click (event)// @startlock
 	{// @endlock
@@ -70,24 +87,6 @@ function constructor (id) {
 		});
 	};// @lock
 
-	showAddress.click = function showAddress_click (event)// @startlock
-	{// @endlock
-		$("#" + additionaInfoContainer).stop().animate({ 'left': "933px"}, 900, function(){});
-		$('#' + leadAddressContainer).show();
-		$("#" + leadAddressContainer).animate({ 'left': "1px"}, 900, function(){
-			$('#' + additionaInfoContainer).hide();
-		});
-		
-	
-		/*
-		$("#" + additionaInfoContainer).animate({ 'left': "933px"}, 900, function(){ //'left': "1500px"
-			$('#' + additionaInfoContainer).hide();
-			$('#' + leadAddressContainer).show();
-			$("#" + leadAddressContainer).animate({ 'left': "1px"}, 900, function(){});
-		});
-		*/
-	};// @lock
-
 	addEventButton.click = function addEventButton_click (event)// @startlock
 	{// @endlock
 		waf.sources.activity.addNewElement();
@@ -95,7 +94,7 @@ function constructor (id) {
 		waf.sources.activity.type = "event";
 		waf.sources.activity.save({
 			onSuccess: function(event) {
-				$$(id + "_tabView2").selectTab(4);
+				//$$(id + "_tabView2").selectTab(4);
 			}
 		});
 	};// @lock
@@ -107,86 +106,9 @@ function constructor (id) {
 		waf.sources.activity.type = "task";
 		waf.sources.activity.save({
 			onSuccess: function(event) {
-				$$(id + "_tabView2").selectTab(4);
+				//$$(id + "_tabView2").selectTab(4);
 			}
 		});
-	};// @lock
-
-	button4.click = function button4_click (event)// @startlock
-	{// @endlock
-		//Save Activity
-		waf.sources.activity.save();
-		$$(id + "_tabView2").selectTab(2);
-	};// @lock
-
-	showActivities.click = function showActivities_click (event)// @startlock
-	{// @endlock
-		
-		$("#" + leadAddressContainer).stop().animate({ 'left': "-933px"}, 900, function(){});
-		$('#' + additionaInfoContainer).show();
-		$("#" + additionaInfoContainer).stop().animate({ 'left': "1px"}, 900, function(){
-			$('#' + leadAddressContainer).hide();
-		});
-		
-		
-		/*
-		$("#" + leadAddressContainer).animate({ 'left': "-933px"}, 900, function(){ //'left': "1500px"
-			$('#' + leadAddressContainer).hide();
-			$('#' + additionaInfoContainer).show();
-			$("#" + additionaInfoContainer).animate({ 'left': "1px"}, 900, function(){});
-		});
-		*/
-		
-			
-		/*	
-		if ($$(activityToggleText).getValue() == "Activity") {
-			$$(activityToggleText).setValue('Address');
-			
-			$("#" + leadAddressContainer).animate({ 'left': "1500px"}, 900, function(){
-				$('#' + leadAddressContainer).hide();
-				$('#' + additionaInfoContainer).show();
-				$("#" + additionaInfoContainer).animate({ 'left': "15px"}, 900, function(){});
-			});
-			
-			
-			
-			//$("#" + leadAddressContainer).animate({ 'top': "626px"}, 600, function(){});
-			//$('#' + leadAddressContainer).hide();
-			//$('#' + additionaInfoContainer).show();
-			//$("#" + additionaInfoContainer).animate({ 'top': "295px"}, 600, function(){});
-			
-			
-			
-		} else {
-			$$(activityToggleText).setValue('Activity');
-			
-			$("#" + additionaInfoContainer).animate({ 'left': "1500px"}, 900, function(){
-				$('#' + additionaInfoContainer).hide();
-				$('#' + leadAddressContainer).show();
-				$("#" + leadAddressContainer).animate({ 'left': "15px"}, 900, function(){});
-			});
-			
-			
-			
-			//$("#" + additionaInfoContainer).animate({ 'top': "626px"}, 600, function(){});
-			//$('#' + additionaInfoContainer).hide();
-			//$('#' + leadAddressContainer).show();
-			//$("#" + leadAddressContainer).animate({ 'top': "295px"}, 600, function(){});
-			
-		}
-		*/
-	};// @lock
-
-	button5.click = function button5_click (event)// @startlock
-	{// @endlock
-		//Activity Navigate to Lead Detail and Activity List
-		$$(id + "_tabView2").selectTab(2);
-	};// @lock
-
-	dataGrid1.onRowDblClick = function dataGrid1_onRowDblClick (event)// @startlock
-	{// @endlock
-		//Activity Navigate to Detail
-		$$(id + "_tabView2").selectTab(4);
 	};// @lock
 
 	button3.click = function button3_click (event)// @startlock
@@ -256,14 +178,12 @@ function constructor (id) {
 	};// @lock
 
 	// @region eventManager// @startlock
+	WAF.addListener(this.id + "_leadsActivityDetailSaveButton", "click", leadsActivityDetailSaveButton.click, "WAF");
+	WAF.addListener(this.id + "_leadsActivityDetailCancelButton", "click", leadsActivityDetailCancelButton.click, "WAF");
+	WAF.addListener(this.id + "_dataGrid2", "onRowDblClick", dataGrid2.onRowDblClick, "WAF");
 	WAF.addListener(this.id + "_newLeadButton", "click", newLeadButton.click, "WAF");
-	WAF.addListener(this.id + "_showAddress", "click", showAddress.click, "WAF");
 	WAF.addListener(this.id + "_addEventButton", "click", addEventButton.click, "WAF");
 	WAF.addListener(this.id + "_addTaskButton", "click", addTaskButton.click, "WAF");
-	WAF.addListener(this.id + "_button4", "click", button4.click, "WAF");
-	WAF.addListener(this.id + "_showActivities", "click", showActivities.click, "WAF");
-	WAF.addListener(this.id + "_button5", "click", button5.click, "WAF");
-	WAF.addListener(this.id + "_dataGrid1", "onRowDblClick", dataGrid1.onRowDblClick, "WAF");
 	WAF.addListener(this.id + "_button3", "click", button3.click, "WAF");
 	WAF.addListener(this.id + "_button2", "click", button2.click, "WAF");
 	WAF.addListener(this.id + "_convertButton", "click", convertButton.click, "WAF");
