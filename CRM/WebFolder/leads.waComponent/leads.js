@@ -13,7 +13,7 @@ function constructor (id) {
 		firstNameInputfield = getHtmlId('textField1'),
 		leadsActivityDetailContainer = getHtmlId('leadsActivityDetailContainer'),
 		accordian1 = getHtmlId('accordian1'),
-		leadTitle = getHtmlId('leadTitle');
+		leadsTitle = getHtmlId('leadsTitle');
 		
 		var firstNameQuick = getHtmlId('quickAddFirstNameLeads');
 		
@@ -86,7 +86,7 @@ function constructor (id) {
 				$$(id + "_tabView2").selectTab(2);
 				$$(firstNameInputfield).focus();
 				crmUtil.setDisableLeadsQuickAdd("disable");
-				$$(leadTitle).setValue("Lead Information");
+				$$(leadsTitle).setValue("Lead Information");
 			}
 		});
 	};// @lock
@@ -183,7 +183,7 @@ function constructor (id) {
 		crmUtil.newRecentItem("leads", "Lead: ", waf.sources.lead.firstName + " " + waf.sources.lead.lastName, waf.sources.lead.ID, 'recentItemsBodyContainer');        
 		$$(id + "_tabView2").selectTab(2);
 		crmUtil.setDisableLeadsQuickAdd("disable");
-		$$(leadTitle).setValue("Lead Information: " + waf.sources.lead.firstName + " " + waf.sources.lead.lastName);
+		$$(leadsTitle).setValue("Lead Information: " + waf.sources.lead.fullName);
 	};// @lock
 
 	// @region eventManager// @startlock
