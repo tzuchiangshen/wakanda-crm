@@ -5,7 +5,10 @@
 
 function constructor (id) {
 	var contactsUL = getHtmlId('contactsUL'),
-		contactsUL$ = getHtmlObj('contactsUL');
+		contactsUL$ = getHtmlObj('contactsUL'),
+		contactDetailTemplateSource = $("#contact-list-template").html(),
+		contactDetailTemplate = Handlebars.compile(contactDetailTemplateSource),
+		contactData = "";
 	
 		
 	// @region beginComponentDeclaration// @startlock
@@ -18,15 +21,25 @@ function constructor (id) {
 		/**/
 		ds.Contact.all({
 			onSuccess: function(ev1) {
-				console.log(ev1.entityCollection.length);
 				ev1.entityCollection.forEach({
 					onSuccess: function(ev2) {	
+						/*
 						var contactLi = $('<li>', {
 							text: ev2.entity.lastName.getValue(),
 							"class" : "contactPreview"
 						});
+						*/
+						contactData = {lastName: ev2.entity.lastName.getValue()};
+						contactsUL$.append(contactDetailTemplate(contactData));
 						
-						contactsUL$.append(contactLi);
+						/* handlebars experiments*/
+						//contact-list-template
+						/*
+						var contactDetailTemplateSource = $("#contact-list-template").html(),
+						 	 contactDetailTemplate = Handlebars.compile(contactDetailTemplateSource),
+							contactData = {lastName: "xiang lui"};
+						console.log(contactDetailTemplate(contactData));
+						*/
 					}
 				}); //ev1.entityCollection.forEach
 			}
@@ -35,6 +48,15 @@ function constructor (id) {
 	}
 	
 	this.load = function (data) {// @lock
+		//event handlers
+		contactsUL$.on('mouseenter', '.contactPreview', function (event) {
+	   		$(this).addClass('contactSelected');
+		});
+		
+		contactsUL$.on('mouseleave', '.contactPreview', function (event) {
+	   		$(this).removeClass('contactSelected');
+		});
+		
 		buildContactGrid();
 	// @region namespaceDeclaration// @startlock
 	// @endregion// @endlock
