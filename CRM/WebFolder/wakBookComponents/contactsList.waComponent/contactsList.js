@@ -57,17 +57,9 @@ function constructor (id) {
 	   		var contactId = this$.children('div.contactIdent').attr('data-id');
 	   		ds.Contact.find("ID = :1", contactId, {
 	   			onSuccess: function(event) {
-	   				$$(firstNameInput).setValue(event.entity.firstName.getValue());
-	   				$$(lastNameInput).setValue(event.entity.lastName.getValue());
-	   				//local datasource sync with input fields does not work.
-	   				/*
-	   				console.log(event.entity.lastName.getValue());
-	   				console.log("Before: " + $comp.sources.contactObject.lastName);
-	   				$comp.sources.contactObject.lastName = event.entity.lastName.getValue();
-	   				$comp.sources.contactObject.firstName = event.entity.firstName.getValue();
-	   				console.log("After: " + $comp.sources.contactObject.lastName);
+	   				$comp.sourcesVar.contactObject.lastName = event.entity.lastName.getValue();
+	   				$comp.sourcesVar.contactObject.firstName = event.entity.firstName.getValue();
 	   				$comp.sources.contactObject.sync();
-	   				*/
 	   			}
 	   		});
 	   		
