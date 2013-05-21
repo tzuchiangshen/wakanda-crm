@@ -23,23 +23,12 @@ function constructor (id) {
 			onSuccess: function(ev1) {
 				ev1.entityCollection.forEach({
 					onSuccess: function(ev2) {	
-						/*
-						var contactLi = $('<li>', {
-							text: ev2.entity.lastName.getValue(),
-							"class" : "contactPreview"
-						});
-						*/
-						contactData = {lastName: ev2.entity.lastName.getValue()};
+						contactData = 	{
+							lastName: 	ev2.entity.lastName.getValue(),
+							city:    	ev2.entity.city.getValue(),
+							dataId: 	ev2.entity.ID.getValue()
+						};
 						contactsUL$.append(contactDetailTemplate(contactData));
-						
-						/* handlebars experiments*/
-						//contact-list-template
-						/*
-						var contactDetailTemplateSource = $("#contact-list-template").html(),
-						 	 contactDetailTemplate = Handlebars.compile(contactDetailTemplateSource),
-							contactData = {lastName: "xiang lui"};
-						console.log(contactDetailTemplate(contactData));
-						*/
 					}
 				}); //ev1.entityCollection.forEach
 			}
@@ -55,6 +44,21 @@ function constructor (id) {
 		
 		contactsUL$.on('mouseleave', '.contactPreview', function (event) {
 	   		$(this).removeClass('contactSelected');
+		});
+		
+		contactsUL$.on('click', '.contactPreview', function (event) {
+			var this$ = $(this);
+	   		this$.addClass('contactPermSelected');
+	   		this$.siblings().removeClass('contactPermSelected');
+	   		
+	   		
+	   		var contactId = this$.children('div.contactIdent').attr('data-id');
+	   		ds.Contact.find("ID = :1", contactId, {
+	   			onSuccess: function(event) {
+	   				console.log(event.entity.lastName.getValue());
+	   			}
+	   		});
+	   		
 		});
 		
 		buildContactGrid();
